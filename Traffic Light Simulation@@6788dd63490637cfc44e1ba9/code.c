@@ -21,7 +21,7 @@ char *getAction(char c)
 {
     for (int i = 0; lights[i].action != NULL; i++)
         if (c == lights[i].input)
-            return lights[i].description;
+            return lights[i].action;
 
     return "Invalid input";
 }
