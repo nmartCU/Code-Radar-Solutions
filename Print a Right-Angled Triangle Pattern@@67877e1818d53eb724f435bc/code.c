@@ -19,5 +19,5 @@ int main(int argc, char *const argv[])
         if ((printf("\n")) < 0)
             return ERROR;
     }
-    return SUCCESS
+    return SUCCESS;
 }
