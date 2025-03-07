@@ -5,7 +5,8 @@
 #define ERROR 1
 #define SUCCESS 0
 
-int main(int argc, char *const argv[]) {
+int main(int argc, char *const argv[])
+{
     int n = 0;
     
     if (scanf("%d", &n) != 1)
