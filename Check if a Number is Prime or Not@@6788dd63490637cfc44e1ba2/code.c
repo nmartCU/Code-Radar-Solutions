@@ -14,7 +14,7 @@ int main(int argc, char *const av [])
     printf("%d", divisibleBy1);
     bool divisibleByItSelf = (a % a == 0);
     printf("2: %d", divisibleByItSelf);
-    if ((printf("%s\n", (a > 1 && (divisibleBy1 && divisibleByItSelf) && a % 2 != 0) ? "Prime" : "Not Prime")) < 0)
+    if ((printf("%s\n", (a > 1 && (divisibleBy1 && divisibleByItSelf) && a % 3 != 0) ? "Prime" : "Not Prime")) < 0)
         return ERROR;
     return SUCCESS;
 }
