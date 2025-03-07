@@ -5,7 +5,7 @@
 #define ERROR 1
 #define SUCCESS 0
 
-const dayOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+static const char *dayOfWeek[] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
 int main(int argc, char *const av [])
 {
