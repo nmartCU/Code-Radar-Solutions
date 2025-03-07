@@ -7,7 +7,7 @@
 
 typedef struct grades_s {
     char grade;
-    char *str;
+    char *description;
 } grades_t;
 
 static const grades_t grades[] = {
