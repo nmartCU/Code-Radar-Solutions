@@ -8,7 +8,7 @@ int main(int argc, char *const av[])
 {
     int x = 0;
 
-    if ((scanf("%d", x)) != 1) {
+    if ((scanf("%d", &x)) != 1) {
         return ERROR;
     }
     if ((printf("You entered: %x\n", x)) < 0) {
