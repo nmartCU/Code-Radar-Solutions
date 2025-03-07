@@ -12,7 +12,7 @@ int main(int argc, char *const av [])
         printf("Error");
         return ERROR;
     }
-    if ((printf("%s\n", (a % 2) ? "Even" : "Odd")) < 0)
+    if ((printf("%s\n", ((a % 2) == 0) ? "Even" : "Odd")) < 0)
         return ERROR;
     return SUCCESS;
 }
