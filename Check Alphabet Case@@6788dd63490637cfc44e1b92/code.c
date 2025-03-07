@@ -9,7 +9,7 @@ int main(int argc, char *const av [])
     char c = 0;
     if ((scanf("%c", &c)) != 1)
         return ERROR;
-    if ((printf("%s\n", (a >= 'A' && a <= 'Z') ? "Uppercase" : (a >= 'a' && a <= 'z') ? "Lowercase" : "Not an alphabet")) < 0)
+    if ((printf("%s\n", (c >= 'A' && a <= 'Z') ? "Uppercase" : (c >= 'a' && a <= 'z') ? "Lowercase" : "Not an alphabet")) < 0)
         return ERROR;
     return SUCCESS;
 }
