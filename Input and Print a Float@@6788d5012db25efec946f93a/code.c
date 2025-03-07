@@ -9,6 +9,6 @@ int main()
         printf("Error scanf %f result \n", result);
         return error;
     }
-    printf("You entered %f", result);
+    printf("You entered %0.2f", result);
     return 0;
 }
