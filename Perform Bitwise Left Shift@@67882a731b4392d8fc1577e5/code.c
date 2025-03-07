@@ -12,7 +12,7 @@ int main(int argc, char *const av [])
         printf("Error");
         return ERROR;
     }
-    if ((printf("%d\n", (a >> b))) < 0)
+    if ((printf("%d\n", (a << b))) < 0)
         return ERROR;
     return SUCCESS;
 }
