@@ -12,12 +12,12 @@ int main(int argc, char *const argv[])
 
     if ((scanf("%d ", &a)) != 1)
         return ERROR;
-    for (int i = 0; i < a; i++) {
-        for (int j = 0; j < (a + i); j++) {
-            if (j < (a - i - 1)) {
+    for (int i = 1; i <= a; i++) {
+        for (int j = 1; j <= (a + i); j++) {
+            if (j < (a - i)) {
                 if ((printf(" ")) < 0)
                     return ERROR;
-            } else if ((a - i - 1) == j) {
+            } else {
                 if ((printf("%d", i + 1)) < 0)
                     return ERROR;
             }
