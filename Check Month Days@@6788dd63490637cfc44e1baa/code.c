@@ -21,7 +21,7 @@ int main(int argc, char *const av [])
     if ((scanf("%d", &a)) != 1)
         return ERROR;
 
-    if (a >= 1 && a <= 12)
+    if (a < 1 || a > 12)
         if ((printf("Invalid month")) < 0)
             return ERROR;
 
