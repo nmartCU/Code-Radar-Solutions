@@ -11,7 +11,7 @@ int main(int argc, char *const argv[])
 {
     char str[MAX_LENGTH] = {0};
 
-    if (scanf("%s", &str) != 1)
+    if (scanf("%s", str) != 1)
         return ERROR;
     for (int i = strlen(str); i >= 0; i--) {
         if (printf("%c" , str[i]) < 0)
