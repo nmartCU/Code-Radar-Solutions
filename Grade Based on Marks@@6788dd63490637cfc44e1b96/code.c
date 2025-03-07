@@ -9,9 +9,9 @@
 
 int main(int argc, char *const argv[])
 {
-    int grade = 0;
+    int a = 0;
     
-    if ((scanf("%d", &grade)) != 1)
+    if ((scanf("%d", &a)) != 1)
         return ERROR;
     
     if ((printf("%s\n", (a >= 90 ? "A" : (a >= 80 && a < 90) ? "B" : (a >= 70 && a < 80) ? "C" : (a >= 60 && a < 70) ? 'D' : 'F'))) < 0)
