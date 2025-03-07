@@ -3,7 +3,7 @@
 #include <string.h>
 
 #define ERROR 1
-#define SUCCESS 2
+#define SUCCESS 0
 
 int main(int argc, char *const argv[])
 {
@@ -13,7 +13,9 @@ int main(int argc, char *const argv[])
         return ERROR;
     for (int i = a; i > 0; i--) {
         for (int j = i; j > 0; j--)
-            printf("* ");
-        printf("\n");
+            if ((printf("* ")) < 0)
+                return ERROR;
+        if ((printf("\n")) < 0)
+            return ERROR;
     }
 }
