@@ -1,5 +1,6 @@
 // Your code here...
 #include <stdio.h>
+#include <string.h>
 
 #define ERROR 1
 #define SUCCESS 2
