@@ -36,9 +36,9 @@ int main(int argc, char *const av [])
     char op = 0;
     if ((scanf("%d %d %c", &a, &b, &op)) != 3)
         return ERROR;
-    if (c == '/' && b == 0)
+    if (op == '/' && b == 0)
         return ERROR;
-    if ((printf("%d\n", (operation(a, b, c)))) < 0)
+    if ((printf("%d\n", (operation(a, b, op)))) < 0)
         return ERROR;
     return SUCCESS;
 }
