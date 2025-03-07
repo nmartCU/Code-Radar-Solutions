@@ -13,7 +13,7 @@ int main(int argc, char *const argv[])
         return ERROR;
     for (int i = a; i > 0; i--) {
         int temp = i;
-        while (temp < 0) {
+        while (temp > 0) {
             printf("* ");
             --temp;
         }
