@@ -38,7 +38,7 @@ int main(int argc, char *const av [])
         return ERROR;
     if (op == '/' && b == 0)
         return ERROR;
-    if ((printf("%d\n", (operation(a, b, op)))) < 0)
+    if ((printf("%d\n", (operations(a, b, op)))) < 0)
         return ERROR;
     return SUCCESS;
 }
