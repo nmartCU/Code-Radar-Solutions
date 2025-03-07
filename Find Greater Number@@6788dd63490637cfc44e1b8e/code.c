@@ -8,10 +8,8 @@
 int main(int argc, char *const av [])
 {
     int a, b = 0;
-    if ((scanf("%d %d", &a, &b)) != 1) {
-        printf("Error");
+    if ((scanf("%d %d", &a, &b)) != 2)
         return ERROR;
-    }
     if ((printf("%d\n", (a > b) ? a : b)) < 0)
         return ERROR;
     return SUCCESS;
