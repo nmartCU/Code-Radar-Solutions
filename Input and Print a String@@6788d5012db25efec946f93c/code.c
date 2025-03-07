@@ -7,9 +7,9 @@
 
 int main(int main, char *const av[])
 {
-    char *str;
+    char str[];
 
-    if ((scanf("%s", str)) != 1)
+    if ((scanf("%s", &str)) != 1)
         return ERROR;
     if ((printf("You entered: %s", str)) < 0)
         return ERROR;
