@@ -12,8 +12,8 @@ int main(int argc, char *const argv[])
     if (scanf("%d", &n) != 1)
         return ERROR;
     int x = 0;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j <= i; j++) {
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
             if ((printf("%d ", (j % 2 == 0) ? 1 : 0)) < 0)
                 return ERROR;
         }
