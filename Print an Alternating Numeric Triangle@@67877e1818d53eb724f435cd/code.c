@@ -13,7 +13,7 @@ int main(int argc, char *const argv[])
         return ERROR;
     int x = 0;
     for (int i = 0; i < n; i++) {
-        for (int j = 0; j <= i; j++) {
+        for (int j = 0; j < n - i; j++) {
             if ((printf("%d ", (j % 2 == 0) ? 1 : 0)) < 0)
                 return ERROR;
         }
