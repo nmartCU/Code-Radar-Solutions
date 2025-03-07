@@ -10,7 +10,7 @@
         int a, b = 0;
         if ((scanf("%d", &a, &b)) != 2)
             return ERROR;
-        int profit = b - c;
+        int profit = b - a;
         if ((printf("%s\n", (profit > 0 ? "Profit" : (profit < 0) ? "Loss" : "No Profit No Loss" ))) < 0)
             return ERROR;
         return SUCCESS;
