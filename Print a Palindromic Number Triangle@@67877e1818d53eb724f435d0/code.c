@@ -17,7 +17,7 @@ int main(int argc, char *const argv[])
             if (j < (a - i - 1)) {
                 if ((printf(" ")) < 0)
                     return ERROR;
-            } else if (i == j) {
+            } else if ((i - 1) == j) {
                 if ((printf("%d", i + 1)) < 0)
                     return ERROR;
             }
