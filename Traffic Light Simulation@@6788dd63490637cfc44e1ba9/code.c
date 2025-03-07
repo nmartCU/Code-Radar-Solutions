@@ -2,8 +2,8 @@
 
 #include <stdio.h>
 
-#define ERROR
-#define SUCCESS
+#define ERROR 1
+#define SUCCESS 0
 
 typedef struct traffic_s {
     char input;
