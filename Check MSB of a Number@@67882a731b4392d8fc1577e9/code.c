@@ -12,6 +12,11 @@ int main(int argc, char *const av [])
         return ERROR;
     }
     int mbs = 0;
+    if (a == 0) {
+        if ((printf("%s\n", "Not Set")) < 0)
+            return ERROR;
+        return SUCCESS;
+    }
     while (a != 0) {
         a/=2;
         mbs++;
