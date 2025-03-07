@@ -6,13 +6,13 @@
 
 int main(int argc, char *const av [])
 {
-    int number, position, result = 0;
+    int number, position, mask = 0;
     if ((scanf("%d %d", &number, &position)) != 1) {
         printf("Error");
         return ERROR;
     }
-    result = (1 << number) - 1
-    if ((printf("%d\n", (number & result))) < 0)
+    mask = (1 << number) - 1;
+    if ((printf("%d\n", (number & mask))) < 0)
         return ERROR;
     return SUCCESS;
 }
