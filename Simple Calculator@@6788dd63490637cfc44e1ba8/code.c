@@ -23,7 +23,7 @@ static const operation_handler_t operation_handlers[] = {
 
 int operations(int a, int b, char c)
 {
-    for (int i = 0; operation_handlers[i] != NULL; i++) {
+    for (int i = 0; operation_handlers[i].operation != NULL; i++) {
         if (c == operation_handlers[i].operator)
             return operation_handlers[i].operation(a, b);
     }
@@ -33,8 +33,8 @@ int operations(int a, int b, char c)
 int main(int argc, char *const av [])
 {
     int a, b = 0;
-    char op = 0
-    if ((scanf("%d %d %s", &a, &b, &op)) != 2)
+    char op = 0;
+    if ((scanf("%d %d %c", &a, &b, &op)) != 3)
         return ERROR;
     if (c == '/' && b == 0)
         return ERROR;
