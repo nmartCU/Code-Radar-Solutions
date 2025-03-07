@@ -6,23 +6,19 @@
 #define ERROR 1
 #define SUCCESS 0
 
-int main(int argc, char *const argv[])
-{
-    int a = 0;
-
-    if ((scanf("%d ", &a)) != 1)
+int main(int argc, char *const argv[]) {
+    int n;
+    
+    if (scanf("%d", &n) != 1)
         return ERROR;
-    for (int i = 0; i < a; i++) {
-        for (int j = 0; j < (a + i); j++) {
-            if (j < (a - i - 1)) {
-                if ((printf(" ")) < 0)
-                    return ERROR;
-            } else {
-                if ((printf("%d ", j)) < 0)
-                    return ERROR;
-            }
-        }
-        if ((printf("\n")) < 0)
-            return ERROR;
+    
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n - i; j++)
+            printf(" ");
+        for (int j = 1; j <= i; j++)
+            printf("%d%s", j, j < i ? " " : "");
+        printf("\n");
     }
+    
+    return SUCCESS;
 }
