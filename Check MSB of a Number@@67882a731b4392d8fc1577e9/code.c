@@ -19,7 +19,7 @@ int main(int argc, char *const av [])
     }
     while (a != 0) {
         a/=2;
-        mbs++;
+        ++mbs;
     }
     if ((printf("%s\n", (1 << (mbs)) ? "Set" : "Not Set")) < 0)
         return ERROR;
