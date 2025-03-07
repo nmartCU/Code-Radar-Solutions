@@ -21,7 +21,7 @@ int main(int argc, char *const av [])
         a/=2;
         ++mbs;
     }
-    if ((printf("%s\n", (1 << (mbs)) ? "Set" : "Not Set")) < 0)
+    if ((printf("%s\n", (1 << (mbs - 1)) ? "Set" : "Not Set")) < 0)
         return ERROR;
     return SUCCESS;
 }
