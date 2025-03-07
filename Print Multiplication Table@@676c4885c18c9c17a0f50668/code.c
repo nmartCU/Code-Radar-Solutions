@@ -14,7 +14,7 @@ int main(int argc, char *const argv[])
     int sum = 0;
     for (int i = 0; i < a; i++) {
         sum *= (i + 1);
-        if ((printf("%d x %d = %s", a, i + 1, sum)) < 0)
+        if ((printf("%d x %d = %d\n", a, i + 1, sum)) < 0)
             return ERROR;
     }
     return SUCCESS;
