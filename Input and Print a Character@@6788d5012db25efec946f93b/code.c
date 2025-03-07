@@ -1,8 +1,8 @@
 // Your code here...
 #include <stdio.h>
 
-#define ERROR (1)
-#define SUCCESS (0)
+#define ERROR 1
+#define SUCCESS 0
 
 int main()
 {
@@ -11,6 +11,8 @@ int main()
         printf("Error scanf");
         return ERROR;
     }
-    printf("You entered: %c", c);
+    if (printf("You entered: %c", c) == -1) {
+        return ERROR;
+    };
     return SUCCESS;
 }
