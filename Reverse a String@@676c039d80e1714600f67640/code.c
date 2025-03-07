@@ -13,7 +13,7 @@ int main(int argc, char *const argv[])
 
     if (scanf("%s", &str) != 1)
         return ERROR;
-    for (int i = strlen(str); i < 0; i--) {
+    for (int i = strlen(str); i > 0; i--) {
         if (printf("%c" , str[i]) < 0)
             return ERROR;
     }
