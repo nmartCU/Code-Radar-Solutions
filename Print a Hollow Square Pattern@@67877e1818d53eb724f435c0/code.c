@@ -16,7 +16,7 @@ int main(int argc, char *const argv [])
         int row = i / a;
         int col = i % a;
 
-        if (row == 0 || row == N - 1 || col == 0 || col == N - 1) {
+        if (row == 0 || row == a - 1 || col == 0 || col == a - 1) {
             if ((printf("%c", '*')) < 0)
                 return ERROR;
         } else {
