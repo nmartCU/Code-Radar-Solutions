@@ -12,7 +12,7 @@ int main(int argc, char *const av [])
         printf("Error");
         return ERROR;
     }
-    if ((printf("%s\n", (a >> 1) ? "Set" : "Not Set")) < 0)
+    if ((printf("%s\n", ((a & 1) >> 1) ? "Set" : "Not Set")) < 0)
         return ERROR;
     return SUCCESS;
 }
