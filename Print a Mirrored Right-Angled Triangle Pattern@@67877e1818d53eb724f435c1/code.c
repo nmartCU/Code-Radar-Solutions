@@ -13,7 +13,7 @@ int main(int argc, char *const argv [])
     
     for (int i = 0; i < a; i++) {
         for (int j = 0; j < a; j++) {
-            if (j == (a - 1)) {
+            if (j != (a - 1)) {
                 if ((printf(" ")) < 0)
                     return ERROR;
             } else {
