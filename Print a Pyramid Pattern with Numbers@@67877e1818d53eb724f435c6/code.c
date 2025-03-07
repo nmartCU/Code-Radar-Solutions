@@ -18,8 +18,8 @@ int main(int argc, char *const argv[]) {
         for (int j = 1; j <= i; j++)
             if ((printf("%d ", j)) < 0)
                 return ERROR;
-        printf("\n");
+        if ((printf("\n")) < 0)
+            return ERROR;
     }
-    
     return SUCCESS;
 }
