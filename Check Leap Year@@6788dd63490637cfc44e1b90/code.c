@@ -12,7 +12,7 @@ int main(int argc, char *const av [])
         printf("Error");
         return ERROR;
     }
-    if ((printf("%s\n", (a % 4 == 0) ? "Leap Year" : "Not a Leap Year")) < 0)
+    if ((printf("%s\n", (a / 4 == 0) ? "Leap Year" : "Not a Leap Year")) < 0)
         return ERROR;
     return SUCCESS;
 }
