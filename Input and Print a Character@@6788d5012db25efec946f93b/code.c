@@ -7,12 +7,9 @@
 int main()
 {
     char c = 0;
-    if ((scanf("%c", &c)) != 1) {
-        printf("Error scanf");
+    if ((scanf("%c", &c)) != 1)
         return ERROR;
-    }
-    if (printf("You entered: %c", c) == -1) {
+    if (printf("You entered: %c", c) == -1)
         return ERROR;
-    };
     return SUCCESS;
 }
