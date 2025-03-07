@@ -11,9 +11,9 @@ typedef struct traffic_s {
 } traffic_t;
 
 static const traffic_t lights[] = {
-    {.input = "R", .action = "Stop"},
-    {.input = "G", .action = "Go"},
-    {.input = "Y", .action = "Slow Down"},
+    {.input = 'R', .action = "Stop"},
+    {.input = 'G', .action = "Go"},
+    {.input = 'Y', .action = "Slow Down"},
     {0},
 };
 
