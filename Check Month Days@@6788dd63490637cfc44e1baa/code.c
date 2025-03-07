@@ -22,7 +22,7 @@ int main(int argc, char *const av [])
         return ERROR;
 
     if (a >= 1 && a <= 12)
-        if ((printf("s\n", "Invalid month")) < 0)
+        if ((printf("Invalid month")) < 0)
             return ERROR;
 
     if ((printf("d\n", numberOfDay(a))) < 0)
