@@ -12,7 +12,7 @@ int main(int argc, char *const argv[])
     if ((scanf("%d ", &a)) != 1)
         return ERROR;
     for (int i = 0; i < a; i++) {
-        for (int j = i; j >= 0; j++)
+        for (int j = i; j <= a; j++)
             printf("* ");
         printf("\n");
     }
