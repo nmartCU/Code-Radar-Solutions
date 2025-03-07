@@ -21,7 +21,7 @@ int main(int argc, char *const argv[])
                 if ((printf("%d", j - (a - i))) < 0)
                     return ERROR;
             } else {
-                if ((printf("%d", j - (a - i) - 1)) < 0)
+                if ((printf("%d", 2* j - (a - i))) < 0)
                     return ERROR;
             }
         }
