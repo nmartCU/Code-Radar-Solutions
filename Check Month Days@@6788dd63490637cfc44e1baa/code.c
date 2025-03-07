@@ -20,7 +20,7 @@ int main(int argc, char *const av [])
 
     if ((scanf("%d", &a)) != 1)
         return ERROR;
-    if ((printf("s\n", (a >= 1 && a <= 12) ? numberOfDay(a) : "Invalid month")) < 0)
+    if ((printf("s\n", ((a >= 1 && a <= 12) ? numberOfDay(a) : "Invalid month"))) < 0)
         return ERROR;
     return SUCCESS;
 }
