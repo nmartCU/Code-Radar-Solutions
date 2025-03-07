@@ -11,8 +11,8 @@ int main(int argc, char *const argv[])
 
     if ((scanf("%d ", &a)) != 1)
         return ERROR;
-    for (int i = 0; i < a; i++) {
-        for (int j = i; j <= 0; j++)
+    for (int i = 1; i < a; i++) {
+        for (int j = i; j < 0; j++)
             printf("* ");
         printf("\n");
     }
