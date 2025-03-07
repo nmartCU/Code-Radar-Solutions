@@ -10,7 +10,7 @@ typedef struct grades_s {
     char *str;
 } grades_t;
 
-static const grades_t grades = {
+static const grades_t grades[] = {
     { .grade = 'A', .description = "Excellent" },
     { .grade = 'B', .description = "Good" },
     { .grade = 'C', .description = "Average" },
@@ -25,7 +25,7 @@ char *getDescription(char c)
         if (c == grades[i].grade)
             return grade[i].description;
 
-    return "Invalid grade"
+    return "Invalid grade";
 }
 
 int main(int argc, char *const argv[])
