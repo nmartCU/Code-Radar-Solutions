@@ -11,7 +11,7 @@ int main(int argc, char *const argv[])
 
     if ((scanf("%d ", &a)) != 1)
         return ERROR;
-    for (int i = 0; i < a; i++) {
+    for (int i = 0; i < 10; i++) {
         int sum = a * (i + 1);
         if ((printf("%d x %d = %d\n", a, i + 1, sum)) < 0)
             return ERROR;
