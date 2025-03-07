@@ -4,7 +4,7 @@
 int main()
 {
     float result = 0.0f;
-    int res = scanf("Input \n ", &result);
-    printf("You entered");
-    return 0;
+    int error = scanf("Input \n ", &result);
+    printf("You entered %f", result);
+    return error;
 }
