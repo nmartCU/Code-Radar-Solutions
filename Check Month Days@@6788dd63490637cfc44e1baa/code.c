@@ -11,7 +11,7 @@ int numberOfDay(int a)
         return 28;
     if (a == 8)
         return 31;
-    return (a % 2 != 0) ? 31 : 30;
+    return (a % 2 == 0) ? 31 : 30;
 }
 
 int main(int argc, char *const av [])
