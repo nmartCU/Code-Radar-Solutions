@@ -5,7 +5,7 @@
 #define SUCCESS 2
 
 int main(int argc, char *const argv[])
-(
+{
     int a = 0;
 
     if ((scanf("%d ", &a)) != 1)
@@ -16,4 +16,4 @@ int main(int argc, char *const argv[])
         str[i] = '\0';
         printf("%s\n", str);
     }
-)
+}
