@@ -23,7 +23,7 @@ char *getDescription(char c)
 {
     for (int i = 0; grades[i].description != NULL; i++)
         if (c == grades[i].grade)
-            return grade[i].description;
+            return grades[i].description;
 
     return "Invalid grade";
 }
