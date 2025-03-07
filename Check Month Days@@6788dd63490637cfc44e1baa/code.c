@@ -10,7 +10,7 @@ int numberOfDay(int a)
     if (a == 2)
         return 28;
     if (a == 8)
-        return 31
+        return 31;
     return (a % 2 != 0) ? 31 : 30;
 }
 
