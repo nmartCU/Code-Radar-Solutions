@@ -16,7 +16,7 @@ int main(int argc, char *const argv[])
         for (int j = 1; j <= a - i; j++)
             if ((printf(" ")) < 0)
                 return ERROR;      
-        for (int j = 1; j <= 2 * i - 1; j++) {
+        for (int j = 1; j <= 2 * i; j++) {
             int num = (j <= i) ? j : 2 * i - j;
             if ((printf("%d", num)) < 0)
                 return ERROR;
