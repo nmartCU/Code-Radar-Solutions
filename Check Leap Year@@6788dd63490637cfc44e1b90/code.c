@@ -14,7 +14,6 @@ int main(int argc, char *const av [])
         return ERROR;
     }
     bool res = (a % 4 == 0) && ((a % 100 != 0) || (a % 400 == 0));
-
     if ((printf("%s\n", (res) ? "Leap Year" : "Not a Leap Year")) < 0)
         return ERROR;
     return SUCCESS;
