@@ -15,7 +15,6 @@ int main(int argc, char *const argv [])
     for (int i = 0; i < a * a; i++) {
         int row = i / a;
         int col = i % a;
-
         if (row == 0 || row == a - 1 || col == 0 || col == a - 1) {
             if ((printf("%c", '*')) < 0)
                 return ERROR;
