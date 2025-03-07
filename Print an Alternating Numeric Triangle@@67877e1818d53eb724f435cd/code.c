@@ -16,7 +16,6 @@ int main(int argc, char *const argv[])
         for (int j = 0; j <= i; j++) {
             if ((printf("%d ", (x % 2 == 0) ? 1 : 0)) < 0)
                 return ERROR;
-            x++;
         }
         if ((printf("\n")) < 0)
             return ERROR;
