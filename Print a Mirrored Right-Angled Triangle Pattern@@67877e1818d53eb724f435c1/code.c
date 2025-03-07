@@ -13,8 +13,13 @@ int main(int argc, char *const argv [])
     
     for (int i = 0; i < a; i++) {
         for (int j = 0; j < (a + i); j++) {
-            if ((printf("%d ", j + 1)) < 0)
-                return ERROR;
+            if (j == (a - i - 1)) {
+                if ((printf(" ")) < 0)
+                    return ERROR;
+            } else {
+                if ((printf("*")) < 0)
+                    return ERROR;
+            }
         }
         if ((printf("\n")) < 0)
             return ERROR;
