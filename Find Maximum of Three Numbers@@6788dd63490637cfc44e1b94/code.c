@@ -11,5 +11,5 @@ int main(int argc, char *const argv[])
         return ERROR;
     if ((printf("%d", (a > b && a > c ? a : (b > a && b > c) ? b : c))) < 0)
         return ERROR;
-    return SUCCESS
+    return SUCCESS;
 }
