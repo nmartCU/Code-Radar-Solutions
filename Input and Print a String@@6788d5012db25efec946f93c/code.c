@@ -7,11 +7,11 @@
 
 int main(int main, char *const av[])
 {
-    char *str = NULL;
+    char *str;
 
     if ((scanf("%s", str)) != 1)
         return ERROR;
-    if ((printf("You entered: %s", str)))
+    if ((printf("You entered: %s", str)) < 0)
         return ERROR;
     return SUCCESS;
 }
