@@ -11,6 +11,6 @@ int main()
         printf("Error scanf");
         return ERROR;
     }
-    printf("You entered: %c", c)
+    printf("You entered: %c", c);
     return SUCCESS;
 }
