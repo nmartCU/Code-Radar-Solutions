@@ -7,7 +7,8 @@
 bool isDivisble(int a)
 {
     int res = 0;
-    while ((res = a / 2) != 0) {
+    while (a != 0) {
+        res /= 2;
         a = res;
     }
     if (res == 0) {
