@@ -11,7 +11,7 @@ int main(int argc, char *const av[])
     if ((scanf("%d", &x)) != 1) {
         return ERROR;
     }
-    if ((printf("You entered: %x\n", x)) < 0) {
+    if ((printf("You entered: %d\n", x)) < 0) {
         return ERROR;
     }
     return SUCCESS;
