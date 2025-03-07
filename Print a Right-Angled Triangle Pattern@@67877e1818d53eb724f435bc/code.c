@@ -3,7 +3,7 @@
 #include <string.h>
 
 #define ERROR 1
-#define SUCCESS 2
+#define SUCCESS 0
 
 int main(int argc, char *const argv[])
 {
