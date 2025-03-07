@@ -8,7 +8,7 @@
 int main(int argc, char *const av [])
 {
     float radius = 0.0f;
-    if ((scanf("%f \n", radius)) != 3)
+    if ((scanf("%f \n", radius)) != 1)
         return ERROR;
     if ((printf("Area: %0.2f", (radius * 3.14))) < 0)
         return ERROR;
