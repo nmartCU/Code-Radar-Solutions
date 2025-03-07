@@ -7,7 +7,7 @@
 
 bool isPrime(int a, int i)
 {
-    if (a >= 1)
+    if (a <= 1)
         return false;
     if (i == 1)
         return true;
@@ -21,7 +21,7 @@ int main(int argc, char *const av [])
     int a = 0;
     if ((scanf("%d", &a)) != 1)
         return ERROR;
-    if ((printf("%s\n", ((isPrime(a, a / 2))) ? "Prime" : "Not Prime")) < 0)
+    if ((printf("%s\n", (a > 1 && (isPrime(a, a / 2))) ? "Prime" : "Not Prime")) < 0)
         return ERROR;
     return SUCCESS;
 }
