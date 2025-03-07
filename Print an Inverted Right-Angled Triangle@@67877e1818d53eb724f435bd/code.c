@@ -13,7 +13,7 @@ int main(int argc, char *const argv[])
         return ERROR;
     for (int i = a; i > 0; i--) {
         char str[i + 1];
-        memset(str, '* ', i);
+        memset(str, "* ", i);
         str[i] = '\0';
         printf("%s\n", str);
     }
