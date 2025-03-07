@@ -36,8 +36,11 @@ int main(int argc, char *const av [])
     char op = 0;
     if ((scanf("%d %d %c", &a, &b, &op)) != 3)
         return ERROR;
-    if (op == '/' && b == 0)
+    if (op == '/' && b == 0) {
+        if ((printf("%s\n", "error")) < 0)
+            return ERROR;
         return ERROR;
+    }
     if ((printf("%d\n", (operations(a, b, op)))) < 0)
         return ERROR;
     return SUCCESS;
