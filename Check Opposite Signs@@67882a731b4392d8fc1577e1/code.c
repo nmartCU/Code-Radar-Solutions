@@ -9,7 +9,8 @@ int main(int argc, char *const av [])
     int a, b = 0;
     if ((scanf("%d %d \n", &a, &b)) != 2)
         return ERROR;
-    if ((printf("%s\n", (((a < 0 && b > 0) || (a > 0 && b < 0)) ? "True" : "False"))) < 0)
+    // ((a < 0 && b > 0) || (a > 0 && b < 0))
+    if ((printf("%s\n", ((a * b > 0 ) ? "True" : "False"))) < 0)
         return ERROR;
     return SUCCESS;
 }
