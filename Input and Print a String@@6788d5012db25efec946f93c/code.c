@@ -1,6 +1,9 @@
 // Your code here...
 #include <stdio.h>
 
+#define ERROR 1
+#define SUCCESS 0
+
 
 int main(int main, char *const av[])
 {
