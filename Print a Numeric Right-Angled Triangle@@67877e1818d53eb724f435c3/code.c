@@ -20,8 +20,6 @@ int main(int argc, char *const argv [])
                 if((printf(" ", j + 1)) < 0)
                     return ERROR;
             }
-            if((printf("%d ", j + 1)) < 0)
-                return ERROR;
         }
         if((printf("\n")) < 0)
             return ERROR;
