@@ -7,7 +7,7 @@
 int main(int argc, char *const av [])
 {
     float a = 0;
-    if ((scanf("%f \n", &a)) != 1)
+    if ((scanf("%0.2f \n", &a)) != 1)
         return ERROR;
     if ((printf("You entered: %0.4f\n", a)) < 0)
         return ERROR;
