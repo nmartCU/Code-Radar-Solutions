@@ -14,7 +14,7 @@ int main(int argc, char *const argv[])
     int x = 0;
     for (int i = 1; i <= n; i++) {
         for (int j = 1; j <= i; j++) {
-            if ((printf("%d ", (i - j) ? 1 : 0)) < 0)
+            if ((printf("%d ", (n - j) ? 1 : 0)) < 0)
                 return ERROR;
         }
         if ((printf("\n")) < 0)
