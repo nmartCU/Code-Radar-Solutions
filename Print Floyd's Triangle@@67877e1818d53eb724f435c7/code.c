@@ -1,5 +1,4 @@
 // Your code here...
-// Your code here...
 #include <stdio.h>
 #include <string.h>
 
@@ -9,14 +8,15 @@
 int main(int argc, char *const argv[])
 {
     int n = 0;
-    
+    int x = 0;
+
     if (scanf("%d", &n) != 1)
         return ERROR;
-    
     for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n - i ; j++) {
-            if ((printf("%d ", j + i)) < 0)
+        for (int j = 0; j <= i ; j++) {
+            if ((printf("%d ", x + 1)) < 0)
                 return ERROR;
+            x++;
         }
         if ((printf("\n")) < 0)
             return ERROR;
