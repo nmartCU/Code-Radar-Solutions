@@ -9,11 +9,13 @@
 
 int main(int argc, char *const argv[])
 {
-    char str[MAX_LENGTH] = 0;
+    char str[MAX_LENGTH] = {0};
 
     if (scanf("%s", &str) != 1)
         return ERROR;
-    if (printf(strrev(str)) < 0)
-        return ERROR;
+    for (int i = strlen(str); i > 1; i--) {
+        if (printf("%c" , str[i]) < 0)
+            return ERROR;
+    }
     return SUCCESS;
 }
