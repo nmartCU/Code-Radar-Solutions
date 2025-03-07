@@ -9,7 +9,7 @@
 int main(int argc, char *const argv[])
 {
     char c = 0;
-    if ((scanf("%d %d %d \n", &a, &b, &c)) != 3)
+    if ((scanf("%c \n", &c)) != 1)
         return ERROR;
     char lower = tolower(c);
     bool isVowel = (isalpha(lower) && (lower_ch == 'a' || lower_ch == 'e' || lower_ch == 'i' || lower_ch == 'o' || lower_ch == 'u' || lower_ch == 'y' ));
