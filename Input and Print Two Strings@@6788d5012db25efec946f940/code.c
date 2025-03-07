@@ -1,6 +1,5 @@
 // Your code here...
 
-// Your code here...
 #include <stdio.h>
 
 #define ERROR 1
