@@ -18,7 +18,7 @@ int main(int argc, char *const argv[])
                 if ((printf(" ")) < 0)
                     return ERROR;
             } else {
-                if ((printf("%d", j + 1)) < 0)
+                if ((printf("%d ", j + 1)) < 0)
                     return ERROR;
             }
         }
