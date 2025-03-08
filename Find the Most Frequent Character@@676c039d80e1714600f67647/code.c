@@ -28,6 +28,7 @@ int main(int argc, char *const argv[])
             pos = occur[i];
         }
     }
+    printf("pos: %d", pos);
     if (printf("%d", str[pos]) < 0) {
         return ERROR;
     }
