@@ -18,7 +18,7 @@ int main(int argc, char *const argv[])
         return ERROR;
     for (int i = 0; i < strlen(str); i++) {
         char lower = tolower(str[i]);
-        if ((strrchr("aeiouy", lower)) != NULL)
+        if ((strrchr("aeiou", lower)) != NULL)
             ++vowels;
     }
     if ((printf("%d\n", vowels)) < 0)
