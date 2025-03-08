@@ -12,6 +12,7 @@
 int main(int argc, char *const argv[])
 {
     char *str[2] = {NULL, NULL};
+    char *result = NULL;
     size_t len[2] = {0, 0};
     ssize_t read[2] = {0, 0};
     int size = 0;
@@ -25,14 +26,22 @@ int main(int argc, char *const argv[])
         }
         if (str[i] && read[i] > 0 && str[i][read[i] - 1] == '\n') {
             str[i][read[i] - 1] = '\0';
+            --read[i];
         }
     }
-    if (printf("%s", str[0]) < 0) {
+    int size = read[0] + read[1];
+    if ((result = malloc(sizeof(char) * (size + 1))) == NULL) {
         free(str[0]);
         free(str[1]);
         return ERROR;
     }
-    if (printf("%s\n", str[1]) < 0) {
+    result[size] = '\0';
+    for (int i = 0; str[0][i] != '\0'; i++)
+        result[i] = str[0][i];
+    for (int j = 0; str[1][i] != '\0'; j++) {
+        result[i + read[0]] = str[1][i];
+    }
+    if (printf("%s", result) < 0) {
         free(str[0]);
         free(str[1]);
         return ERROR;
