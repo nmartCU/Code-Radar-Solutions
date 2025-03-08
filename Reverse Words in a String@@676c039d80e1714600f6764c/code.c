@@ -11,12 +11,11 @@
 void reverse(char *str, int start, int end)
 {
     for (int i = start; i < end; i++) {
+        printf("start: %d end: %d i: %d %s\n", start, end, i, str);
         char temp = str[i];
-        str[i] = str[end];
-        str[end] = temp;
-        --end; 
+        str[i] = str[end - i];
+        str[end - i] = temp;
     }
-    printf("start: %d end: %d %s\n", start, end, str);
 }
 
 int main(int argc, char *const argv[])
