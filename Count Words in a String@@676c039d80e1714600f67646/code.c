@@ -26,7 +26,7 @@ int main(int argc, char *const argv[])
         if (str[i] == ' ' || str[i] == '\t') {
             isWord = true;
         }
-        else if (isWord) {
+        else if (!isWord) {
             isWord = false;
             wordCount++;
         }
