@@ -31,7 +31,7 @@ int main(int argc, char *const argv[])
     res[read] = '\0';
     for (int i = 0; i < read; i++) {
         printf("read: %d i: %d %c\n", read, i, str[i]);
-        if (str[i] != ' ' || str[i] != '\t') {
+        if (str[i] != ' ' || str[i] != '\t' || str[i] != '\0') {
             printf("Inside");
             res[i] = str[i];
         }
