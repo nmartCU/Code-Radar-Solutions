@@ -19,5 +19,7 @@ int main(int argc, char *const argv [])
             if ((printf("*")) < 0)
                 return ERROR;
         }
+        if ((printf("\n")) < 0)
+            return ERROR;
     }
 }
