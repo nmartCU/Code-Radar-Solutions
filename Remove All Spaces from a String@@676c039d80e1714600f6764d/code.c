@@ -32,7 +32,7 @@ int main(int argc, char *const argv[])
     for (int i = 0; i < read; i++) {
         printf("read: %d i: %d %c\n", read, i, str[i]);
         if (str[i] != ' ' || str[i] != '\t' || str[i] != '\0') {
-            printf("Inside");
+            printf("Inside\n");
             res[i] = str[i];
         }
     }
