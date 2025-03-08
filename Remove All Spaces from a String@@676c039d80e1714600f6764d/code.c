@@ -15,8 +15,6 @@ int main(int argc, char *const argv[])
     char *res = NULL;
     size_t len = 0;
     ssize_t read = 0;
-    int size = 0;
-    int lenghtWord = 0;
 
     if ((read = getline(&str, &len, stdin)) == -1) {
         free(str);
@@ -30,7 +28,7 @@ int main(int argc, char *const argv[])
         free(str);
         return ERROR;
     }
-    for (int i = 0; i <= read; i++) {
+    for (int i = 0; i < read; i++) {
         if (str[i] == ' ' || str[i] == '\t')
             continue;
         res[i] = str[i];
