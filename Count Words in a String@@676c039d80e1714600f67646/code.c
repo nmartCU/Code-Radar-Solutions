@@ -12,17 +12,30 @@
 
 int main(int argc, char *const argv[])
 {
-    char str[MAX_LENGTH] = {0};
-    int j = 0;
-
-    if (scanf("%s", str) != 1)
+    char *str = NULL;
+    size_t len = 0;
+    ssize_t read;
+    int wordCount = 0;
+    bool isWord = false;
+        
+    if ((read = getline(&str, &len, stdin)) == 1) {
+        free(str);
         return ERROR;
+    };
+    
     for (int i = 0; str[i] != '\0'; i++) {
         if (str[i] == ' ' || str[i] == '\t') {
-            ++j;
+            inWord = true;
+        }
+        else if (inWord) {
+            inWord = false;
+            wordCount++;
         }
     }
-    if ((printf("%d\n", j)) < 0)
+    if (printf("%d\n", wordCount) < 0) {
+        free(str);
         return ERROR;
+    }    
+    free(str);
     return SUCCESS;
 }
