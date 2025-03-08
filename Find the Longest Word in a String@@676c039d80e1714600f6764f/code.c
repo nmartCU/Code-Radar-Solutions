@@ -27,7 +27,7 @@ int main(int argc, char *const argv[])
         --read;
     }
     for (int i = 0; i < read; i++) {
-        for (int j = 0; str[i] && str[i] == ' '; j++) {
+        for (int j = 0; str[i] && str[i] != ' '; j++) {
             ++sizeWord;
             ++i;
         }
