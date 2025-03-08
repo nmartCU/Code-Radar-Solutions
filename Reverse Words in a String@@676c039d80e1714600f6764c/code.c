@@ -39,7 +39,7 @@ int main(int argc, char *const argv[])
         printf("size= %d i= %d lentgh: %d caract: %c \n ", read, i, lenghtWord, str[i]);
         if (str[i] == ' ' || str[i] == '\0') {
             reverse(str, lenghtWord, i - 1);
-            lenghtWord = i;
+            lenghtWord = i + 1;
         }
     }
     if ((printf("%s\n", str)) < 0) {
