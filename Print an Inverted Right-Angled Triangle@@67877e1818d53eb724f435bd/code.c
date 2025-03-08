@@ -14,7 +14,7 @@ int main(int argc, char *const argv[])
     if ((printf("* ")) < 0)
         return ERROR;
     for (int i = a; i > 0; i--) {
-        for (int j = i; j > 0; j--) {
+        for (int j = i; j > a; j--) {
             if ((printf("* ")) < 0)
                 return ERROR;
         }
