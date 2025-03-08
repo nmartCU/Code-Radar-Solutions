@@ -28,7 +28,7 @@ int main(int argc, char *const argv[])
                 free(str[j]);
             return ERROR;
         }
-        if (str[i] && read[i] > 0 && str[read[i] - 1] == '\n') {
+        if (str[i] && read[i] > 0 && str[i][read[i] - 1] == '\n') {
             str[read[i] - 1] = '\0';
             --read[i];
         }
