@@ -38,8 +38,10 @@ int main(int argc, char *const argv[])
     }
     if ((printf("%s\n", res)) < 0) {
         free(str);
+        free(res);
         return ERROR;
     }
     free(str);
+    free(res);
     return SUCCESS;
 }
