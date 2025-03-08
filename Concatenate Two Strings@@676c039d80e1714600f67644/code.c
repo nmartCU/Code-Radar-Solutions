@@ -27,19 +27,14 @@ int main(int argc, char *const argv[])
             str[i][read[i] - 1] = '\0';
         }
     }
-    
-    for (int i = 0; str[0][i] != '\0'; i++) {
-        if (printf("%c\n", str[0][i]) < 0) {
-            free(str[0]);
-            free(str[1]);
-        }
+    if (printf("%s", str[0]) < 0) {
+        free(str[0]);
+        free(str[1]);
         return ERROR;
     }
-    for (int i = 0; str[1][i] != '\0'; i++) {
-        if (printf("%c\n", str[1][i]) < 0) {
-            free(str[0]);
-            free(str[1]);
-        }
+    if (printf("%s\n", str[1][i]) < 0) {
+        free(str[0]);
+        free(str[1]);
         return ERROR;
     }
     free(str[0]);
