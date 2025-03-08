@@ -23,7 +23,7 @@ int main(int argc, char *const argv[])
     ssize_t read[3] = {0, 0, 0};
 
     for (int i = 0; i < 3; i++) {
-        if ((read = getline(str, len, stdin)) == -1) {
+        if ((read[i] = getline(str, len, stdin)) == -1) {
             for (int j = 0; j < i; j++)
                 free(str[j]);
             return ERROR;
