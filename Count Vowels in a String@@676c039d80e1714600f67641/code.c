@@ -18,7 +18,6 @@ int main(int argc, char *const argv[])
     for (int i = 0; i < strlen(str); i++) {
         if ((strrchr("aeiouy", str[i])) != NULL)
             ++vowels;
-        return ERROR;
     }
     if ((printf("%d\n", vowels)) < 0)
         return ERROR;
