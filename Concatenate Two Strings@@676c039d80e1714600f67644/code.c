@@ -29,7 +29,7 @@ int main(int argc, char *const argv[])
             --read[i];
         }
     }
-    int size = read[0] + read[1];
+    size = read[0] + read[1];
     if ((result = malloc(sizeof(char) * (size + 1))) == NULL) {
         free(str[0]);
         free(str[1]);
