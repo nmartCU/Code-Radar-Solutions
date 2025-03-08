@@ -32,7 +32,7 @@ int main(int argc, char *const argv[])
         free(str[1]);
         return ERROR;
     }
-    if (printf("%s\n", str[1][i]) < 0) {
+    if (printf("%s\n", str[1]) < 0) {
         free(str[0]);
         free(str[1]);
         return ERROR;
