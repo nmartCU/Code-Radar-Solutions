@@ -28,6 +28,7 @@ int main(int argc, char *const argv[])
         free(str);
         return ERROR;
     }
+    res[read] = '\0';
     for (int i = 0; i < read; i++) {
         printf("%c ", str[i]);
         if (str[i] == ' ' || str[i] == '\t')
