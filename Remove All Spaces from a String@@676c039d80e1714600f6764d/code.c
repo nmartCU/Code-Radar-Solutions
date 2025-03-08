@@ -30,7 +30,7 @@ int main(int argc, char *const argv[])
     }
     res[read] = '\0';
     for (int i = 0; i < read; i++) {
-        printf("%c", str[i]);
+        printf("%c\n", str[i]);
         if (str[i] == ' ' || str[i] == '\t') {
             printf("Inside");
             continue;
