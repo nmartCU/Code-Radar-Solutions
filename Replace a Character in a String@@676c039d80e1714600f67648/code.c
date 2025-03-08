@@ -46,7 +46,7 @@ int main(int argc, char *const argv[])
             result[i] = current;
         }
     }
-    if (printf("%c", letter) < 0) {
+    if (printf("%s\n", result) < 0) {
         my_free(str);
         free(result);
         return ERROR;
