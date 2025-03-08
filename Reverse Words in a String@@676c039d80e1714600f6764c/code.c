@@ -32,7 +32,7 @@ int main(int argc, char *const argv[])
     size = read - 1;
     for (int i = 0; i < size; i++) {
         if (str[i] == ' ') {
-            reverse(str, lenghtWord, i)
+            reverse(str, lenghtWord, i);
             lenghtWord += i; 
         }
     }
