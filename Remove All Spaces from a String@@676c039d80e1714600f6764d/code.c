@@ -30,8 +30,11 @@ int main(int argc, char *const argv[])
     }
     res[read] = '\0';
     for (int i = 0; i < read; i++) {
-        if (str[i] != ' ' || str[i] != '\t')
+        printf("read: %d i: %d %c\n", read, i, str[i]);
+        if (str[i] != ' ' || str[i] != '\t') {
+            printf("Inside")
             res[i] = str[i];
+        }
     }
     if ((printf("%s\n", res)) < 0) {
         free(str);
