@@ -29,10 +29,9 @@ int main(int argc, char *const argv[])
         return ERROR;
     }
     res[read] = '\0';
-    printf("str: %s size:%d \n", str, strlen(str) );
     for (int i = 0; i < read; i++) {
         printf("read: %d i: %d %c\n", read, i, str[i]);
-        if (str[i] != ' ' || str[i] != '\0') {
+        if (str[i] != ' ') {
             printf("Inside %c\n", str[i]);
             res[i] = str[i];
         }
