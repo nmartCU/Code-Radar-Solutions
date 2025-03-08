@@ -10,7 +10,7 @@
 
 void reverse(char *str, int start, int end)
 {
-    while (start < end ) {
+    while (start < end) {
         char temp = str[start];
         str[start] = str[end];
         str[end] = temp;
@@ -33,8 +33,8 @@ int main(int argc, char *const argv[])
     }
     size = read - 1;
     for (int i = 0; i < size; i++) {
-        if (str[i] == ' ') {
-            reverse(str, lenghtWord, i - 1);
+        if (str[i + 1] == ' ') {
+            reverse(str, lenghtWord, i);
             lenghtWord = i; 
         }
     }
