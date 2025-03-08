@@ -33,7 +33,7 @@ int main(int argc, char *const argv[])
         printf("%c", str[i]);
         if (str[i] == ' ' || str[i] == '\t') {
             printf("Inside");
-            continue:
+            continue;
         }
         res[i] = str[i];
     }
