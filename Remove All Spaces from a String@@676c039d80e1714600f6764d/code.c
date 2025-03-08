@@ -15,6 +15,7 @@ int main(int argc, char *const argv[])
     char *res = NULL;
     size_t len = 0;
     ssize_t read = 0;
+    int index = 0;
 
     if ((read = getline(&str, &len, stdin)) == -1) {
         free(str);
@@ -33,7 +34,8 @@ int main(int argc, char *const argv[])
         printf("read: %d i: %d %c\n", read, i, str[i]);
         if (str[i] != ' ') {
             printf("Inside %c\n res:%s\n", str[i], res);
-            res[i] = str[i];
+            res[index] = str[i];
+            ++index;
         }
     }
     if ((printf("%s\n", res)) < 0) {
