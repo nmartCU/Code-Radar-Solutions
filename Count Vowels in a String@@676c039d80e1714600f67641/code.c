@@ -16,7 +16,8 @@ int main(int argc, char *const argv[])
     if (scanf("%s", str) != 1)
         return ERROR;
     for (int i = 0; i < strlen(str); i++) {
-        if ((strrchr("aeiouy", str[i])) != NULL)
+        char lower = tolower(str[i]);
+        if ((strrchr("aeiouy", lower)) != NULL)
             ++vowels;
     }
     if ((printf("%d\n", vowels)) < 0)
