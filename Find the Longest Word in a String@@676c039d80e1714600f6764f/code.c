@@ -33,10 +33,10 @@ int main(int argc, char *const argv[])
         }
         if (sizeWord > max) {
             max = sizeWord;
-            start = i - sizeWord;
+            start = i - max;
         }
     }
-    if ((printf("%s\n", &str[start] + sizeWord)))
+    if ((printf("%.*s\n", max, &str[start])))
     free(str);
     return SUCCESS;
 }
