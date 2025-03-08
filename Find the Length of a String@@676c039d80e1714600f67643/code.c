@@ -20,7 +20,8 @@ int main(int argc, char *const argv[])
         if (printf("%d\n", size) < 0) {
             free(str);
             return ERROR;
-        } 
+        }
+        return ERROR;
     };
     
     for (int i = 0; str[i] != '\0'; i++) {
