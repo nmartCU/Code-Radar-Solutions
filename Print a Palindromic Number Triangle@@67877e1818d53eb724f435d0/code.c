@@ -20,7 +20,7 @@ int main(int argc, char *const argv[])
             if ((printf("%d", j)) < 0)
                 return ERROR; 
         }
-        for (int j = i - 1; j >= i; j--) {
+        for (int j = i - 1; j >= 1; j--) {
             if ((printf("%d", j)) < 0)
                 return ERROR; 
         }
