@@ -15,7 +15,7 @@ int main(int argc, char *const argv[])
     size_t len = 0;
     ssize_t read = 0;
     int index = 0;
-    int size = 0;
+    int sizeWord = 0;
     int start = 0;
     int max = 0;
 
@@ -28,13 +28,8 @@ int main(int argc, char *const argv[])
         --read;
     }
     for (int i = 0; i < read; i++) {
-        for (int j = i; str[j] && str[j] != ' '; j++)
-            ++size;
-        if (size > max) {
-            max = size;
-            start = i;
-            size = 0;
-        }
+        for (sizeWord = 0; str[i] && str[i] != ' '; ++sizeWord);
+        printf("%d ", sizeWord)
     }
     printf("%d %d", max, start);
     free(str);
