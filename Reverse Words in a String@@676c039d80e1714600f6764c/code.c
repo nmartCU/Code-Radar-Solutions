@@ -15,6 +15,7 @@ void reverse(char *str, int start, int end)
         str[i] = str[end - i];
         str[end - i] = temp; 
     }
+    printf("%s", str)
 }
 
 int main(int argc, char *const argv[])
@@ -33,7 +34,7 @@ int main(int argc, char *const argv[])
     for (int i = 0; i < size; i++) {
         if (str[i] == ' ') {
             reverse(str, lenghtWord, i - 1);
-            lenghtWord += i + 1; 
+            lenghtWord += i; 
         }
     }
     if ((printf("%s\n", str)) < 0) {
