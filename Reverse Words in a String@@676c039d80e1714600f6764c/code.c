@@ -31,6 +31,10 @@ int main(int argc, char *const argv[])
         free(str);
         return ERROR;
     }
+    if (str[read - 1] == '\n') {
+        str[read - 1] = '\0';
+        --read;
+    }
     size = read - 1;
     for (int i = 0; i < size; i++) {
         if (str[i + 1] == ' ' || str[i + 1] == '\0') {
