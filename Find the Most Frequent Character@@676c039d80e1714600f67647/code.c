@@ -21,11 +21,12 @@ int main(int argc, char *const argv[])
         free(str);
         return ERROR;
     }
-    
+    for (; *str; ++str)
+        *str = tolower(*str)
     for (int i = 0; str[i]; i++) {
         char current = str[i];
         ++occur[current];
-        if (occur[current] > max || (occur[current] == current && current < letter)) {
+        if (occur[current] > max || (occur[current] == max && current < letter)) {
             max = occur[current];
             letter = str[i];
         }
