@@ -14,22 +14,22 @@ int main(int argc, char *const argv[])
     size_t len = 0;
     ssize_t read = 0;
     int occur[MAX_LENGTH] = {0};
-    int pos = 0;
+    int max = 0;
+    char letter = 0;
 
     if ((read = getline(&str, &len, stdin)) == -1) {
         free(str);
         return ERROR;
     }
     for (int i = 0; str[i]; i++) {
-        ++occur[str[i]];
-    }
-    for (int i = 1; i <= str[i]; i++) {
-        if (occur[str[i]] > occur[str[i] - 1]) {
-            pos = occur[i];
+        char current = str[i];
+        ++occur[current];
+        if (occur[current] > max) {
+            max = occur[current];
+            letter = str[i];
         }
     }
-    printf("pos: %d", pos);
-    if (printf("%d", str[pos]) < 0) {
+    if (printf("%c", letter) < 0) {
         return ERROR;
     }
     return SUCCESS;
