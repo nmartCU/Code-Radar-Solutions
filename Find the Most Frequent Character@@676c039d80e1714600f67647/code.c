@@ -22,7 +22,7 @@ int main(int argc, char *const argv[])
         return ERROR;
     }
     for (; *str; ++str)
-        *str = tolower(*str)
+        *str = tolower(*str);
     for (int i = 0; str[i]; i++) {
         char current = str[i];
         ++occur[current];
