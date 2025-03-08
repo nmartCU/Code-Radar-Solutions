@@ -8,23 +8,24 @@
 #define ERROR 1
 #define SUCCESS 0
 #define MAX_LENGTH 256
+#define INPUT_LENGTH 3
 
 void my_free(char **str)
 {
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < INPUT_LENGTH; i++)
         free(str[i]);
 }
 
 int main(int argc, char *const argv[])
 {
-    char *str[3] = {NULL, NULL, NULL};
+    char *str[INPUT_LENGTH] = {NULL, NULL, NULL};
     char *result = NULL;
-    size_t len[3] = {0, 0, 0};
-    ssize_t read[3] = {0, 0, 0};
+    size_t len[INPUT_LENGTH] = {0, 0, 0};
+    ssize_t read[INPUT_LENGTH] = {0, 0, 0};
     char toreplace = 0;
     char replaced = 0;
 
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < INPUT_LENGTH; i++) {
         if ((read[i] = getline(&str[i], &len[i], stdin)) == -1) {
             for (int j = 0; j < i; j++)
                 free(str[j]);
