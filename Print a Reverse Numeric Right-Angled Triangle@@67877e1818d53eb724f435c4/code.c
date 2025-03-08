@@ -12,7 +12,7 @@ int main(int argc, char *const argv [])
         return ERROR;
     
     for (int i = 1; i <= a; i++) {
-        for (int j = 1; i <= a - 1; j++) {
+        for (int j = 1; j <= a - 1; j++) {
             if ((printf("%d ", j)) < 0)
                 return ERROR;
         }
