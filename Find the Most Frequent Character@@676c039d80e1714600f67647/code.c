@@ -12,7 +12,7 @@ int main(int argc, char *const argv[])
 {
     char *str = NULL;
     size_t len = 0;
-    ssize_t read = 0:
+    ssize_t read = 0;
     int occur[MAX_LENGTH] = {0};
     int pos = 0;
 
