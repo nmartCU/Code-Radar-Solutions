@@ -20,8 +20,8 @@ int main(int argc, char *const argv[])
     }
     printf("%d", read);
     for (int i = 0; i < read - 1; i++) {
-        char temp = str[read - i];
-        str[read - i] = str[i];
+        char temp = str[read - 1 - i];
+        str[read - 1 - i] = str[i];
         str[i] = temp; 
     }
     if ((printf("%s\n", str)) < 0) {
