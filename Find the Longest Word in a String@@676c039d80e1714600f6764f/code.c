@@ -28,10 +28,11 @@ int main(int argc, char *const argv[])
         --read;
     }
     for (int i = 0; i < read; i++) {
-        for (sizeWord = 0; str[i] && str[i] != ' '; ++sizeWord);
+        for (sizeWord = 0; str[i] && str[i] != ' '; ++i) {
+            ++sizeWord;
+        }
         printf("%d \n", sizeWord);
     }
-    printf("%d %d", max, start);
     free(str);
     return SUCCESS;
 }
