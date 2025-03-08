@@ -17,7 +17,7 @@ int main(int argc, char *const argv[])
 
     if (scanf("%s", str) != 1)
         return ERROR;
-    for (int i = 0; i < j; i++) {
+    for (int i = 0; i < strlen(str) - 1; i++) {
         if (str[i] == ' ') {
             ++j;
         }
