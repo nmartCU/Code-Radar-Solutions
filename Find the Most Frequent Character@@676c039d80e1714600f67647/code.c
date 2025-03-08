@@ -28,7 +28,7 @@ int main(int argc, char *const argv[])
             pos = occur[i];
         }
     }
-    if (printf("%d", occur[pos]) < 0) {
+    if (printf("%d", str[pos]) < 0) {
         return ERROR;
     }
     return SUCCESS;
