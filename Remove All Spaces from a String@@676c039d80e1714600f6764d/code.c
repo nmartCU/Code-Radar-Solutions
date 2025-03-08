@@ -32,10 +32,10 @@ int main(int argc, char *const argv[])
     for (int i = 0; i < read; i++) {
         printf("read: %d i: %d %c\n", read, i, str[i]);
         if (str[i] == ' ' || str[i] == '\t') {
-            printf("Inside");
+            printf("Inside\n");
             continue;
         }
-        printf("Swap");
+        printf("Swap\n");
         res[i] = str[i];
     }
     if ((printf("%s\n", res)) < 0) {
