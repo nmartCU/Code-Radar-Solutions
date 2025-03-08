@@ -21,7 +21,7 @@ int main(int argc, char *const argv[])
         return ERROR;
     }
     for (int i = 0; str[i]; i++) {
-        ++occur[i];
+        ++occur[str[i]];
     }
     for (int i = 1; i <= occur[i]; i++) {
         if (occur[i] > occur[i - 1]) {
