@@ -13,7 +13,7 @@ int main(int argc, char *const argv[])
 {
     char *str = NULL;
     size_t len = 0;
-    ssize_t read;
+    ssize_t read = 0;
     int wordCount = 0;
     bool inWord = false;
         
