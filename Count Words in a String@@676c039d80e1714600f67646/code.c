@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define ERROR 1
 #define SUCCESS 0
@@ -23,10 +24,10 @@ int main(int argc, char *const argv[])
     
     for (int i = 0; str[i] != '\0'; i++) {
         if (str[i] == ' ' || str[i] == '\t') {
-            inWord = true;
+            isWord = true;
         }
-        else if (inWord) {
-            inWord = false;
+        else if (isWord) {
+            isWord = false;
             wordCount++;
         }
     }
