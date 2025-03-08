@@ -35,9 +35,8 @@ int main(int argc, char *const argv[])
         str[read - 1] = '\0';
         --read;
     }
-    size = read - 1;
     for (int i = 0; i < read; i++) {
-        printf("size= %d i= %d lentgh: %d\n", size, i, lenghtWord);
+        printf("size= %d i= %d lentgh: %d\n", read, i, lenghtWord);
         if (str[i + 1] == ' ' || str[i + 1] == '\0') {
             reverse(str, lenghtWord, i);
             lenghtWord = i;
