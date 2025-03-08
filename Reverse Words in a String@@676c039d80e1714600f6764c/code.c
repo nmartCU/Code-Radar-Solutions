@@ -37,7 +37,7 @@ int main(int argc, char *const argv[])
     }
     size = read - 1;
     for (int i = 0; i < size; i++) {
-        printf("size= %d i= %d lentgh: %d", i, size, lenghtWord);
+        printf("size= %d i= %d lentgh: %d\n", i, size, lenghtWord);
         if (str[i + 1] == ' ' || str[i + 1] == '\0') {
             reverse(str, lenghtWord, i);
             lenghtWord = i;
