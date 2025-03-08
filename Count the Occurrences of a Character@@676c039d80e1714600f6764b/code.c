@@ -20,7 +20,6 @@ int main(int argc, char *const argv[])
     char *str[INPUT_LENGTH] = {NULL, NULL};
     size_t len[INPUT_LENGTH] = {0};
     ssize_t read[INPUT_LENGTH] = {0};
-    int size = 0;
     int count = 0;
     char tocheck = 0; 
 
@@ -34,9 +33,8 @@ int main(int argc, char *const argv[])
             --read[i];
         }
     }
-    size = strlen(str[0]) - 1;
     tocheck = str[1][0];
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < read[0]; i++) {
         if (tocheck == str[0][i])
             ++count;
     }
