@@ -34,7 +34,7 @@ int main(int argc, char *const argv[])
     for (int i = 0; i < size - 1; i++) {
         if (str[i] == ' ') {
             reverse(str, lenghtWord, i - 1);
-            lenghtWord = i; 
+            lenghtWord = i + 1; 
         }
     }
     if ((printf("%s\n", str)) < 0) {
