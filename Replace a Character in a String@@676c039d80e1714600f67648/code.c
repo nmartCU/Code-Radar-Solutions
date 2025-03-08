@@ -40,8 +40,8 @@ int main(int argc, char *const argv[])
     result[read[0]] = '\0';
     for (int i = 0; i < read[0]; i++) {
         char current = str[0][i];
-        if (current == str[1][i]) {
-            result[i] = str[2][i];
+        if (current == str[1][0]) {
+            result[i] = str[2][0];
         } else {
             result[i] = current;
         }
