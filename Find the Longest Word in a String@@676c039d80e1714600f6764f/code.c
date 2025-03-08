@@ -31,8 +31,13 @@ int main(int argc, char *const argv[])
         for (sizeWord = 0; str[i] && str[i] != ' '; ++i) {
             ++sizeWord;
         }
+        if (sizeWord > max) {
+            max = sizeWord;
+            start = i - sizeWord;
+        }
         printf("%d \n", sizeWord);
     }
+    printf("%d %d", sizeWord, start);
     free(str);
     return SUCCESS;
 }
