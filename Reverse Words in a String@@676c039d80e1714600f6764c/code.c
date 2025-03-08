@@ -18,6 +18,7 @@ int main(int argc, char *const argv[])
         free(str);
         return ERROR;
     }
+    printf("%d", read);
     for (int i = 0; i < read; i++) {
         char temp = str[read - i];
         str[read - i] = str[i];
