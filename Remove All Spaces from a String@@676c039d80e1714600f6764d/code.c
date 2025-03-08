@@ -35,7 +35,7 @@ int main(int argc, char *const argv[])
             continue;
         res[i] = str[i];
     }
-    if ((printf("%s\n", str)) < 0) {
+    if ((printf("%s\n", res)) < 0) {
         free(str);
         return ERROR;
     }
