@@ -31,10 +31,10 @@ int main(int argc, char *const argv[])
         return ERROR;
     }
     size = read - 1;
-    for (int i = 0; i < size - 1; i++) {
+    for (int i = 0; i < size; i++) {
         if (str[i] == ' ') {
             reverse(str, lenghtWord, i - 1);
-            lenghtWord = i + 1; 
+            lenghtWord = i; 
         }
     }
     if ((printf("%s\n", str)) < 0) {
