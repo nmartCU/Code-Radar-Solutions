@@ -29,7 +29,7 @@ int main(int argc, char *const argv[])
             return ERROR;
         }
         if (str[i] && read[i] > 0 && str[i][read[i] - 1] == '\n') {
-            str[read[i] - 1] = '\0';
+            str[i][read[i] - 1] = '\0';
             --read[i];
         }
     }
