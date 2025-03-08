@@ -17,11 +17,12 @@ int main(int argc, char *const argv[])
     if (scanf("%s", str) != 1)
         return ERROR;
     for (int i = 0; i < strlen(str); i++) {
-        if (str[i] != str[j++]) {
+        if (str[i] != str[j]) {
             if ((printf("No")) < 0)
                 return ERROR;
             return SUCCESS;
         }
+        ++j;
     }
     if ((printf("Yes")) < 0)
         return ERROR;
