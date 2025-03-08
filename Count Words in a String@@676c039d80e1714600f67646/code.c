@@ -15,7 +15,7 @@ int main(int argc, char *const argv[])
     size_t len = 0;
     ssize_t read;
     int wordCount = 0;
-    bool isWord = false;
+    bool inWord = false;
         
     if ((read = getline(&str, &len, stdin)) == -1) {
         free(str);
@@ -24,10 +24,11 @@ int main(int argc, char *const argv[])
     
     for (int i = 0; str[i] != '\0'; i++) {
         if (str[i] == ' ' || str[i] == '\t') {
-            isWord = true;
+            inWord = false;
+            continue;
         }
-        else if (!isWord) {
-            isWord = false;
+        if (!inWord) {
+            inWord = true;
             wordCount++;
         }
     }
