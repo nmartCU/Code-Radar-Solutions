@@ -17,7 +17,7 @@ int main(int argc, char *const argv[])
     int wordCount = 0;
     bool isWord = false;
         
-    if ((read = getline(&str, &len, stdin)) == 1) {
+    if ((read = getline(&str, &len, stdin)) == -1) {
         free(str);
         return ERROR;
     };
