@@ -14,7 +14,7 @@ int main(int argc, char *const argv[])
     size_t len = 0;
     ssize_t read = 0;
 
-    if ((read[i] = getline(&str, &len, stdin)) == -1) {
+    if ((read = getline(&str, &len, stdin)) == -1) {
         free(str);
         return ERROR;
     }
