@@ -36,12 +36,6 @@ int main(int argc, char *const argv[])
         }
     }
     printf("%d %d", max, start);
-    if ((printf("%s\n", res)) < 0) {
-        free(str);
-        free(res);
-        return ERROR;
-    }
     free(str);
-    free(res);
     return SUCCESS;
 }
