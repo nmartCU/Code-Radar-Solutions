@@ -17,8 +17,10 @@ int main(int argc, char *const argv[])
     int size = 0;
         
     if ((read = getline(&str, &len, stdin)) == -1) {
-        free(str);
-        return ERROR;
+        if (printf("%d\n", size) < 0) {
+            free(str);
+            return ERROR;
+        } 
     };
     
     for (int i = 0; str[i] != '\0'; i++) {
