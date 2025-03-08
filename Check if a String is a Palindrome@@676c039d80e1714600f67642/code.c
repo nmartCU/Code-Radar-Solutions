@@ -16,8 +16,9 @@ int main(int argc, char *const argv[])
 
     if (scanf("%s", str) != 1)
         return ERROR;
+    j = strlen(str) - 1;
     for (int i = 0; i < strlen(str) - 1; i++) {
-        if (str[i] != str[j++]) {
+        if (str[i] != str[j--]) {
             if ((printf("No")) < 0)
                 return ERROR;
             return SUCCESS;
