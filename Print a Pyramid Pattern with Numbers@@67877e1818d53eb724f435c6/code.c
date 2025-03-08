@@ -17,6 +17,8 @@ int main(int argc, char *const argv[])
             if ((printf("%d ", j)) < 0)
                 return ERROR;
         }
+        if ((printf("\n")) < 0)
+            return ERROR;
     }
     return SUCCESS;
 }
