@@ -11,7 +11,7 @@
 
 void my_free(char **str)
 {
-    for (int i = 0; str[i] ; i++)
+    for (int i = 0; i < 3 ; i++)
         free(str[i]);
 }
 
