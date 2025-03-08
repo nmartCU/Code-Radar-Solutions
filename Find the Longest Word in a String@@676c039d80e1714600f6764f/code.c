@@ -33,6 +33,7 @@ int main(int argc, char *const argv[])
         if (size > max) {
             max = size;
             start = i;
+            size = 0;
         }
     }
     printf("%d %d", max, start);
