@@ -39,7 +39,7 @@ int main(int argc, char *const argv[])
     for (int i = 0; i < size; i++) {
         if (str[i + 1] == ' ' || str[i + 1] == '\0') {
             reverse(str, lenghtWord, i);
-            lenghtWord = i + 1;
+            lenghtWord = i;
         }
     }
     if ((printf("%s\n", str)) < 0) {
