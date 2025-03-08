@@ -21,6 +21,8 @@ int main(int argc, char *const argv[])
     char *result = NULL;
     size_t len[3] = {0, 0, 0};
     ssize_t read[3] = {0, 0, 0};
+    char toreplace = 0;
+    char replaced = 0;
 
     for (int i = 0; i < 3; i++) {
         if ((read[i] = getline(&str[i], &len[i], stdin)) == -1) {
@@ -38,10 +40,12 @@ int main(int argc, char *const argv[])
         return ERROR;
     }
     result[read[0]] = '\0';
+    toreplace = str[1][0];
+    replaced = str[2][0];
     for (int i = 0; i < read[0]; i++) {
         char current = str[0][i];
-        if (i < read[1] && i < read[2] && current == str[1][i]) {
-            result[i] = str[2][i];
+        if (current == toreplace) {
+            result[i] = replaced;
         } else {
             result[i] = current;
         }
