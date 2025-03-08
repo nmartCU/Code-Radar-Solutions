@@ -22,6 +22,7 @@ int main(int argc, char *const argv[])
     ssize_t read[INPUT_LENGTH] = {0};
     int size = 0;
     int count = 0;
+    char tocheck = 0; 
 
     for (int i = 0; i < INPUT_LENGTH; i++) {
         if ((read[i] = getline(&str[i], &len[i], stdin)) == -1) {
@@ -34,9 +35,9 @@ int main(int argc, char *const argv[])
         }
     }
     size = strlen(str[0]) - 1;
-
+    tocheck = str[1][0];
     for (int i = 0; i < size; i++) {
-        if (i < read[1] && str[1][i] == str[0][i])
+        if (tocheck == str[0][i])
             ++count;
     }
     my_free(str);
