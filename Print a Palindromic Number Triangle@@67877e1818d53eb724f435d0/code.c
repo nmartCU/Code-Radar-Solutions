@@ -16,15 +16,14 @@ int main(int argc, char *const argv[])
         for (int j = 1; j <= a - i; j++)
             if ((printf(" ")) < 0)
                 return ERROR;      
-        for (int j = 1; j <= i; j++) {
+        for (int j = 1; j <= i; j++)
             if ((printf("%d", j)) < 0)
                 return ERROR; 
-        }
-        for (int j = i - 1; j >= 1; j--) {
+        for (int j = i - 1; j >= 1; j--)
             if ((printf("%d", j)) < 0)
                 return ERROR; 
-        }
         if ((printf("\n")) < 0)
             return ERROR;
     }
+    return SUCCESS;
 }
