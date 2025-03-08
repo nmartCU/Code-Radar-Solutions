@@ -29,7 +29,7 @@ int main(int argc, char *const argv[])
     }
     for (int i = 0; i < read; i++) {
         for (sizeWord = 0; str[i] && str[i] != ' '; ++sizeWord);
-        printf("%d ", sizeWord)
+        printf("%d \n", sizeWord);
     }
     printf("%d %d", max, start);
     free(str);
