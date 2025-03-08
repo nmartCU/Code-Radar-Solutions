@@ -15,7 +15,6 @@ void reverse(char *str, int start, int end)
         str[i] = str[end - i];
         str[end - i] = temp; 
     }
-    printf("start: %d end: %d %s\n", str, start, end);
 }
 
 int main(int argc, char *const argv[])
