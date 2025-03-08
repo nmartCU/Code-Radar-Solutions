@@ -20,6 +20,7 @@ int main(int argc, char *const argv[])
         if (str[i] != str[j++]) {
             if ((printf("No")) < 0)
                 return ERROR;
+            return SUCESS;
         }
     }
     if ((printf("Yes")) < 0)
