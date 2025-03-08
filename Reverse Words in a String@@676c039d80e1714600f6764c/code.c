@@ -10,11 +10,12 @@
 
 void reverse(char *str, int start, int end)
 {
-    for (int i = start; i < end; i++) {
-        printf("start: %d end: %d i: %d %s\n", start, end, i, str);
-        char temp = str[i];
-        str[i] = str[end - i];
-        str[end - i] = temp;
+    while (start < end ) {
+        char temp = str[start];
+        str[start] = str[end];
+        str[end] = temp;
+        ++start;
+        --end;
     }
 }
 
