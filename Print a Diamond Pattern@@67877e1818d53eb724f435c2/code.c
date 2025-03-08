@@ -29,7 +29,7 @@ int main(int argc, char *const argv[])
     for (int i = 1; i <= a; i++)
         if (print(a, i) == ERROR)
             return ERROR;
-    for (int i = a - 1; i >= 1; i--)
+    for (int i = a; i > 1; i--)
         if (print(a, i) == ERROR)
             return ERROR; 
     return SUCCESS;
