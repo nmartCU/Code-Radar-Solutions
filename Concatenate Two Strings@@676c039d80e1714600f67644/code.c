@@ -44,9 +44,11 @@ int main(int argc, char *const argv[])
     if (printf("%s", result) < 0) {
         free(str[0]);
         free(str[1]);
+        free(result);
         return ERROR;
     }
     free(str[0]);
     free(str[1]);
+    free(result);
     return SUCCESS;
 }
