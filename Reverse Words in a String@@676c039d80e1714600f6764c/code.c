@@ -13,15 +13,16 @@ int main(int argc, char *const argv[])
     char *str = NULL;
     size_t len = 0;
     ssize_t read = 0;
+    int size = 0;
 
     if ((read = getline(&str, &len, stdin)) == -1) {
         free(str);
         return ERROR;
     }
-    printf("%d", read);
-    for (int i = 0; i < read - 1; i++) {
-        char temp = str[read - 1 - i];
-        str[read - 1 - i] = str[i];
+    size = read - 1;
+    for (int i = 0; i < size; i++) {
+        char temp = str[size - i];
+        str[size - i] = str[i];
         str[i] = temp; 
     }
     if ((printf("%s\n", str)) < 0) {
