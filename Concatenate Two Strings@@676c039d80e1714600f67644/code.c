@@ -42,7 +42,7 @@ int main(int argc, char *const argv[])
         }
         return ERROR;
     }
-    free(str[0])
+    free(str[0]);
     free(str[1]);
     return SUCCESS;
 }
