@@ -35,9 +35,8 @@ int main(int argc, char *const argv[])
             max = sizeWord;
             start = i - sizeWord;
         }
-        printf("%d \n", sizeWord);
     }
-    printf("%d %d", sizeWord, start);
+    if ((printf("%s\n", &str[start] + sizeWord)))
     free(str);
     return SUCCESS;
 }
