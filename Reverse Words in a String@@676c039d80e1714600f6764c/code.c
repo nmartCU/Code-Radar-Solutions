@@ -12,8 +12,9 @@ void reverse(char *str, int start, int end)
 {
     for (int i = start; i < end; i++) {
         char temp = str[i];
-        str[i] = str[end - i];
-        str[end - i] = temp; 
+        str[i] = str[end];
+        str[end] = temp;
+        --end; 
     }
     printf("start: %d end: %d %s\n", start, end, str);
 }
@@ -31,7 +32,7 @@ int main(int argc, char *const argv[])
         return ERROR;
     }
     size = read - 1;
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size - 1; i++) {
         if (str[i] == ' ') {
             reverse(str, lenghtWord, i - 1);
             lenghtWord = i; 
