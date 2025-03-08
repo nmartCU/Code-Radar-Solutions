@@ -35,6 +35,7 @@ int main(int argc, char *const argv[])
             printf("Inside");
             continue;
         }
+        printf("Swap");
         res[i] = str[i];
     }
     if ((printf("%s\n", res)) < 0) {
