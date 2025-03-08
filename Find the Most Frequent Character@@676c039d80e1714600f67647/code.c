@@ -23,8 +23,8 @@ int main(int argc, char *const argv[])
     for (int i = 0; str[i]; i++) {
         ++occur[str[i]];
     }
-    for (int i = 1; i <= occur[i]; i++) {
-        if (occur[i] > occur[i - 1]) {
+    for (int i = 1; i <= str[i]; i++) {
+        if (occur[str[i]] > occur[str[i] - 1]) {
             pos = occur[i];
         }
     }
