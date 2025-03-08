@@ -19,9 +19,9 @@ int main(int argc, char *const argv[])
         return ERROR;
     }
     for (int i = 0; i < read; i++) {
-        char temp = result[read - i];
-        result[read - i] = result[i];
-        result[i] = temp; 
+        char temp = str[read - i];
+        str[read - i] = str[i];
+        str[i] = temp; 
     }
     if ((printf("%s\n", str)) < 0) {
         free(str);
