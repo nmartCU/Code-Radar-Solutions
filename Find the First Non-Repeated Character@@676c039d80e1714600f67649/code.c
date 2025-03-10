@@ -31,6 +31,7 @@ int main(int argc, char *const argv[])
                 break;
             } else {
                 letter = c;
+                break;
             }
         }
         if (letter != '\0')
