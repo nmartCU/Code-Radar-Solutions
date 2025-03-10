@@ -30,7 +30,7 @@ int main(int argc, char *const argv[])
         free(str);
         return ERROR;
     }
-    if (read > 0 && str && str[read[i] - 1] == '\n') {
+    if (read > 0 && str && str[read - 1] == '\n') {
         str[read[i] - 1] = '\0';
         --read;
     }
