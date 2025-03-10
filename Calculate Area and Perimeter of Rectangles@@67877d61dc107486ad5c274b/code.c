@@ -31,7 +31,7 @@ int main(int argc, char *const argv[])
         }
     }
     for (int i = 0; i < n; i++) {
-        printf("Rectangle %d: Area = %0.2f, Perimeter = %0.2f\n", i + 1, (rectangles[i].length * rectangles[i].breadth), 2 * (rectangles[i].length + rectangles[i].breadth));
+        printf("Rectangle %d: Area = %0.2f, Perimeter = %0.2f\n", i + 1, rectangles[i].length * rectangles[i].breadth, 2 * (rectangles[i].length + rectangles[i].breadth));
     }
     free(rectangles);
     return SUCCESS;
