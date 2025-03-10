@@ -21,7 +21,7 @@ int main(int argc, char *const argv[])
         
     if ((read = getline(&str, &len, stdin)) == -1) {
         free(str);
-        if ((printf("No\n")) < 0)
+        if ((printf("Yes\n")) < 0)
             return ERROR;
         return ERROR;
     };
