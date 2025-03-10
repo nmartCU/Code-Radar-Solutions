@@ -59,13 +59,11 @@ int main(int argc, char *const argv[])
         free(temp);
         return ERROR;
     }
-    printf("Start is %s, begin: %s\n", temp, &str[1][start]);
     if ((strncat(temp, str[1], start)) == NULL) {
         my_free(str);
         free(temp);
         return ERROR;
     }
-    printf("v2 temp: %s str2: %s \n size1: %d sizestr1: %d \n", temp, str[0], strlen(temp), strlen(str[0]));
     if ((strcmp(str[0], temp)) == 0) {
         rotation = true;
     }
