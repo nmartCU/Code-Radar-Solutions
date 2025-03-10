@@ -11,7 +11,7 @@ int main(int argc, char *const argv[])
     char *str = NULL;
     size_t len = 0;
     ssize_t read = 0;
-    char c = 0;
+    char letter = 0;
     int count = 0;
 
     if ((read = getline(&str, &len, stdin)) == -1) {
@@ -23,18 +23,18 @@ int main(int argc, char *const argv[])
         --read;
     }
     for (int i = 0; str[i]; i++) {
-        c = str[i];
+        letter = str[i];
         for (int j = 0; str[j]; j++) {
-            if (c == str[j]) {
+            if (letter == str[j]) {
                 ++count;
                 break;
-            } 
+            }
         }
-        if (count == 1) {
+        if (count >= 1) {
             break;
         }
     }
-    if ((printf("%c\n", c == 0 ? '-' : c)) < 0) {
+    if ((printf("%c\n", count >= 1 ? '-' : c)) < 0) {
         free(str);
         return ERROR;
     }
