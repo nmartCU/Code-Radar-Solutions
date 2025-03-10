@@ -31,7 +31,7 @@ int main(int argc, char *const argv[])
     int n = 0;
     sub_t *students = NULL;
     float basic, premium, standard = 0.0f;
-    int user = 0, user2, user3 = 0;
+    int user = 0, user2 = 0, user3 = 0;
 
     if ((scanf("%d\n", &n)) != 1)
         return ERROR;
@@ -57,10 +57,8 @@ int main(int argc, char *const argv[])
         strcpy(students[i].name, temp);
         strcpy(students[i].id, temp2);
         if (strcmp(students[i].id, "Basic") == 0) {
-            printf("Inside ");
             basic += students[i].price;
             user += 1;
-            printf("%d\n", user);
         } else if (strcmp(students[i].id, "Standard") == 0) {
             standard += students[i].price;
             ++user2;
