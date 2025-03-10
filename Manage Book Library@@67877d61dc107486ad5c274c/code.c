@@ -37,7 +37,7 @@ int main(int argc, char *const argv[])
     for (int i = 0; i < n; i++) {
         char tempTitle[MAX_LENGTH] = {0};
         char tempAuthor[MAX_LENGTH] = {0};
-        if ((scanf("%sizeof %s %f", &tempTitle, &tempAuthor, &students[i].price)) != 3) {
+        if ((scanf("%s %s %d", &tempTitle, &tempAuthor, &students[i].price)) != 3) {
             my_free(students, i);
             return ERROR;
         }
