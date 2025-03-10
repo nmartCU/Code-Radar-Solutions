@@ -63,7 +63,7 @@ int main(int argc, char *const argv[])
     }
 
     my_free(students, n);
-    if ((printf("Cars: %0.2f, Trucks: %0.2f, Bikes: %0.2f\n", total[0], total[1], total[2])) < 0)
+    if ((printf("Cars: %0.2f, Trucks: %0.2f, Bikes: %0.2f\n", (float)total[0], (float)total[1], (float)total[2])) < 0)
         return ERROR;
     return SUCCESS;
 }
