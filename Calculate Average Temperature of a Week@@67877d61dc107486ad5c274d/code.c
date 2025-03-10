@@ -15,7 +15,7 @@ int main(int argc, char *const argv[])
         
     for (int i = 0; i < INPUT_LENGTH; i++) {
         int value = 0;
-        if ((scanf("%d ", value)) != 1)
+        if ((scanf("%d ", &value)) != 1)
             return ERROR;
         total += value;
     }
