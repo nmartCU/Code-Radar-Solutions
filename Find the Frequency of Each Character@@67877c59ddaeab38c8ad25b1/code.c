@@ -29,9 +29,11 @@ int main(int argc, char *const argv[])
         ++letters[str[i]];
     }
     for (int i = 0; str[i]; i++) {
-        if ((printf("%c: %d\n", str[i], letters[str[i]])) < 0) {
-            free(str);
-            return ERROR;
+        if (str[i] == letters[str[i]]) {
+            if ((printf("%c: %d\n", str[i], letters[str[i]])) < 0) {
+                free(str);
+                return ERROR;
+            }
         }
     }
     free(str);
