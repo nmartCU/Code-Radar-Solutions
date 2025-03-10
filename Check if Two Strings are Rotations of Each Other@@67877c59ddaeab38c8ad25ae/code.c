@@ -54,6 +54,18 @@ int main(int argc, char *const argv[])
         return ERROR;
     }
     temp[read[0]] = '\0';
+    if ((temp = strcpy(temp, str[1] + start)) == NULL) {
+        my_free(str);
+        free(temp);
+        return ERROR;
+    }
+    printf("temp: %s sizeTemp: %d \n", temp, strlen(temp));
+    if ((temp = strncat(temp, str[1], start)) == NULL) {
+        my_free(str);
+        free(temp);
+        return ERROR;
+    }
+    printf("v2 temp: %s sizeTemp: %d \n", temp, strlen(temp));
     if ((strcmp(str[0], strncat(strcat(temp, str[1] + start), str[1], start))) == 0) {
         rotation = true;
     }
