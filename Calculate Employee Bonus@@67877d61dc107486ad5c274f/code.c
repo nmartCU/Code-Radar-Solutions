@@ -30,7 +30,7 @@ int main(int argc, char *const argv[])
         
     if ((scanf("%d", &n)) != 1)
         return ERROR;
-    if ((students = malloc(sizeof(student_t) * (n))) == NULL)
+    if ((students = malloc(sizeof(emp_t) * (n))) == NULL)
         return ERROR;
     for (int i = 0; i < n; i++) {
         char temp[MAX_LENGTH] = {0};
