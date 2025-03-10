@@ -48,10 +48,7 @@ int main(int argc, char *const argv[])
     int index = 0;
         
     if ((read = getline(&str, &len, stdin)) == -1) {
-        if (printf("%d\n", size) < 0) {
-            free(str);
-            return ERROR;
-        }
+        free(str);
         return ERROR;
     };
     if (read > 0 && str && str[read - 1] == '\n') {
@@ -64,6 +61,7 @@ int main(int argc, char *const argv[])
         free(str);
         return ERROR;
     }
+    temp[read - words] = '\0';
     for (int i = 0; i < read; i++) {
         if (str[i] != ' ')
             temp[index] = str[i]; 
