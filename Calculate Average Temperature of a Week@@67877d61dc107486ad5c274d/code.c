@@ -15,7 +15,7 @@ int main(int argc, char *const argv[])
     int value = 0;
         
     for (int i = 0; i < INPUT_LENGTH; i++) {
-        if ((scanf("%d ", &value)) != 1) {
+        if ((scanf("%*s %d ", &value)) != 1) {
             printf("Error inside");
             return ERROR;
         }
