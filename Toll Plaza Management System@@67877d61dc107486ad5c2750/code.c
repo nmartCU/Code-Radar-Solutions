@@ -29,7 +29,7 @@ int main(int argc, char *const argv[])
 {
     int n = 0;
     car_t *students = NULL;
-    int car, truck, bike = 0;
+    float car, truck, bike = 0;
         
     if ((scanf("%d\n", &n)) != 1)
         return ERROR;
@@ -39,6 +39,7 @@ int main(int argc, char *const argv[])
     for (int i = 0; i < n; i++) {
         char temp[MAX_LENGTH] = {0};
         char temp2[MAX_LENGTH] = {0};
+
         if ((scanf("%s %s %d", temp2, temp, &students[i].price)) != 3) {
             my_free(students, i);
             return ERROR;
@@ -65,7 +66,7 @@ int main(int argc, char *const argv[])
     }
 
     my_free(students, n);
-    if ((printf("Cars: %0.2f, Trucks: %0.2f, Bikes: %0.2f\n", car, truck, bike)) < 0)
+    if ((printf("Cars: %.2f, Trucks: %.2f, Bikes: %.2f\n", car, truck, bike)) < 0)
         return ERROR;
     return SUCCESS;
 }
