@@ -13,7 +13,7 @@ int main(int argc, char *const argv[])
     size_t len = 0;
     ssize_t read = 0;
     char letter = 0;
-    bool count = false;
+    int count = 0;
 
     if ((read = getline(&str, &len, stdin)) == -1) {
         free(str);
@@ -27,15 +27,14 @@ int main(int argc, char *const argv[])
         char c = str[i];
         for (int j = 0; str[j]; j++) {
             if (c == str[j]) {
-                count = true;
-                break;
-            } else {
-                letter = c;
-                break;
+                ++count;
             }
         }
+        if (count == 1)
+            letter = c;
         if (letter != '\0')
             break;
+        count = 0;
     }
     if ((printf("%c\n", letter != '\0' ? letter : '-')) < 0) {
         free(str);
