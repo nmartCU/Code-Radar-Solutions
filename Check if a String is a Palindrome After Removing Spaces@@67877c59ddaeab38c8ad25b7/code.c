@@ -64,7 +64,7 @@ int main(int argc, char *const argv[])
     temp[read - words] = '\0';
     for (int i = 0; i < read; i++) {
         if (str[i] != ' ') {
-            temp[index] = isalpha(str[i]) ? towler(str[i]) : str[i]; 
+            temp[index] = isalpha(str[i]) ? tolower(str[i]) : str[i]; 
             ++index;
         }
     }
