@@ -47,11 +47,10 @@ int main(int argc, char *const argv[])
 
     if ((printf("Average Marks: %0.2f\n", average / n)) < 0) {
         for (int j = 0; j < n; j++)
-            free(students[i].name);
+            free(students[j].name);
         free(students);
         return ERROR;
     }
-    free(students[i].name);
     free(students);
     return SUCCESS;
 }
