@@ -12,7 +12,7 @@
 typedef struct sub_s {
     char *id;
     char *name;
-    int price;
+    float price;
 } sub_t;
 
 void my_free(sub_t *students, int end)
@@ -42,7 +42,7 @@ int main(int argc, char *const argv[])
         char temp[MAX_LENGTH] = {0};
         char temp2[MAX_LENGTH] = {0};
 
-        if ((scanf("%s %s %d", temp2, temp, &students[i].price)) != 3) {
+        if ((scanf("%s %s %f", temp2, temp, &students[i].price)) != 3) {
             my_free(students, i);
             return ERROR;
         }
