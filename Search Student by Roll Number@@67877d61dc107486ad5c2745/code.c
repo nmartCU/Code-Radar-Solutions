@@ -24,13 +24,13 @@ void my_free(student_t *students, int end)
     free(students);
 }
 
-student_t *find(student_t *student, int roll)
+student_t *find(student_t *students, int roll)
 {
     if (!students)
         return NULL;
     for (int i = 0; students[i]; i++) {
         if (students[i].roll == roll)
-            return &student[i];
+            return &students[i];
     }
     return NULL;
 }
