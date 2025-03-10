@@ -21,7 +21,7 @@ int main(int argc, char *const argv[])
     size_t len[2] = {0, 0};
     ssize_t read[2] = {0, 0};
     bool rotation = false;
-    int rot = 0;
+    int start = 0;
         
     for (int i = 0; i < 2; i++) {
         if ((read[i] = getline(&str[i], &len[i], stdin)) == -1) {
@@ -35,31 +35,25 @@ int main(int argc, char *const argv[])
         }
     }
     if (read[0] != read[1]) {
-        if (printf("No") < 0) {
-            my_free(str[0], str[1]);
+        my_free(str[0], str[1]);
+        if (printf("No") < 0)
             return ERROR;
-        }
         return SUCCESS;
     }
-    if (str[0][read[0] - 1] != str[1][0]) {
-        if (printf("No") < 0) {
-            my_free(str[0], str[1]);
-            return ERROR;
+    for (int i = 0; i < read[0] - 1; i++) {
+        if (str[1][j] == str[0][1]) {
+            start = j;
+            break;
         }
-        return SUCCESS;
     }
-    for (int i = 0; i < read[0] - 1 - 1; i++) {
-        if (str[0][i] != str[1][i + 1]) {
-            if (printf("No") < 0) {
-                my_free(str[0], str[1]);
-                return ERROR;
-            }
-            return SUCCESS;
-        }
-
+    char *temp = malloc(sizeof(char) * (read[0] + 1));
+    temp[read] = '\0';
+    if ((strcmp(str[0], strncat(strcat(temp, &str[1] + start), str[1], start))) == 0) {
+        rotation = true;
     }
     my_free(str[0], str[1]);
-    if (printf("Yes") < 0)
+    free(temp);
+    if (printf("%s\n" ? rotation : "Yes" : "No") < 0)
         return ERROR;
     return SUCCESS;
 }
