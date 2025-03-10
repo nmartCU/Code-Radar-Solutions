@@ -31,7 +31,7 @@ int main(int argc, char *const argv[])
     car_t *students = NULL;
     int car, truck, bike = 0;
         
-    if ((scanf("%d", &n)) != 1)
+    if ((scanf("%d\n", &n)) != 1)
         return ERROR;
     if ((students = malloc(sizeof(car_t) * (n))) == NULL)
         return ERROR;
