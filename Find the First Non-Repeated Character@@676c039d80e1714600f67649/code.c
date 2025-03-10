@@ -11,6 +11,7 @@ int main(int argc, char *const argv[])
     size_t len = 0;
     ssize_t read = 0;
     char c = 0;
+    int size = 0;
 
     if ((read = getline(&str, &len, stdin)) == -1) {
         free(str);
@@ -20,7 +21,8 @@ int main(int argc, char *const argv[])
         str[read - 1] = '\0';
         --read;
     }
-    int letters[read - 1] = {0};
+    size = read - 1;
+    int letters[size] = {0};
     for (int i = 0; str[i]; i++) {
         ++letters[str[i]];
     } 
