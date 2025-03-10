@@ -42,7 +42,7 @@ int main(int argc, char *const argv[])
     }
     for (int i = 0; i < read[0] - 1; i++) {
         if (str[1][i] == str[0][1]) {
-            start = j;
+            start = i;
             break;
         }
     }
