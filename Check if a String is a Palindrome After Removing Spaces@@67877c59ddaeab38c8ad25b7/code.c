@@ -63,12 +63,12 @@ int main(int argc, char *const argv[])
     temp[read - words] = '\0';
     for (int i = 0; i < read; i++) {
         if (str[i] != ' ') {
-            temp[index] = str[i]; 
+            char c = isaplha(str[i]) ? islower(str[i]) : str[i];
+            temp[index] = c; 
             ++index;
         }
     }
     free(str);
-    printf("temp %s\n", temp);
     if ((printf("%s\n", isPalindrome(temp) ? "Yes" : "No")) < 0) {
         free(temp);
         return ERROR;
