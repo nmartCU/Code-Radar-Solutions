@@ -32,6 +32,8 @@ int main(int argc, char *const argv[])
     }
 
     for (int i = 0; i < read; i++) {
+        if (str[i] == ' ')
+            continue;
         for (int j = i; j < read && str[j] != '\0' && str[j] != ' '; j++)
             ++size;
         if (size > 0 && size < min) {
