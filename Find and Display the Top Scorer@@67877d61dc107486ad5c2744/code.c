@@ -40,11 +40,11 @@ int main(int argc, char *const argv[])
             return ERROR;
         }
         strcpy(students[i].name, temp);
-        if (max < students[i].marks) {
+        if (students[i].marks > max) {
             max = i;
         }
     }
-    
+    printf("max is %d", max);
     if ((printf("Top Scorer: Roll Number: %d, Name: %s, Marks: %0.2f", students[max].roll, students[max].name, students[max].marks)) < 0) {
         for (int i = 0; i < n; i++)
             free(students[i].name);
