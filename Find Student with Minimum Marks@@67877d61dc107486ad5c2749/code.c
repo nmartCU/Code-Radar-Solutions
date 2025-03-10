@@ -31,7 +31,7 @@ student_t *find(student_t *students,  int n)
     if (!students)
         return NULL;
     for (int i = 0; i < n; i++) {
-        if (min < students[i].marks) {
+        if (min > students[i].marks) {
             min = students[i].marks;
             pos = i;
         }
