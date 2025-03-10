@@ -59,7 +59,7 @@ int main(int argc, char *const argv[])
     }
     my_free(str);
     free(temp);
-    if (printf("%s\n" ? rotation : "Yes" : "No") < 0)
+    if (printf("%s\n", rotation ? "Yes" : "No") < 0)
         return ERROR;
     return SUCCESS;
 }
