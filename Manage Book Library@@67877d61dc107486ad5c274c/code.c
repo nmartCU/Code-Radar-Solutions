@@ -19,14 +19,10 @@ void my_free(student_t *students, int end)
     if (!students)
         return;
     for (int j = 0; j < end; j++) {
-        free(students[j].author)
+        free(students[j].author);
         free(students[j].title);
     }
     free(students);
-}
-
-int compare_students(const void *a, const void *b) {
-    return ((student_t *)b)->marks - ((student_t *)a)->marks;
 }
 
 int main(int argc, char *const argv[])
