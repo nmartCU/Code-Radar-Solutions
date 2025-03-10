@@ -29,7 +29,7 @@ int main(int argc, char *const argv[])
         ++letters[str[i]];
     } 
     for (int i = 0; str[i]; i++) {
-        printf("letters is = %c str is %c \n", letters[str[i]], str[i]);
+        printf("letters is = %d str is %c \n", letters[str[i]], str[i]);
     }
     for (int i = 0; str[i]; i++) {
         if (letters[str[i]] == 1) {
