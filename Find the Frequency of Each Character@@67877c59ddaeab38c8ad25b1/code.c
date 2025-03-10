@@ -41,9 +41,7 @@ int main(int argc, char *const argv[])
     }
     for (int i = 0; str[i]; i++) {
         ++letters[str[i]];
-        printf("value : %d\n", letters[str[i]]);
         if (letters[str[i]] == 1) {
-            printf("Inside");
             temp[index] = str[i];
             ++index;
         }
