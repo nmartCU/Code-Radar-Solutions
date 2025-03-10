@@ -16,12 +16,12 @@ typedef struct rectangle_s {
 int main(int argc, char *const argv[])
 {
     int n = 0;
-    rectangle_t_t *rectangles = NULL;
+    rectangle_t *rectangles = NULL;
     int number = 0;
         
     if ((scanf("%d", &n)) != 1)
         return ERROR;
-    if ((rectangles = malloc(sizeof(rectangle_t_t) * (n))) == NULL)
+    if ((rectangles = malloc(sizeof(rectangle_t) * (n))) == NULL)
         return ERROR;
     for (int i = 0; i < n; i++) {
         char temp[MAX_LENGTH] = {0};
