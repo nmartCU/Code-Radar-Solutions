@@ -13,15 +13,6 @@ typedef struct rectangle_s {
     int length;
 } rectangle_t;
 
-void my_free(rectangle_t *rectangles, int end)
-{
-    if (!rectangles)
-        return;
-    for (int j = 0; j < end; j++)
-        free(rectangles[j].name);
-    free(rectangles);
-}
-
 int main(int argc, char *const argv[])
 {
     int n = 0;
@@ -35,13 +26,13 @@ int main(int argc, char *const argv[])
     for (int i = 0; i < n; i++) {
         char temp[MAX_LENGTH] = {0};
         if ((scanf("%d %d", &rectangles[i].length, temp, &rectangles[i].breadth)) != 2) {
-            my_free(rectangles, i);
+            free(rectangles);
             return ERROR;
         }
     }
     for (int i = 0; i < n; i++) {
         printf("Rectangle %d: Area = %0.2f, Perimeter = %0.2f\n", i + 1, &rectangles[i].length * &rectangles[i].breadth, 2 * (&rectangles[i].length + &rectangles[i].breadth));
     }
-    my_free(rectangles, n);
+    free(rectangles);
     return SUCCESS;
 }
