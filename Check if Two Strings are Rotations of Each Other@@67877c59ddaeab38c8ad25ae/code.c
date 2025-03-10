@@ -66,7 +66,7 @@ int main(int argc, char *const argv[])
         return ERROR;
     }
     printf("v2 temp: %s sizeTemp: %d \n", temp, strlen(temp));
-    if ((strcmp(str[0], strncat(strcat(temp, str[1] + start), str[1], start))) == 0) {
+    if ((strcmp(str[0], temp)) == 0) {
         rotation = true;
     }
     my_free(str);
