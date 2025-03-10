@@ -39,12 +39,7 @@ int main(int argc, char *const argv[])
             return ERROR;
         }
         students[i].name[strlen(temp) - 1] = '\0';
-        if ((strcpy(students[i].name, temp)) == NULL) {
-            for (int j = 0; j < i; j++) {
-                free(students[j].name);
-            }
-            free(students);
-        }
+        strcpy(students[i].name, temp);
     }
     for (int i = 0; i < n; i++) {
         if ((printf("Roll Number: %d, Name: %s, Marks: %0.2f\n", students[i].roll, students[i].name, students[i].marks)) < 0) {
