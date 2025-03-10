@@ -62,7 +62,7 @@ int main(int argc, char *const argv[])
         } else if (strcmp(students[i].name, "Standard") == 0) {
             standard += students[i].price;
             ++user2;
-        } else if (strcmp(students[i].name, "premium") == 0){
+        } else if (strcmp(students[i].name, "Premium") == 0){
             premium += students[i].price;
             ++user3;
         }
