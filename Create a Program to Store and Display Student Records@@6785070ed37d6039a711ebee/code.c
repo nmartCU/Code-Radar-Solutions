@@ -19,7 +19,8 @@ int main(int argc, char *const argv[])
         
     if ((scanf("%d", &n)) != 1)
         return ERROR;
-    student_t student[n] = {0};
+    student_t *student = malloc(sizeof(student_t) * (n));
+    student[n] = NULL;
     for (int i = 0; i < n; i++) {
         if ((scanf("%d %s %f", &student[i].roll, student[i].name, &student[i].marks)) != 3) {
             return ERROR;
