@@ -59,6 +59,7 @@ int main(int argc, char *const argv[])
         free(temp);
         return ERROR;
     }
+    printf("Start is %s\n", temp);
     if ((temp = strncat(temp, str[1], start)) == NULL) {
         my_free(str);
         free(temp);
