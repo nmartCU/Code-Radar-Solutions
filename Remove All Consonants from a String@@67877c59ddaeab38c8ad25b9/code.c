@@ -27,7 +27,7 @@ int main(int argc, char *const argv[])
     }
     for (int i = 0; i < read; i++) {
         char c = isalpha(str[i]) ? tolower(str[i]) : str[i];
-        if (strrchr("aeiou", c) || str[i] == ' ') {
+        if (strrchr("aeiou", c) || !isalpha(str[i])) {
             printf("%c", c);
         }
     }
