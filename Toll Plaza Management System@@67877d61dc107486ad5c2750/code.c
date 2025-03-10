@@ -54,10 +54,10 @@ int main(int argc, char *const argv[])
         strcpy(students[i].name, temp);
         strcpy(students[i].id, temp2);
         printf("Name is : %s", students[i].name);
-        if (strcmp(students[i].name, "Car")) {
+        if (strcmp(students[i].name, "Car") == 0) {
             printf(" Inside car\n");
             total[0] += students[i].price;
-        } else if (strcmp(students[i].name, "Truck")) {
+        } else if (strcmp(students[i].name, "Truck") == 0) {
             printf("INside truck\n");
             total[1] += students[i].price;
         } else {
