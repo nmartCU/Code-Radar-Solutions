@@ -15,11 +15,13 @@ int main(int argc, char *const argv[])
         
     for (int i = 0; i < INPUT_LENGTH; i++) {
         int value = 0;
-        if ((scanf("%d ", &value)) != 1)
+        if ((scanf("%d ", &value)) != 1) {
+            printf("Eroor scanf")
             return ERROR;
+        }
         total += value;
     }
-
+    prinf("total %d", total);
     if ((printf("Average Temperature: %0.2f", (float) total / INPUT_LENGTH)) < 0)
         return ERROR;
     return SUCCESS;
