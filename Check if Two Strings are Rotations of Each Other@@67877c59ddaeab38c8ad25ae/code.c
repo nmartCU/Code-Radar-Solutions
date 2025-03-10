@@ -54,13 +54,13 @@ int main(int argc, char *const argv[])
         return ERROR;
     }
     temp[read[0]] = '\0';
-    if ((temp = strcpy(temp, str[1] + start)) == NULL) {
+    if ((strcpy(temp, &str[1][start])) == NULL) {
         my_free(str);
         free(temp);
         return ERROR;
     }
     printf("Start is %s\n", temp);
-    if ((temp = strncat(temp, str[1], start)) == NULL) {
+    if ((strncat(temp, str[1], start)) == NULL) {
         my_free(str);
         free(temp);
         return ERROR;
