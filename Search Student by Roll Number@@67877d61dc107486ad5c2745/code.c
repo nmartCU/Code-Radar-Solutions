@@ -28,7 +28,7 @@ student_t *find(student_t *students, int roll)
 {
     if (!students)
         return NULL;
-    for (int i = 0; students[i]; i++) {
+    for (int i = 0; students; i++) {
         if (students[i].roll == roll)
             return &students[i];
     }
