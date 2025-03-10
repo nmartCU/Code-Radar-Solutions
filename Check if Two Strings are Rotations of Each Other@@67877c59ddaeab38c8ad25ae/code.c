@@ -8,23 +8,25 @@
 #define ERROR 1
 #define SUCCESS 0
 #define MAX_LENGTH 256
+#define INPUT_LENGTH 2
 
-void my_free(char *str, char *str2)
+void my_free(char **str)
 {
-    free(str);
-    free(str2);
+    for (int i = 0; i < INPUT_LENGTH; i++) {
+        free(str[i]);
+    }
 }
 
 int main(int argc, char *const argv[])
 {
-    char *str[2] = {NULL, NULL};
-    size_t len[2] = {0, 0};
-    ssize_t read[2] = {0, 0};
+    char *str[INPUT_LENGTH] = {NULL, NULL};
+    size_t len[INPUT_LENGTH] = {0, 0};
+    ssize_t read[INPUT_LENGTH] = {0, 0};
     bool rotation = false;
     char *temp = NULL;
     int start = 0;
         
-    for (int i = 0; i < 2; i++) {
+    for (int i = 0; i < INPUT_LENGTH; i++) {
         if ((read[i] = getline(&str[i], &len[i], stdin)) == -1) {
             for (int j = 0; j < i; j++)
                 free(str[j]);
@@ -55,7 +57,7 @@ int main(int argc, char *const argv[])
     if ((strcmp(str[0], strncat(strcpy(temp, &str[1] + start), str[1], start))) == 0) {
         rotation = true;
     }
-    my_free(str[0], str[1]);
+    my_free(str);
     free(temp);
     if (printf("%s\n" ? rotation : "Yes" : "No") < 0)
         return ERROR;
