@@ -11,7 +11,7 @@ enum Chartype {
     NONE,
 };
 
-Chartype is_alpha(char c)
+enum Chartype is_alpha(char c)
 {
     if (c >= 'A' && c <= 'Z')
         return Chartype.UPPER;
