@@ -22,7 +22,8 @@ int main(int argc, char *const argv[])
         --read;
     }
     size = read - 1;
-    int letters[size] = 0;
+    int letters[size];
+    memset(letters, 0, sizeof(int) * size)
     for (int i = 0; str[i]; i++) {
         ++letters[str[i]];
     } 
