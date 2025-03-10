@@ -61,7 +61,7 @@ int main(int argc, char *const argv[])
             bike += students[i].price;
         }
         printf("Name is : %s size: %d\n", students[i].name, strlen(students[i].name));
-        printf("Name is %s\n car: %d truck: %d bike %d", students[i].name, car, truck, bike)
+        printf("Name is %s\n car: %d truck: %d bike %d", students[i].name, car, truck, bike);
     }
 
     my_free(students, n);
