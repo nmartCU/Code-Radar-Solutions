@@ -16,19 +16,20 @@ typedef struct student_s {
 int main(int argc, char *const argv[])
 {
     int n = 0;
-    student_t *student = NULL;
+    student_t *students = NULL;
         
     if ((scanf("%d", &n)) != 1)
         return ERROR;
-    if ((student = malloc(sizeof(student) * n)) == NULL)
+    if ((students = malloc(sizeof(student_t) * n)) == NULL)
         return ERROR;
     for (int i = 0; i < n; i++) {
-        if ((scanf("%d %s %f", &student[i].roll, student[i].name, &student[i].marks)) != 3) {
+        if ((scanf("%d %s %f", &students[i].roll, students[i].name, &students[i].marks)) != 3) {
+            free(students);
             return ERROR;
         }
     }
     for (int i = 0; i < n; i++) {
-        if ((printf("Roll Number: %d, Name: %s, Marks: %f", student[i].roll, student[i].name, student[i].marks)) < 0) {
+        if ((printf("Roll Number: %d, Name: %s, Marks: %f", students[i].roll, students[i].name, students[i].marks)) < 0) {
             return ERROR;
         }
     }
