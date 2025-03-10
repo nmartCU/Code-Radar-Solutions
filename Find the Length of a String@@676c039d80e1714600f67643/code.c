@@ -24,13 +24,10 @@ int main(int argc, char *const argv[])
         return ERROR;
     };
     
-    for (int i = 0; str[i] != '\0'; i++) {
+    for (int i = 0; str[i] != '\0'; i++)
         ++size;
-    }
-    if (printf("%d\n", size) < 0) {
-        free(str);
-        return ERROR;
-    }    
     free(str);
+    if (printf("%d\n", size) < 0)
+        return ERROR;
     return SUCCESS;
 }
