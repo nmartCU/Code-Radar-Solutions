@@ -12,7 +12,7 @@ int main(int argc, char *const argv[])
     size_t len = 0;
     ssize_t read = 0;
     char c = 0;
-    int size = 0;
+    int count = 0;
 
     if ((read = getline(&str, &len, stdin)) == -1) {
         free(str);
@@ -22,18 +22,15 @@ int main(int argc, char *const argv[])
         str[read - 1] = '\0';
         --read;
     }
-    size = read - 1;
-    int letters[size];
-    memset(letters, 0, sizeof(int) * size);
     for (int i = 0; str[i]; i++) {
-        ++letters[str[i]];
-    } 
-    for (int i = 0; str[i]; i++) {
-        printf("letters is = %d str is %c \n", letters[str[i]], str[i]);
-    }
-    for (int i = 0; str[i]; i++) {
-        if (letters[str[i]] == 1) {
-            c = str[i];
+        c = str[i];
+        for (int j = 0; str[j]; j++) {
+            if (c == str[j]) {
+                ++count;
+                break;
+            } 
+        }
+        if (count == 1) {
             break;
         }
     }
