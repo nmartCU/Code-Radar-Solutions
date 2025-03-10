@@ -30,11 +30,9 @@ student_t *find(student_t *students,  int n)
     if (!students)
         return NULL;
     min_student = &students[0];
-    for (int i = 1; i < n; i++) {
-        if (students[i].marks < min_student->marks) {
+    for (int i = 1; i < n; i++)
+        if (students[i].marks < min_student->marks)
             min_student = &students[i];
-        }
-    }
     return min_student;
 }
 
