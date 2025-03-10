@@ -26,10 +26,10 @@ int main(int argc, char *const argv[])
         --read;
     }
     for (int i = 0; str[i]; i++) {
-        ++letters[str[i]]
+        ++letters[str[i]];
     }
     for (int i = 0; str[i]; i++) {
-        if ((printf("%c: %d", str[i], letters[str[i]])) < 0) {
+        if ((printf("%c: %d\n", str[i], letters[str[i]])) < 0) {
             free(str);
             return ERROR;
         }
