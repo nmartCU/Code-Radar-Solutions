@@ -46,7 +46,7 @@ int main(int argc, char *const argv[])
             free(students);
         }
     }
-    for (int i = 0; i <= n; i++) {
+    for (int i = 0; i < n; i++) {
         if ((printf("Roll Number: %d, Name: %s, Marks: %0.2f", students[i].roll, students[i].name, students[i].marks)) < 0) {
             return ERROR;
         }
