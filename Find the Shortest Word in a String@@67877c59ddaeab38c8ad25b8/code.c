@@ -43,7 +43,10 @@ int main(int argc, char *const argv[])
         i = i + size - 1;
         size = 0;
     }
-    if (printf("%.*s\n", min, &str[start]) < 0)
+    if (printf("%.*s\n", min, &str[start]) < 0) {
+        free(str);
         return ERROR;
+    }
+    free(str);
     return SUCCESS;
 }
