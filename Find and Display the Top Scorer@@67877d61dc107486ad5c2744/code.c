@@ -40,7 +40,7 @@ int main(int argc, char *const argv[])
             return ERROR;
         }
         strcpy(students[i].name, temp);
-        if (max < student[i].marks) {
+        if (max < students[i].marks) {
             max = i;
         }
     }
