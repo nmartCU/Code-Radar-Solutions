@@ -46,6 +46,7 @@ int main(int argc, char *const argv[])
             ++index;
         }
     }
+    temp[index] = '\0';
     for (int i = 0; temp[i]; i++) {
         if ((printf("%c: %d\n", temp[i], letters[str[i]])) < 0) {
             free(str);
