@@ -44,7 +44,7 @@ int main(int argc, char *const argv[])
         return SUCCESS;
     }
     for (int i = 0; i < read[0] - 1; i++) {
-        if (str[1][i] == str[0][1]) {
+        if (str[1][i] == str[0][0]) {
             start = i;
             break;
         }
