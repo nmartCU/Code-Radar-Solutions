@@ -34,15 +34,15 @@ int main(int argc, char *const argv[])
     }
 
     for (int i = 0; str[0][i]; i++) {
+        sub = true
         for (int j = 0; str[1][j]; j++) {
-            if (str[0][i] == str[1][j]) {
-                sub = true;
-                continue;
-            } else {
+            if (str[0][i + j] && str[0][i + j] != str[1][j]) {
                 sub = false;
                 break;
             }
         }
+        if (sub)
+            break;
     }
     my_free(str);
     if ((printf("%s\n", sub ? "Yes" : "No")) < 0)
