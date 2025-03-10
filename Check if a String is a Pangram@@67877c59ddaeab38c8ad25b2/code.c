@@ -37,6 +37,7 @@ int main(int argc, char *const argv[])
         if (!letters[i]) {
             if ((printf("No")) < 0)
                 return ERROR;
+            return ERROR;
         }
     }
     if ((printf("Yes")) < 0)
