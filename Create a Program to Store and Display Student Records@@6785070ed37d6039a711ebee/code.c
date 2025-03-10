@@ -23,7 +23,7 @@ int main(int argc, char *const argv[])
         return ERROR;
     if ((students = malloc(sizeof(student_t) * n)) == NULL)
         return ERROR;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i <= n; i++) {
         char temp[MAX_LENGTH] = {0};
         if ((scanf("%d %s %f", &students[i].roll, temp, &students[i].marks)) != 3) {
             for (int j = 0; j < i; j++)
@@ -46,7 +46,7 @@ int main(int argc, char *const argv[])
             free(students);
         }
     }
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i <= n; i++) {
         if ((printf("Roll Number: %d, Name: %s, Marks: %0.2f", students[i].roll, students[i].name, students[i].marks)) < 0) {
             return ERROR;
         }
