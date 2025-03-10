@@ -32,13 +32,13 @@ int main(int argc, char *const argv[])
     }
 
     for (int i = 0; i < read; i++) {
-        for (int j = i; str[j] != '\0' && str[j] != ' '; j++)
+        for (int j = i; j < read && str[j] != '\0' && str[j] != ' '; j++)
             ++size;
         if (size < min) {
-            start = i - size;
+            start = i;
             min = size;
         }
-        size = 0;
+        i += size - 1;
     }
     if (printf("%.*s\n", min, &str[start]) < 0)
         return ERROR;
