@@ -12,7 +12,7 @@
 bool isPalindrome(char *str, int start, int end)
 {
     while (start < end) {
-        if (str[i] != str[j])
+        if (str[start] != str[end])
             return false;
         ++start;
         --end;
