@@ -30,7 +30,7 @@ int main(int argc, char *const argv[])
 {
     int n = 0;
     sub_t *students = NULL;
-    float basic, premium, standard = 0;
+    float basic, premium, standard = 0.0f;
     int user, user2, user3 = 0;
 
     if ((scanf("%d\n", &n)) != 1)
