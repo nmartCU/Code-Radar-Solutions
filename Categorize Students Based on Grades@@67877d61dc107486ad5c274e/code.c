@@ -24,10 +24,6 @@ void my_free(student_t *students, int end)
     free(students);
 }
 
-int compare_students(const void *a, const void *b) {
-    return ((student_t *)b)->grade - ((student_t *)a)->grade;
-}
-
 int main(int argc, char *const argv[])
 {
     int n = 0;
@@ -52,7 +48,6 @@ int main(int argc, char *const argv[])
         students[i].grade = (mark >= 85 ? 'A' : mark >= 70 && mark <= 84 ? 'B' : 'C');
     }
 
-    qsort(students, n, sizeof(student_t), compare_students);
     for (int i = 0; i < n; i++) {
         if ((printf("Roll Number: %d, Name: %s, Grade: %c\n", students[i].roll, students[i].name, students[i].grade)) < 0) {
             my_free(students, n);
