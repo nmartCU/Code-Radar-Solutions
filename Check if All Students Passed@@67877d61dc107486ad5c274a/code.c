@@ -28,7 +28,7 @@ int main(int argc, char *const argv[])
 {
     int n = 0;
     student_t *students = NULL;
-    bool passed = false;
+    int number = 0;
         
     if ((scanf("%d", &n)) != 1)
         return ERROR;
@@ -45,9 +45,9 @@ int main(int argc, char *const argv[])
             return ERROR;
         }
         strcpy(students[i].name, temp);
-        passed = (students[i].marks >= 50);
+        number += (students[i].marks >= 50) ? 1 : 0;
     }
-    printf("%s\n", passed ? "All Passed" : "Not All Passed");
+    printf("%s\n", number == n ? "All Passed" : "Not All Passed");
     my_free(students, n);
     return SUCCESS;
 }
