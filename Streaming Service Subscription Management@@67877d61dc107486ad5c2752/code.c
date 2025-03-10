@@ -57,8 +57,10 @@ int main(int argc, char *const argv[])
         strcpy(students[i].name, temp);
         strcpy(students[i].id, temp2);
         if (strcmp(students[i].id, "Basic") == 0) {
+            print("Inside ");
             basic += students[i].price;
             ++user;
+            printf("%d\n", user);
         } else if (strcmp(students[i].id, "Standard") == 0) {
             standard += students[i].price;
             ++user2;
