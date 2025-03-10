@@ -42,7 +42,7 @@ int main(int argc, char *const argv[])
     }
 
     for (int i = 0; i < n; i++) {
-        if ((printf("Roll Number: %d, Name: %s, Marks: %0.2f", students[i].roll, students[i].name, students[i].marks)) < 0) {
+        if ((printf("Roll Number: %d, Name: %s, Marks: %0.2f\n", students[i].roll, students[i].name, students[i].marks)) < 0) {
             for (int j = 0; i < j; j++)
                 free(students[i].name);
             free(students);
