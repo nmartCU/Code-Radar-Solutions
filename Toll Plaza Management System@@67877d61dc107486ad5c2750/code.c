@@ -57,7 +57,7 @@ int main(int argc, char *const argv[])
             car += students[i].price;
         } else if (strcmp(students[i].name, "Truck") == 0) {
             truck += students[i].price;
-        } else {
+        } else if (strcmp(students[i].name, "Bike") == 0){
             bike += students[i].price;
         }
         printf("Name is : %s size: %d\n", students[i].name, strlen(students[i].name));
