@@ -23,9 +23,9 @@ int main(int argc, char *const argv[])
 
     for (int i = 0; i < INPUT_LENGTH; i++) {
         if ((read[i] = getline(&str[i], &len[i], stdin)) == -1) {
-            for (int j = 0; j < i; i++) {
+            for (int j = 0; j < i; j++)
                 free(str[j]);
-            }
+            return ERROR;
         }
         if (read[i] > 0 && str[i] && str[i][read[i] - 1] == '\n') {
             str[i][read[i] - 1] = '\0';
