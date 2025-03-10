@@ -46,7 +46,7 @@ int main(int argc, char *const argv[])
     }
 
     for (int i = 0; i < n; i++) {
-        float bonus = students[i].salary < 5000 ? students[i].salary * 0.1 : students[i].salary * 0.05;
+        double bonus = students[i].salary < 5000 ? students[i].salary * 0.1 : students[i].salary * 0.05;
         printf("salaire : %d bonus: %0.2f\n and bonus var is %f\n", students[i].salary, students[i].salary * 0.1, bonus);
         if ((printf("Employee ID: %d, Name: %s, Bonus: %0.2f\n", students[i].id, students[i].name, bonus)) < 0) {
             my_free(students, n);
