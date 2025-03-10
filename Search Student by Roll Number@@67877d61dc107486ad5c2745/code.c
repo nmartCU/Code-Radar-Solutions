@@ -24,11 +24,11 @@ void my_free(student_t *students, int end)
     free(students);
 }
 
-student_t *find(student_t *students, int roll)
+student_t *find(student_t *students, int roll, int n)
 {
     if (!students)
         return NULL;
-    for (int i = 0; students[i] != NULL; i++) {
+    for (int i = 0; i < n; i++) {
         if (students[i].roll == roll)
             return &students[i];
     }
@@ -62,7 +62,7 @@ int main(int argc, char *const argv[])
         my_free(students, n);
         return ERROR;
     }
-    student_t *student = find(students, roll);
+    student_t *student = find(students, roll, n);
     if (!student) {
         if ((printf("Student not found\n")) < 0) {
             my_free(students, n);
