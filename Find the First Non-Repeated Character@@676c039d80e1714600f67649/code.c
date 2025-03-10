@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 
 #define SUCCESS 0
 #define ERROR 1
@@ -12,7 +13,7 @@ int main(int argc, char *const argv[])
     size_t len = 0;
     ssize_t read = 0;
     char letter = 0;
-    int count = 0;
+    bool count = false;
 
     if ((read = getline(&str, &len, stdin)) == -1) {
         free(str);
@@ -25,16 +26,16 @@ int main(int argc, char *const argv[])
     for (int i = 0; str[i]; i++) {
         letter = str[i];
         for (int j = 0; str[j]; j++) {
-            if (letter == str[j]) {
-                ++count;
+            if (letter != str[j]) {
+                count = true;
                 break;
             }
         }
-        if (count >= 1) {
+        if (count) {
             break;
         }
     }
-    if ((printf("%c\n", count >= 1 ? '-' : letter)) < 0) {
+    if ((printf("%c\n", count ? letter : '-')) < 0) {
         free(str);
         return ERROR;
     }
