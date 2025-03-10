@@ -46,7 +46,6 @@ int main(int argc, char *const argv[])
             pos = i;
         }
     }
-    printf("max is %d pose %d", max, pos);
     if ((printf("Top Scorer: Roll Number: %d, Name: %s, Marks: %0.2f", students[pos].roll, students[pos].name, students[pos].marks)) < 0) {
         for (int i = 0; i < n; i++)
             free(students[i].name);
