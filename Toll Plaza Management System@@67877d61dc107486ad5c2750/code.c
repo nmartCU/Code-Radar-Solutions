@@ -53,9 +53,7 @@ int main(int argc, char *const argv[])
         }
         strcpy(students[i].name, temp);
         strcpy(students[i].id, temp2);
-        printf("Name is : %s", students[i].name);
         if (strcmp(students[i].name, "Car") == 0) {
-            printf(" Inside car\n");
             total[0] += students[i].price;
         } else if (strcmp(students[i].name, "Truck") == 0) {
             printf("INside truck\n");
@@ -66,7 +64,7 @@ int main(int argc, char *const argv[])
     }
 
     my_free(students, n);
-    if ((printf("Cars: %0.2f, Trucks: %0.2f, Bikes: %0.2f\n", (double)total[0], (float)total[1], (float)total[2])) < 0)
+    if ((printf("Cars: %0.2f, Trucks: %0.2f, Bikes: %0.2f\n", total[0], (double)total[1], (float)total[2])) < 0)
         return ERROR;
     return SUCCESS;
 }
