@@ -41,7 +41,7 @@ int main(int argc, char *const argv[])
         }
         size = 0;
     }
-    if (printf("%.*s\n", max, &str[start]) < 0)
+    if (printf("%.*s\n", min, &str[start]) < 0)
         return ERROR;
     return SUCCESS;
 }
