@@ -54,7 +54,7 @@ int main(int argc, char *const argv[])
                 my_free(str[0], str[1]);
                 return ERROR;
             }
-            return SUCESS;
+            return SUCCESS;
         }
 
     }
