@@ -65,6 +65,7 @@ int main(int argc, char *const argv[])
     for (int i = 0; i < read; i++) {
         if (str[i] != ' ') {
             char c = isalpha(str[i]) ? islower(str[i]) : str[i];
+            printf("Inside %c", c);
             temp[index] = c; 
             ++index;
         }
