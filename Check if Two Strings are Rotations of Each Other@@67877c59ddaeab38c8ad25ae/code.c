@@ -49,17 +49,17 @@ int main(int argc, char *const argv[])
         return SUCCESS;
     }
     for (int i = 0; i < read[0] - 1 - 1; i++) {
-        if (str[0][i] == str[1][i + 1]) {
-
+        if (str[0][i] != str[1][i + 1]) {
+            if (printf("No") < 0) {
+                my_free(str[0], str[1]);
+                return ERROR;
+            }
+            return SUCESS;
         }
 
     }
-    if (printf("%s", rotation ? "Yes" : "No") < 0) {
-        my_free(str[0], str[1]);
-        free(result);
-        return ERROR;
-    }
     my_free(str[0], str[1]);
-    free(result);
+    if (printf("Yes") < 0)
+        return ERROR;
     return SUCCESS;
 }
