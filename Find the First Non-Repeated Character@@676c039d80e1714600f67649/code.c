@@ -24,18 +24,19 @@ int main(int argc, char *const argv[])
         --read;
     }
     for (int i = 0; str[i]; i++) {
-        letter = str[i];
+        char c = str[i];
         for (int j = 0; str[j]; j++) {
-            if (letter != str[j]) {
+            if (c == str[j]) {
                 count = true;
                 break;
+            } else {
+                letter = c;
             }
         }
-        if (count) {
+        if (letter != '\0')
             break;
-        }
     }
-    if ((printf("%c\n", count ? letter : '-')) < 0) {
+    if ((printf("%c\n", letter != '\0' ? letter : '-')) < 0) {
         free(str);
         return ERROR;
     }
