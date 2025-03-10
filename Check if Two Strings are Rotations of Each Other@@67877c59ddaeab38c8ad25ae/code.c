@@ -38,7 +38,7 @@ int main(int argc, char *const argv[])
         }
     }
     if (read[0] != read[1]) {
-        my_free(str[0], str[1]);
+        my_free(str);
         if (printf("No") < 0)
             return ERROR;
         return SUCCESS;
