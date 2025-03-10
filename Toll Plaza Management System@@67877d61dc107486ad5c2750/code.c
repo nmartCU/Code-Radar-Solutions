@@ -14,7 +14,7 @@ typedef struct car_s {
     int price;
 } car_t;
 
-void my_free(emp_t *students, int end)
+void my_free(car_t *students, int end)
 {
     if (!students)
         return;
