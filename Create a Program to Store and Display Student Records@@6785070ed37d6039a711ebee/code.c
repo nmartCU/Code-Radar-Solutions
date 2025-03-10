@@ -23,7 +23,7 @@ int main(int argc, char *const argv[])
         return ERROR;
     if ((students = malloc(sizeof(student_t) * n)) == NULL)
         return ERROR;
-    for (int i = 0; i <= n; i++) {
+    for (int i = 0; i < n; i++) {
         char temp[MAX_LENGTH] = {0};
         if ((scanf("%d %s %f", &students[i].roll, temp, &students[i].marks)) != 3) {
             for (int j = 0; j < i; j++)
