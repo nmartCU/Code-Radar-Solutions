@@ -36,7 +36,7 @@ int main(int argc, char *const argv[])
             ++size;
         printf("letter is %c and size is %d\n", str[i], size);
         if (size < min) {
-            start = i;
+            start = i - size;
             min = size;
         }
         size = 0;
