@@ -56,14 +56,16 @@ int main(int argc, char *const argv[])
         --read;
     }
     int words = count(str, " ");
-
     if ((temp = malloc(sizeof(char) * (read - words + 1))) == NULL) {
         free(str);
         return ERROR;
     }
+    temp[read - words] = '\0';
     for (int i = 0; i < read; i++) {
-        if (str[i] != ' ')
+        if (str[i] != ' ') {
             temp[index] = str[i]; 
+            ++index;
+        }
     }
     free(str);
     printf("temp %s\n", temp);
