@@ -17,6 +17,7 @@ int main(int argc, char *const argv[])
     ssize_t read = 0;
     int size = 0;
     int start = 0;
+    int max = 0;
         
     if ((read = getline(&str, &len, stdin)) == -1) {
         if (printf("%d\n", size) < 0) {
