@@ -9,9 +9,9 @@ typedef enum {
     LOWER,
     UPPER,
     NONE,
-} Chartype_t;
+} Chartype;
 
-Chartype_t is_alpha(char c)
+Chartype is_alpha(char c)
 {
     if (c >= 'A' && c <= 'Z')
         return Chartype.UPPER;
