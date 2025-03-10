@@ -22,9 +22,9 @@ int is_alpha(char c)
 
 int main(int argc, char *const argv[])
 {
-    char *str[INPUT_LENGTH] = {NULL, NULL};
-    size_t len[INPUT_LENGTH] = {0};
-    ssize_t read[INPUT_LENGTH] = {0};
+    char *str = NULL;
+    size_t len = 0;
+    ssize_t read = 0;
 
     if ((read = getline(&str, &len, stdin)) == -1) {
         free(str);
@@ -37,9 +37,9 @@ int main(int argc, char *const argv[])
 
     for (int i = 0; str[i]; i++) {
         int res = is_alpha(str[i]);
-        if (res == Chartype.LOWER) {
+        if (res == LOWER) {
             str[i] = str[i] - 32;
-        } else (res == Chartype.UPPER) {
+        } else (res == UPPER) {
             str[i] = str[i] + 32;
         }
     }
