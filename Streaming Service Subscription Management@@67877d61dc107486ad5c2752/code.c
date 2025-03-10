@@ -59,7 +59,7 @@ int main(int argc, char *const argv[])
         if (strcmp(students[i].id, "Basic") == 0) {
             printf("Inside ");
             basic += students[i].price;
-            ++user;
+            user += 1;
             printf("%d\n", user);
         } else if (strcmp(students[i].id, "Standard") == 0) {
             standard += students[i].price;
