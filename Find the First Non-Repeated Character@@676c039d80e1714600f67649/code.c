@@ -22,7 +22,7 @@ int main(int argc, char *const argv[])
         --read;
     }
     size = read - 1;
-    int letters[size] = {0};
+    int letters[size] = 0;
     for (int i = 0; str[i]; i++) {
         ++letters[str[i]];
     } 
