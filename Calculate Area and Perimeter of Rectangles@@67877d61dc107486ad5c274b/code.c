@@ -24,7 +24,7 @@ int main(int argc, char *const argv[])
     if ((rectangles = malloc(sizeof(rectangle_t) * (n))) == NULL)
         return ERROR;
     for (int i = 0; i < n; i++) {
-        if ((scanf("%d %d ", &rectangles[i].length, temp, &rectangles[i].breadth)) != 2) {
+        if ((scanf("%d %d ", &rectangles[i].length, &rectangles[i].breadth)) != 2) {
             free(rectangles);
             return ERROR;
         }
