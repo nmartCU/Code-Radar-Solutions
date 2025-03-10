@@ -58,7 +58,7 @@ int main(int argc, char *const argv[])
     }
 
     int roll = 0;
-    if ((scanf("%d ", %roll)) != 1) {
+    if ((scanf("%d ", &roll)) != 1) {
         my_free(students, n);
         return ERROR;
     }
