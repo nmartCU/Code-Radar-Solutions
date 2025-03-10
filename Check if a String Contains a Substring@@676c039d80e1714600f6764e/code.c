@@ -39,7 +39,7 @@ int main(int argc, char *const argv[])
                 sub = false;
                 continue;
             } else {
-                break:
+                break;
             }
         }
     }
