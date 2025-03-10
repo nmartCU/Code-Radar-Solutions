@@ -6,7 +6,7 @@
 
 #define SUCCESS 0
 #define ERROR 1
-#define MAX_LENGTH = 255;
+#define MAX_LENGTH 255;
 
 int main(int argc, char *const argv[])
 {
