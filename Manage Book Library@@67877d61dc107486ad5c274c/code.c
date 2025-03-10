@@ -10,7 +10,7 @@
 
 typedef struct student_s {
     int price;
-    char *name;
+    char *title;
     char *author;
 } student_t;
 
@@ -49,8 +49,8 @@ int main(int argc, char *const argv[])
             my_free(students, i);
             return ERROR;
         }
-        strcpy(students[i].name, tempTitle);
-        strcpy(students[i].name, tempAuthor);
+        strcpy(students[i].title, tempTitle);
+        strcpy(students[i].author, tempAuthor);
     }
 
     int price = 0;
