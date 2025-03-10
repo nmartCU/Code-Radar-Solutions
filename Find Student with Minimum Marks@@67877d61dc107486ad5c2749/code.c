@@ -25,18 +25,17 @@ void my_free(student_t *students, int end)
 
 student_t *find(student_t *students,  int n)
 {
-    float min = 100.0f;
-    int pos = 0;
+    student_t *min_student = NULL;
 
     if (!students)
         return NULL;
-    for (int i = 0; i < n; i++) {
-        if (min > students[i].marks) {
-            min = students[i].marks;
-            pos = i;
+    min_student = &students[0];
+    for (int i = 1; i < n; i++) {
+        if (students[i].marks < min_student->marks) {
+            min_student = &students[i];
         }
     }
-    return &students[pos];
+    return min_student;
 }
 
 int main(int argc, char *const argv[])
