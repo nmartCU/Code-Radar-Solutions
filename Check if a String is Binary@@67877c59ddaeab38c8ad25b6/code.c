@@ -28,7 +28,9 @@ int main(int argc, char *const argv[])
         --read;
     }
     for (int i = 0; i < read; i++) {
+        printf("letter is %c\n", str[i]);
         if (str[i] != '0' || str[i] != '1') {
+            printf("Inside");
             notbin = true;
             break;
         }
