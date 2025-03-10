@@ -29,7 +29,7 @@ int main(int argc, char *const argv[])
         ++letters[str[i]];
     
     for (int i = 0; str[i]; i++) {
-        if (letters[str[i]] > 1) {
+        if (letters[str[i]] == 1) {
             letter = str[i];
             break;
         }
