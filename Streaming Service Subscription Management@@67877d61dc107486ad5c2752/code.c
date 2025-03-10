@@ -29,13 +29,13 @@ void my_free(sub_t *students, int end)
 int main(int argc, char *const argv[])
 {
     int n = 0;
-    car_t *students = NULL;
+    sub_t *students = NULL;
     float basic, premium, standard = 0;
     int user, user2, user3 = 0;
 
     if ((scanf("%d\n", &n)) != 1)
         return ERROR;
-    if ((students = malloc(sizeof(car_t) * (n))) == NULL)
+    if ((students = malloc(sizeof(sub_t) * (n))) == NULL)
         return ERROR;
 
     for (int i = 0; i < n; i++) {
