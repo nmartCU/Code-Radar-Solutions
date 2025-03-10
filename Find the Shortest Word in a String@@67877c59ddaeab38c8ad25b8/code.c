@@ -36,7 +36,7 @@ int main(int argc, char *const argv[])
             ++size;
         }
         if (size < min) {
-            start = i;
+            start = i + 1;
             min = size;
         }
         size = 0;
