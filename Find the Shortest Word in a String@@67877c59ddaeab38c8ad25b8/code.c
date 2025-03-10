@@ -32,9 +32,9 @@ int main(int argc, char *const argv[])
     }
 
     for (int i = 0; i < read; i++) {
-        for (int j = i; str[j] != '\0' && str[j] != ' '; j++) {
+        for (int j = i; str[j] != '\0' && str[j] != ' '; j++)
             ++size;
-        }
+        printf("letter is %c and size is %d", str[i], size)
         if (size < min) {
             start = i;
             min = size;
