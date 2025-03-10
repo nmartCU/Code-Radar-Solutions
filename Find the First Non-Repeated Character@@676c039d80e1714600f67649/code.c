@@ -34,7 +34,7 @@ int main(int argc, char *const argv[])
             break;
         }
     }
-    if ((printf("%c\n", count >= 1 ? '-' : c)) < 0) {
+    if ((printf("%c\n", count >= 1 ? '-' : letter)) < 0) {
         free(str);
         return ERROR;
     }
