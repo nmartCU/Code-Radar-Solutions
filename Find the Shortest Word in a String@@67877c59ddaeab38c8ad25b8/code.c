@@ -39,6 +39,7 @@ int main(int argc, char *const argv[])
             start = i;
             min = size;
         }
+        i = size;
         size = 0;
     }
     if (printf("%.*s\n", min, &str[start]) < 0)
