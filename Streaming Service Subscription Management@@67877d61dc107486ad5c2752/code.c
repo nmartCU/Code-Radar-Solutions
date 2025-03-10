@@ -42,7 +42,7 @@ int main(int argc, char *const argv[])
         char temp[MAX_LENGTH] = {0};
         char temp2[MAX_LENGTH] = {0};
 
-        if ((scanf("%s %s %f", temp2, temp, &students[i].price)) != 3) {
+        if ((scanf("%s %s %f", temp, temp2, &students[i].price)) != 3) {
             my_free(students, i);
             return ERROR;
         }
@@ -56,13 +56,13 @@ int main(int argc, char *const argv[])
         }
         strcpy(students[i].name, temp);
         strcpy(students[i].id, temp2);
-        if (strcmp(students[i].name, "Basic") == 0) {
+        if (strcmp(students[i].id, "Basic") == 0) {
             basic += students[i].price;
             ++user;
-        } else if (strcmp(students[i].name, "Standard") == 0) {
+        } else if (strcmp(students[i].id, "Standard") == 0) {
             standard += students[i].price;
             ++user2;
-        } else if (strcmp(students[i].name, "Premium") == 0){
+        } else if (strcmp(students[i].id, "Premium") == 0){
             premium += students[i].price;
             ++user3;
         }
