@@ -44,5 +44,6 @@ int main(int argc, char *const argv[])
         my_free(str);
         return ERROR;
     }
+    my_free(str);
     return SUCCESS;
 }
