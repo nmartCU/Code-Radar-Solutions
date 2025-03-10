@@ -55,7 +55,7 @@ int main(int argc, char *const argv[])
 
     int price = 0;
     scanf("%d ", &price);
-    printf("Books above price: %0.2f\n", (float)price);
+    printf("Books above price %0.2f:\n", (float)price);
     for (int i = 0; i < n; i++) {
         if (students[i].price >= price) {
             printf("Title: %s, Author: %s, Price: %0.2f\n", students[i].title, students[i].author, (float)students[i].price);
