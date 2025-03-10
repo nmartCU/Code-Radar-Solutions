@@ -49,7 +49,7 @@ int main(int argc, char *const argv[])
         }
         strcpy(students[i].name, temp);
         int mark = students[i].marks;
-        student[i].grade = (marks >= 85 ? 'A' : marks >= 70 && marks <= 84 ? 'B' : 'C');
+        students[i].grade = (marks >= 85 ? 'A' : marks >= 70 && marks <= 84 ? 'B' : 'C');
     }
 
     qsort(students, n, sizeof(student_t), compare_students);
