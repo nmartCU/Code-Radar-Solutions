@@ -40,7 +40,7 @@ int main(int argc, char *const argv[])
             start = i;
             min = size;
         }
-        i = i + min;
+        i = i + min - 1;
         size = 0;
     }
     if (printf("%.*s\n", min, &str[start]) < 0) {
