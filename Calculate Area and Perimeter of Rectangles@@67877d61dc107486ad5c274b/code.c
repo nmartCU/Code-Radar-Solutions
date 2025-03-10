@@ -28,7 +28,6 @@ int main(int argc, char *const argv[])
             free(rectangles);
             return ERROR;
         }
-        printf("%d %d\n", &rectangles[i].length, temp, &rectangles[i].breadth);
     }
     for (int i = 0; i < n; i++) {
         float area = rectangles[i].length * rectangles[i].breadth;
