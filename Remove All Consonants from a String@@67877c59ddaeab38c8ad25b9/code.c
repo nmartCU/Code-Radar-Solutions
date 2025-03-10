@@ -27,7 +27,7 @@ int main(int argc, char *const argv[])
     }
     for (int i = 0; i < read; i++) {
         if (strrchr("aeiouAEIOU", str[i]) || !isalpha(str[i])) {
-            printf("%c", c);
+            printf("%c", str[i]);
         }
     }
     free(str);
