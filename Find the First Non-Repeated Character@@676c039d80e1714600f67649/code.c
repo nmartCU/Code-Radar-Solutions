@@ -28,7 +28,9 @@ int main(int argc, char *const argv[])
     for (int i = 0; str[i]; i++) {
         ++letters[str[i]];
     } 
-
+    for (int i = 0; str[i]; i++) {
+        printf("%c\n", letters[str[i]])
+    }
     for (int i = 0; str[i]; i++) {
         if (letters[str[i]] == 1) {
             c = str[i];
