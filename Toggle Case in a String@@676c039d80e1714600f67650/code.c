@@ -5,13 +5,13 @@
 #define SUCCESS 0
 #define ERROR 1
 
-enum Chartype {
+typedef enum {
     LOWER,
     UPPER,
     NONE,
-};
+} Chartype_t;
 
-enum Chartype is_alpha(char c)
+Chartype_t is_alpha(char c)
 {
     if (c >= 'A' && c <= 'Z')
         return Chartype.UPPER;
