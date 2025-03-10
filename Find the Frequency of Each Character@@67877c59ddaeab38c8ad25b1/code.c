@@ -9,15 +9,6 @@
 #define SUCCESS 0
 #define MAX_LENGTH 256
 
-bool isDuplicate(char *str, char c)
-{
-    int count = 0;
-
-    for (int i = 0; str[i]; i++) {
-
-    }
-}
-
 int main(int argc, char *const argv[])
 {
     char *str = NULL;
