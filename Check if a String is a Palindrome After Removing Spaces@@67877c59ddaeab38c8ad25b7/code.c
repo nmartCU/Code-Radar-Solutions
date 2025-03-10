@@ -67,6 +67,7 @@ int main(int argc, char *const argv[])
             temp[index] = str[i]; 
     }
     free(str);
+    printf("temp %s\n", temp);
     if ((printf("%s\n", isPalindrome(temp) ? "Yes" : "No")) < 0) {
         free(temp);
         return ERROR;
