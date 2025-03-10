@@ -35,7 +35,7 @@ int main(int argc, char *const argv[])
     if ((students = malloc(sizeof(car_t) * (n))) == NULL)
         return ERROR;
 
-    int total[n];
+    int car, truck, bike = 0;
     for (int i = 0; i < n; i++) {
         char temp[MAX_LENGTH] = {0};
         char temp2[MAX_LENGTH] = {0};
@@ -54,17 +54,16 @@ int main(int argc, char *const argv[])
         strcpy(students[i].name, temp);
         strcpy(students[i].id, temp2);
         if (strcmp(students[i].name, "Car") == 0) {
-            total[0] += students[i].price;
+            car += students[i].price;
         } else if (strcmp(students[i].name, "Truck") == 0) {
-            printf("INside truck\n");
-            total[1] += students[i].price;
+            truck += students[i].price;
         } else {
-            total[2] += students[i].price;
+            bike += students[i].price;
         }
     }
 
     my_free(students, n);
-    if ((printf("Cars: %0.2f, Trucks: %0.2f, Bikes: %0.2f\n", total[0], (double)total[1], (float)total[2])) < 0)
+    if ((printf("Cars: %0.2f, Trucks: %0.2f, Bikes: %0.2f\n", car, truck, (float)bike)) < 0)
         return ERROR;
     return SUCCESS;
 }
