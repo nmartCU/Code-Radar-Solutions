@@ -6,6 +6,7 @@
 
 #define SUCCESS 0
 #define ERROR 1
+#define MAX_LENGTH = 255;
 
 int main(int argc, char *const argv[])
 {
@@ -13,7 +14,7 @@ int main(int argc, char *const argv[])
     size_t len = 0;
     ssize_t read = 0;
     char letter = 0;
-    int count = 0;
+    int letters[MAX_LENGTH] = {0};
 
     if ((read = getline(&str, &len, stdin)) == -1) {
         free(str);
@@ -23,17 +24,15 @@ int main(int argc, char *const argv[])
         str[read - 1] = '\0';
         --read;
     }
+
+    for (int i = 0; str[i]; i++)
+        ++letters[str[i]];
+    
     for (int i = 0; str[i]; i++) {
-        char c = str[i];
-        for (int j = 0; str[j]; j++) {
-            if (c == str[j])
-                ++count;
-        }
-        if (count == 1)
-            letter = c;
-        if (letter != '\0')
+        if (letters[str[i]] > 1) {
+            letter = str[i];
             break;
-        count = 0;
+        }
     }
     if ((printf("%c\n", letter != '\0' ? letter : '-')) < 0) {
         free(str);
