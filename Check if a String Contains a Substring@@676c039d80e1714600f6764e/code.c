@@ -22,13 +22,13 @@ int main(int argc, char *const argv[])
     bool sub = false;
 
     for (int i = 0; i < INPUT_LENGTH; i++) {
-        if ((read = getline(&str[i], &len[i], stdin)) == -1) {
+        if ((read[i] = getline(&str[i], &len[i], stdin)) == -1) {
             for (int j = 0; j < i; i++) {
                 free(str[j]);
             }
         }
-        if (read[i] > 0 && str[i] && str[read[i] - 1] == '\n') {
-            str[read[i] - 1] = '\0';
+        if (read[i] > 0 && str[i] && str[i][read[i] - 1] == '\n') {
+            str[i][read[i] - 1] = '\0';
             --read[i];
         }
     }
