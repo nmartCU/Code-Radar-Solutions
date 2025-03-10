@@ -26,9 +26,10 @@ int main(int argc, char *const argv[])
     for (int i = 0; str[i]; i++) {
         char c = str[i];
         for (int j = 0; str[j]; j++) {
-            if (c == str[j]) {
+            if (c == str[j])
                 ++count;
-            }
+            else
+                break;
         }
         if (count == 1)
             letter = c;
