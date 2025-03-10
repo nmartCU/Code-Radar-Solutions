@@ -21,6 +21,7 @@ int main(int argc, char *const argv[])
     size_t len[2] = {0, 0};
     ssize_t read[2] = {0, 0};
     bool rotation = false;
+    char *temp = NULL;
     int start = 0;
         
     for (int i = 0; i < 2; i++) {
@@ -46,9 +47,12 @@ int main(int argc, char *const argv[])
             break;
         }
     }
-    char *temp = malloc(sizeof(char) * (read[0] + 1));
+    if ((temp = malloc(sizeof(char) * (read[0] + 1))) == NULL) {
+        my_free(str);
+        return ERROR;
+    }
     temp[read] = '\0';
-    if ((strcmp(str[0], strncat(strcat(temp, &str[1] + start), str[1], start))) == 0) {
+    if ((strcmp(str[0], strncat(strcpy(temp, &str[1] + start), str[1], start))) == 0) {
         rotation = true;
     }
     my_free(str[0], str[1]);
