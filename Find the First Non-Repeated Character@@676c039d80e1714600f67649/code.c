@@ -1,6 +1,7 @@
 // Your code here...
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define SUCCESS 0
 #define ERROR 1
@@ -23,7 +24,7 @@ int main(int argc, char *const argv[])
     }
     size = read - 1;
     int letters[size];
-    memset(letters, 0, sizeof(int) * size)
+    memset(letters, 0, sizeof(int) * size);
     for (int i = 0; str[i]; i++) {
         ++letters[str[i]];
     } 
