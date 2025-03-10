@@ -31,7 +31,7 @@ int main(int argc, char *const argv[])
         }
         ++count;
     }
-    if ((printf("%.*s", max, &str[start])) < 0) {
+    if ((printf("%d", count)) < 0) {
         free(str);
         return ERROR;
     }
