@@ -19,13 +19,14 @@ int main(int argc, char *const argv[])
 
     if ((read = getline(&str, &len, stdin)) == -1) {
         free(str);
+        printf("Inside");
         return ERROR;
     }
     if (read > 0 && str && str[read - 1] == '\n') {
         str[read - 1] = '\0';
         --read;
     }
-
+    printf("INside 2 %d\n", read);
     for (int i = 0; str[i]; i++) {
         char c = isalpha(str[i]) ? tolower(str[i]) : str[i];
         if (isalpha(c)) {
