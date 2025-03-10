@@ -21,7 +21,7 @@ int main(int argc, char *const argv[])
         }
         total += value;
     }
-    prinf("total %d", total);
+    printf("total %d", total);
     if ((printf("Average Temperature: %0.2f", (float) total / INPUT_LENGTH)) < 0)
         return ERROR;
     return SUCCESS;
