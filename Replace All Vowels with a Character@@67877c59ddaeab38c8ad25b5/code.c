@@ -35,10 +35,13 @@ int main(int argc, char *const argv[])
     }
     letter = str[1][0];
     for (int i = 0; i < read[0]; i++) {
-        if (strrchr("aeiou", str[0][i]))
-            str[0][i] = letter; 
+        char temp = tolower(str[0][i]);
+        if (strrchr("aeiou", temp))
+            str[0][i] = letter;
     }
-    if ((printf("%s\n", str[0])) < 0)
+    if ((printf("%s\n", str[0])) < 0) {
+        my_free(str);
         return ERROR;
+    }
     return SUCCESS;
 }
