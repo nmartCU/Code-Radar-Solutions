@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-#define SUCESS 0
+#define SUCCESS 0
 #define ERROR 1
 #define INPUT_LENGTH 2
 
