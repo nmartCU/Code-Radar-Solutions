@@ -41,6 +41,7 @@ int main(int argc, char *const argv[])
     }
     for (int i = 0; str[i]; i++) {
         ++letters[str[i]];
+        printf("outside letters: %c value: %d\n", str[i], letters[str[i]])
         if (letters[str[i]] == 1) {
             temp[index] = str[i];
             ++index;
