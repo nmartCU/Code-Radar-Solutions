@@ -12,11 +12,10 @@ int main(int argc, char *const argv[])
 {
     int n = 0;
     int total = 0;
+    int value = 0;
         
     for (int i = 0; i < INPUT_LENGTH; i++) {
-        int value = 0;
         if ((scanf("%d ", &value)) != 1) {
-            printf("Eroor scanf");
             return ERROR;
         }
         total += value;
