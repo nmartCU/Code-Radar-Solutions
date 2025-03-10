@@ -9,16 +9,17 @@ typedef enum {
     LOWER,
     UPPER,
     NONE,
-} Chartype;
+} Chartype_t;
 
-Chartype is_alpha(char c)
+int is_alpha(char c)
 {
     if (c >= 'A' && c <= 'Z')
-        return Chartype.UPPER;
+        return UPPER;
     if (c >= 'a' && c <= 'z')
-        return Chartype.LOWER;
-    return Chartype.NONE;
+        return LOWER;
+    return NONE;
 }
+
 int main(int argc, char *const argv[])
 {
     char *str[INPUT_LENGTH] = {NULL, NULL};
