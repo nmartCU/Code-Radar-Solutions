@@ -25,7 +25,7 @@ int main(int argc, char *const argv[])
     }
     for (int i = 0; str[i]; i++) {
         char c = str[i];
-        for (int j = 0; str[j] && !count; j++) {
+        for (int j = 0; str[j]; j++) {
             if (c == str[j]) {
                 count = true;
                 break;
