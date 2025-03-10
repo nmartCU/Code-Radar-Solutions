@@ -54,7 +54,7 @@ int main(int argc, char *const argv[])
         return ERROR;
     }
     temp[read[0]] = '\0';
-    if ((strcmp(str[0], strncat(strcpy(temp, &str[1] + start), str[1], start))) == 0) {
+    if ((strcmp(str[0], strncat(strcat(temp, str[1] + start), str[1], start))) == 0) {
         rotation = true;
     }
     my_free(str);
