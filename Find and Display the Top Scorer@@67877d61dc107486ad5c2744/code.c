@@ -19,6 +19,7 @@ int main(int argc, char *const argv[])
     int n = 0;
     student_t *students = NULL;
     int max = 0;
+    int pos = 0;
         
     if ((scanf("%d", &n)) != 1)
         return ERROR;
@@ -41,11 +42,12 @@ int main(int argc, char *const argv[])
         }
         strcpy(students[i].name, temp);
         if (students[i].marks > max) {
-            max = i;
+            max = students[i].marks;
+            pos = i;
         }
     }
-    printf("max is %d", max);
-    if ((printf("Top Scorer: Roll Number: %d, Name: %s, Marks: %0.2f", students[max].roll, students[max].name, students[max].marks)) < 0) {
+    printf("max is %d pose %d", max, pos);
+    if ((printf("Top Scorer: Roll Number: %d, Name: %s, Marks: %0.2f", students[pos].roll, students[pos].name, students[pos].marks)) < 0) {
         for (int i = 0; i < n; i++)
             free(students[i].name);
         free(students);
