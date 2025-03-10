@@ -29,7 +29,7 @@ int main(int argc, char *const argv[])
     for (int i = 0; str[i]; i++) {
         char c = isalpha(str[i]) ? tolower(str[i]) : str[i];
         if (isalpha(c)) {
-            letters[c] = true;
+            letters[c - 'a'] = true;
         }
     }
     free(str);
