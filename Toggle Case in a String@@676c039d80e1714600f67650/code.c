@@ -39,7 +39,7 @@ int main(int argc, char *const argv[])
         int res = is_alpha(str[i]);
         if (res == LOWER) {
             str[i] = str[i] - 32;
-        } else (res == UPPER) {
+        } else if (res == UPPER) {
             str[i] = str[i] + 32;
         }
     }
