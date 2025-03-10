@@ -38,7 +38,7 @@ int main(int argc, char *const argv[])
             free(students);
             return ERROR;
         }
-        students[i].name[strlen(temp) - 1] = '\0';
+        students[i].name[strlen(temp)] = '\0';
         strcpy(students[i].name, temp);
     }
     for (int i = 0; i < n; i++) {
