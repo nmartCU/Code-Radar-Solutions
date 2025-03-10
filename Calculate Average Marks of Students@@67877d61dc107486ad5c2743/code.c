@@ -19,7 +19,7 @@ int main(int argc, char *const argv[])
 {
     int n = 0;
     student_t *students = NULL;
-    float average = 0f;
+    float average = 0.0f;
         
     if ((scanf("%d", &n)) != 1)
         return ERROR;
