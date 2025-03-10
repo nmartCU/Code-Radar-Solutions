@@ -39,6 +39,7 @@ int main(int argc, char *const argv[])
             start = i;
             max  = size;
         }
+        size = 0;
     }
     if (printf("%.*s\n", max, &str[max]) < 0)
         return ERROR;
