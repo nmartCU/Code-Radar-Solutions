@@ -1,23 +1,29 @@
 // Your code here...
 
+#define MAX_VAL 1000
 #include <stdio.h>
 
 int findUnsortedSubarray(int *arr, int n)
 {
-    int start = 0;
-    int end = n - 1;
+    int start = 0, i = 0;
+    int end = n - 1, j = n - 1;
     int compt = 0;
+    int min = MAX_VAL, max = -MAX_VAL;
 
     if (!arr)
         return 0;
-    for (int i = 0; i < end && arr[i] < arr[i + 1]; i++)
-        ++start;
-    printf("start is: %d and end is %d\n", start, end);
-    if (start == end)
-        return 0;
-    for (int j = end; j > 0 && arr[j] > arr[j - 1]; j--) {
-        --end;
+    while (j >= 0) {
+        if (arr[start] >= min)
+            min = arr[start]
+        else
+            end = i;
+
+        if (arr[end] <= max)
+            max = arr[end]
+        else
+            start = j;
+        ++i;
+        --j;
     }
-    printf("end is: %d\n", end);
     return end - start + 1;
 }
