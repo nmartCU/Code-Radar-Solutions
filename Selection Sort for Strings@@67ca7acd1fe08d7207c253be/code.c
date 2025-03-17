@@ -13,15 +13,19 @@ void printArray(char **arr, int n)
 
 void selectionSort(char arr[][MAX_LEN], int n)
 {
+    char min[MAX_LEN];
+
     for (int i = 0; i < n; i++) {
         int idx = i;
+        strcpy(min, arr[idx]);
         for (int j = i + 1; j < n; j++) {
-            if (strcmp(arr[idx], arr[j]) > 0) {
+            if (strcmp(min, arr[j]) > 0) {
+                strcpy(min, arr[j]);
                 idx = j;
             }
         }
         if (idx != i) {
-            char temp[100];
+            char temp[MAX_LEN];
             strcpy(temp, arr[i]);
             strcpy(arr[i], arr[idx]);
             strcpy(arr[i + 1], temp);
