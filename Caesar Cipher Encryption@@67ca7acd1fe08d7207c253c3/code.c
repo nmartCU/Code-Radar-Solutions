@@ -8,8 +8,10 @@
 void caesarCipher(char message[MAX_LEN], int shift, char encrypted[MAX_LEN])
 {
     for (int i = 0; i < strlen(message); i++) {
-        if (message[i] != ' ')
+        if (message[i] >= 'a' && message[i] <= 'z')
             encrypted[i] = 'a' + ((unsigned char) message[i] + shift) % 26;
+        else if (message[i] >= 'A' && message[i] <= 'Z')
+            encrypted[i] = 'A' + ((unsigned char) message[i] + shift) % 26;
         else
             encrypted[i] = message[i];
     }
