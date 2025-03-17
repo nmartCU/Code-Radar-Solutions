@@ -15,13 +15,15 @@ void selectionSort(char **arr, int n)
     for (int i = 0; i < n; i++) {
         int idx = i;
         for (int j = i + 1; j < n; j++) {
-            if (strcmp(arr[j], arr[idx]) < 0) {
-                char temp[100];
-                strcpy(temp, arr[j]);
-                strcpy(arr[j], arr[j + 1]);
-                strcpy(arr[j + 1], temp);
+            if (strcmp(arr[idx], arr[j]) > 0) {
                 idx = j;
             }
+        }
+        if (idx != i) {
+            char temp[100];
+            strcpy(temp, arr[i]);
+            strcpy(arr[i], arr[idx]);
+            strcpy(arr[i + 1], temp);
         }
 
     }
