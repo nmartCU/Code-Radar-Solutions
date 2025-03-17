@@ -21,5 +21,6 @@ void insertionSort(int *arr, int n)
             arr[idx + 1] = arr[idx];
             --idx;
         }
+        arr[idx + 1] = temp;
     }
 }
