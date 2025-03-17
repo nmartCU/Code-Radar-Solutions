@@ -18,9 +18,6 @@ int findUnsortedSubarray(int *arr, int n)
         if (arr[end] >= arr[end - 1])
             --end;
     }
-    while (end > 0 && arr[end] >= arr[end - 1]) {
-        --end;
-    }
     printf("start is: %d end is: %d\n", start, end);
     return compt;
 }
