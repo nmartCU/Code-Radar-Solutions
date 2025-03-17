@@ -5,13 +5,13 @@
 
 int findUnsortedSubarray(int *arr, int n)
 {
+    int i = 0;
+    int j = n - 1;
+    
     int start = 0;
     int end = -1;
 
-    int i = 0;
-    int j = n - 1;
-    int compt = 0;
-    int min = MAX_VAL, max = -MAX_VAL;
+    int min = -MAX_VAL, max = MAX_VAL;
 
     if (!arr)
         return 0;
