@@ -14,12 +14,12 @@ int findUnsortedSubarray(int *arr, int n)
         return 0;
     while (j >= 0) {
         if (arr[start] >= min)
-            min = arr[start]
+            min = arr[start];
         else
             end = i;
 
         if (arr[end] <= max)
-            max = arr[end]
+            max = arr[end];
         else
             start = j;
         ++i;
