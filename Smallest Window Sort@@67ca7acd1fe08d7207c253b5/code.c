@@ -7,7 +7,7 @@ int findUnsortedSubarray(int *arr, int n)
 {
     int start = 0;
     bool find = false;
-    int compt = 0:
+    int compt = 0;
 
     if (!arr)
         return compt;
