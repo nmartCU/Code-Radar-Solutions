@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int findUnsortedSubArray(int *arr, int n)
+int findUnsortedSubarray(int *arr, int n)
 {
     if (!arr)
         return 0;
