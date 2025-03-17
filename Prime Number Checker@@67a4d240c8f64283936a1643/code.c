@@ -9,7 +9,7 @@ bool isPrime(int num)
         return false;
     for (int i = 2; i < num / 2; i++) {
         if ((num % i) == 0)
-            return true;
+            return false;
     }
-    return false;
+    return true;
 }
