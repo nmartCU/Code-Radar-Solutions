@@ -13,8 +13,6 @@ void printArray(char arr[][MAX_LEN], int n)
 
 void selectionSort(char arr[][MAX_LEN], int n)
 {
-    char min[MAX_LEN];
-
     for (int i = 0; i < n; i++) {
         int idx = i;
         for (int j = i + 1; j < n; j++) {
