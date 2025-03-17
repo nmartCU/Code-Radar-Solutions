@@ -16,9 +16,10 @@ void selectionSort(char **arr, int n)
         int idx = i;
         for (int j = i + 1; j < n; j++) {
             if (strcmp(arr[j], arr[idx]) < 0) {
-                char temp[100] = strcpy(arr[j]);
-                arr[j] = strcpy(arr[j + 1]);
-                arr[j + 1] = strcpy(temp);
+                char temp[100];
+                strcpy(temp, arr[j]);
+                strcpy(arr[j], arr[j + 1]);
+                strcpy(arr[j + 1], temp);
             }
         }
 
