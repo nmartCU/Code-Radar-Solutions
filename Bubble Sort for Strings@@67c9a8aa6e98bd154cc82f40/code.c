@@ -2,6 +2,8 @@
 // Your code here...
 
 #include <stdio.h>
+#include <string.h>
+
 #define MAX_LEN 100
 
 void printArray(char arr[][MAX_LEN], int n)
@@ -9,7 +11,7 @@ void printArray(char arr[][MAX_LEN], int n)
     if (!arr)
         return;
     for (int i =0; i < n; i++)
-        printf("%s ", arr[i]);
+        printf("%s\n", arr[i]);
 }
 
 void bubbleSort(char arr[][MAX_LEN], int n)
