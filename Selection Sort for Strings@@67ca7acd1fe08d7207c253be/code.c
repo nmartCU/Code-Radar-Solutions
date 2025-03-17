@@ -17,10 +17,8 @@ void selectionSort(char arr[][MAX_LEN], int n)
 
     for (int i = 0; i < n; i++) {
         int idx = i;
-        strcpy(min, arr[idx]);
         for (int j = i + 1; j < n; j++) {
-            if (strcmp(min, arr[j]) > 0) {
-                strcpy(min, arr[j]);
+            if (strcmp(arr[idx], arr[j]) > 0) {
                 idx = j;
             }
         }
