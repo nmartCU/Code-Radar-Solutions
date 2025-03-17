@@ -14,9 +14,9 @@ void printArray(int *arr, int n)
 
 void insertionSort(int *arr, int n)
 {
-    for (int i = 0; i < n; i++) {
-        int temp = arr[i + 1];
-        int idx = i;
+    for (int i = 1; i < n; i++) {
+        int temp = arr[i];
+        int idx = i - 1;
         while (idx >= 0 && temp < arr[idx]) {
             arr[idx + 1] = arr[idx];
             --idx;
