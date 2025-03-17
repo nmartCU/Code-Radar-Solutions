@@ -12,10 +12,8 @@ int findUnsortedSubarray(int *arr, int n)
         return 0;
     for (int i = 0; i < end && arr[i] < arr[i + 1]; i++)
         ++start;
-    printf("start is: %d", start);
-    for (int j = end; j > 0 && arr[j] >= arr[j - 1]; j--) {
+    for (int j = end; j > start && arr[j] >= arr[j - 1]; j--) {
         --end;
     }
-    printf("end is: %d\n", end);
-    return compt;
+    return end - start;
 }
