@@ -20,6 +20,7 @@ void selectionSort(char **arr, int n)
                 strcpy(temp, arr[j]);
                 strcpy(arr[j], arr[j + 1]);
                 strcpy(arr[j + 1], temp);
+                idx = j;
             }
         }
 
