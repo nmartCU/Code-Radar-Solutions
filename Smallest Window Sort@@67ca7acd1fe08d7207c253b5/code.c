@@ -12,8 +12,7 @@ int findUnsortedSubarray(int *arr, int n)
         return 0;
     for (int i = 0; i < end && arr[i] < arr[i + 1]; i++)
         ++start;
-    for (int j = end; j > start && arr[j] >= arr[j - 1]; j--) {
+    for (int j = end; j > start && arr[j] >= arr[j - 1]; j--)
         --end;
-    }
-    return end - start;
+    return end - start + 1;
 }
