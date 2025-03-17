@@ -3,7 +3,7 @@
 #include <string.h>
 #define MAX_LEN 100
 
-void printArray(char **arr, int n)
+void printArray(char arr[][MAX_LEN], int n)
 {
     if (!arr)
         return;
