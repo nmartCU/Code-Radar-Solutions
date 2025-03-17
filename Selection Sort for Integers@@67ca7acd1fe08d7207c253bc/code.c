@@ -24,6 +24,7 @@ void selectionSort(int *arr, int n)
         for (int j = i + 1; j < n; j++)
             if (arr[j] < arr[idx])
                 idx = j;
-        swap(&arr[i], &arr[idx]);
+        if (idx != i)
+            swap(&arr[i], &arr[idx]);
     }
 }
