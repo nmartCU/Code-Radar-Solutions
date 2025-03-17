@@ -1,6 +1,7 @@
 // Your code here...
 #include <stdio.h>
 #include <string.h>
+#define MAX_LEN 100
 
 void printArray(char **arr, int n)
 {
@@ -10,9 +11,9 @@ void printArray(char **arr, int n)
         printf("%s\n", arr[i]);
 }
 
-void selectionSort(char **arr, int n)
+void selectionSort(char arr[][MAX_LEN], int n)
 {
-    for (int i = 0; i < n - 1; i++) {
+    for (int i = 0; i < n; i++) {
         int idx = i;
         for (int j = i + 1; j < n; j++) {
             if (strcmp(arr[idx], arr[j]) > 0) {
