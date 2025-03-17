@@ -6,16 +6,17 @@
 int findUnsortedSubarray(int *arr, int n)
 {
     int start = 0;
+    int end = n - 1;
     bool find = false;
-    int compt = 0;
 
-    if (!arr || n == 1)
-        return compt;
-
-    for (int i = 0; i < n - 1; i++) {
-        if (arr[i] > arr[i + 1]) {
-            compt++;
-        }
+    if (!arr)
+        return 0;
+    for (int i = 0; i < n - 1 && arr[i] > arr[i + 1]; i++)
+        ++start;
+    if (start == n - 1)
+        return 0;
+    while (end > 0 && arr[end] >= arr[end - 1]) {
+        --end;
     }
-    return compt;
+    return end - start;
 }
