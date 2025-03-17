@@ -1,6 +1,7 @@
 // Your code here...
 
 #include <stdio.h>
+#include <stdbool.h>
 
 int findUnsortedSubarray(int *arr, int n)
 {
