@@ -8,7 +8,7 @@ void printArray(char arr[], int n)
 
 void insertionSort(char arr[], int n)
 {
-    for (int i = 1; i < n; i++) {
+    for (int i = 1; i <= n; i++) {
         int idx = i - 1;
         char temp = arr[idx];
         while (idx >= 0 && temp < arr[i]) {
