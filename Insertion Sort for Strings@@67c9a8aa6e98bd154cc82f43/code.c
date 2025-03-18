@@ -4,7 +4,7 @@
 
 #define MAX_LEN 100
 
-void printArray(char [][MAX_LEN ]arr, int n)
+void printArray(char [][MAX_LEN]arr, int n)
 {
     for (int i = 0; i < n; i++)
         printf("%s\n", arr[i]);
