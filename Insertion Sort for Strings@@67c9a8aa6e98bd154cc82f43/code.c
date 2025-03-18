@@ -4,13 +4,13 @@
 
 #define MAX_LEN 100
 
-void printArray(char [][MAX_LEN]arr, int n)
+void printArray(char arr[][MAX_LEN], int n)
 {
     for (int i = 0; i < n; i++)
         printf("%s\n", arr[i]);
 }
 
-void insertionSort(char [][MAX_LEN] arr, int n)
+void insertionSort(char arr[][MAX_LEN], int n)
 {
     char temp[MAX_LEN];
     for (int i = 1; i < n - 1; i++) {
