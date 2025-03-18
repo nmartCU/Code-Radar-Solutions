@@ -10,8 +10,9 @@ void insertionSort(char arr[], int n)
 {
     for (int i = 1; i < n; i++) {
         int idx = i - 1;
-        while (idx >= 0 && arr[i] < arr[idx]) {
-            idx = i;
+        char temp = arr[idx];
+        while (idx >= 0 && temp < arr[idx]) {
+            arr[idx + 1] = arr[idx] 
             --idx;
         }
         if (idx != i) {
