@@ -18,7 +18,7 @@ void insertionSort(char arr[][MAX_LEN], int n)
     for (int i = 1; i < n; i++) {
         int idx = i - 1;
         strcpy(temp, arr[i]);
-        while (idx >= 0 && strcmp(temp, arr[idx]) < 0) {
+        while (idx >= 0 && strcmp(temp, arr[idx]) > 0) {
             strcpy(arr[idx + 1], arr[idx]);
             --idx;
         }
