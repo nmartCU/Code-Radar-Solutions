@@ -11,8 +11,8 @@ void insertionSort(char arr[], int n)
     for (int i = 1; i < n; i++) {
         int idx = i - 1;
         char temp = arr[idx];
-        while (idx >= 0 && temp < arr[idx]) {
-            arr[idx + 1] = arr[idx] 
+        while (idx >= 0 && temp < arr[i]) {
+            arr[idx + 1] = arr[idx];
             --idx;
         }
         if (idx != i) {
