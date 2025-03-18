@@ -1,5 +1,11 @@
 // Your code here...
 
+void printArray(char arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+        printf("%c ", arr[i]);
+}
+
 void bubbleSort(char arr[], int n)
 {
     for (int i = 0; i < n; i++) {
