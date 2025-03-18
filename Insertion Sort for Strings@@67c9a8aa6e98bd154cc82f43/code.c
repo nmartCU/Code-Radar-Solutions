@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-#define MAX_LEN
+#define MAX_LEN 100
 
 void printArray(char [][MAX_LEN]arr, int n)
 {
