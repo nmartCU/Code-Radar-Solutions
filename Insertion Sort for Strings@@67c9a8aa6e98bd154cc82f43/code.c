@@ -14,10 +14,11 @@ void printArray(char arr[][MAX_LEN], int n)
 void insertionSort(char arr[][MAX_LEN], int n)
 {
     char temp[MAX_LEN];
+
     for (int i = 1; i < n - 1; i++) {
         int idx = i - 1;
         strcpy(temp, arr[i]);
-        while (idx >= 0 && temp < arr[idx]) {
+        while (idx >= 0 && strcmp(temp, arr[idx]) < 0) {
             strcpy(arr[idx + 1], arr[idx]);
             --idx;
         }
