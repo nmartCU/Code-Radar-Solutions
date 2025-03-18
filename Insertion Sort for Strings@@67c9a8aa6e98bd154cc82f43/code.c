@@ -1,6 +1,7 @@
 // Your code here...
 
 #include <stdio.h>
+#include <string.h>
 
 #define MAX_LEN 100
 
