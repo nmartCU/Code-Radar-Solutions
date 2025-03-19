@@ -25,7 +25,7 @@ int main()
             pos = i;
         }
         if (arr[end] < max) {
-            max = arr[end]
+            max = arr[end];
             pos2 = end;
         }
         --end;
