@@ -15,7 +15,7 @@ void compressString(char str[MAX_LEN], char compress[MAX_LEN * 2])
             if (temp == str[j])
                 ++count;
         }
-        if (compress[idx] != temp) {
+        if (compress[i] != temp) {
             compress[idx] = temp;
             compress[idx + 1] = count;
         }
