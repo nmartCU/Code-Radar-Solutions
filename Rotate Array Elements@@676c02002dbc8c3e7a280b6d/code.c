@@ -25,7 +25,6 @@ int main()
     while (idx < k) {
         for (int i = end; i < n - 1; i++) {
             swap(&arr[i], &arr[i - 1]);
-            --end;
         }
         ++idx;
     }
