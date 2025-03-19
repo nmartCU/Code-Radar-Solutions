@@ -1,4 +1,3 @@
-// Your code here...
 #include <stdio.h>
 #include <string.h>
 
@@ -12,14 +11,14 @@ void compressString(char str[MAX_LEN], char compress[MAX_LEN * 2])
         char temp = str[i];
         int count = 0;
         for (int j = 0; str[j] != '\0'; j++) {
-            if (temp == str[j])
+            if (temp == str[j] && strrchr(compress, temp) == NULL)
                 ++count;
         }
-        if (compress[i] != temp) {
+        if (count > 0) {
             compress[idx] = temp;
-            compress[idx + 1] = count;
+            compress[idx + 1] = count + '0';
+            idx += 2;
         }
-        idx += 2;
     }
     if (strlen(compress) > strlen(str)) {
         strcpy(compress, str);
