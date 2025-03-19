@@ -19,7 +19,7 @@ void convertDigitToChar(int *idx, int count, char compress[MAX_LEN * 2])
     *idx += digits; 
 }
 
-void goEndOccurrence(int *i; int *count, char str[MAX_LEN], char temp)
+void goEndOccurrence(int *i, int *count, char str[MAX_LEN], char temp)
 {
     while ((*i) + 1 < strlen(str) && str[(*i) + 1] == temp) {
         ++(*count);
