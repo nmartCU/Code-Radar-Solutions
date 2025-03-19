@@ -17,7 +17,7 @@ void compressString(char str[MAX_LEN], char compress[MAX_LEN * 2])
         if (count > 0) {
             compress[idx] = temp;
             if (count != 1) {
-                compress[idx + 1] = (char)count;
+                compress[idx + 1] = (unsigned char)count;
                 idx += 2;
             } else
                 idx += 1;
