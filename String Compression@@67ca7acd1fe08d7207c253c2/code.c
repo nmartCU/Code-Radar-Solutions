@@ -3,6 +3,12 @@
 
 #define MAX_LEN 100
 
+void convertDigitToChar(int *idx, int count, char compress[MAX_LEN * 2])
+{
+    compress[*idx++] = count + '0';
+}
+
+
 void compressString(char str[MAX_LEN], char compress[MAX_LEN * 2])
 {
     int idx = 0;
@@ -16,7 +22,7 @@ void compressString(char str[MAX_LEN], char compress[MAX_LEN * 2])
         }
         compress[idx++] = temp;
         if (count > 1) {
-            compress[idx++] = count + '0';
+            convertDigitToChar(&idx, count, compress);
         }
     }
     compress[idx] = '\0';
