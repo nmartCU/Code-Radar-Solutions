@@ -15,12 +15,11 @@ int main()
 
     for (int i = 0; i < n; i++)
         scanf("%d", &arr[i]);
-    while (i < n) {
+    for (int i = 0; i < n; i++) {
         if (arr[i] % 2 == 0) {
             ++even;
         } else
             ++odds;
-        i++;
     }
     printf("%d %d", even, odds);
     return 0;
