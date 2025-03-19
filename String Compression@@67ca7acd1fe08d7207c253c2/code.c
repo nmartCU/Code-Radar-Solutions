@@ -6,9 +6,8 @@
 void compressString(char str[MAX_LEN], char compress[MAX_LEN * 2])
 {
     int idx = 0;
-    int i = 0;
 
-    for (; str[i] != '\0'; i++) {
+    for (int i = 0; str[i] != '\0'; i++) {
         char temp = str[i];
         int count = 0;
         for (int j = 0; str[j] != '\0'; j++) {
