@@ -12,7 +12,7 @@ void fibonacciSeries(int n)
         else {
             next = nbr1 + nbr2;
             nbr1 = nbr2;
-            nbr2 = i;
+            nbr2 = next;
         }
         printf("%d ", next);
     }
