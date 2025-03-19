@@ -23,7 +23,7 @@ void compressString(char str[MAX_LEN], char compress[MAX_LEN * 2])
                 idx += 1;
         }
     }
-    compress[idx + 1] = '\0';
+    compress[idx] = '\0';
     if (strlen(compress) >= strlen(str)) {
         strcpy(compress, str);
     }
