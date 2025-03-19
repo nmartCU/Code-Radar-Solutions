@@ -12,12 +12,14 @@ void compressString(char str[MAX_LEN], char compress[MAX_LEN * 2])
         char temp = str[i];
         int count = 0;
         for (int j = 0; str[j] != '\0'; j++) {
-            if (temp == str[j] && temp != compress[j])
+            if (temp == str[j])
                 ++count;
         }
-        compress[idx] = temp;
-        compress[idx + 1] = count;
-        ++idx;
+        if (compress[idx] != temp) {
+            compress[idx] = temp;
+            compress[idx + 1] = count;
+        }
+        idx += 2;
     }
     if (strlen(compress) > strlen(str)) {
         strcpy(compress, str);
