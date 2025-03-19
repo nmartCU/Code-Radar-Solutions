@@ -24,7 +24,7 @@ void compressString(char str[MAX_LEN], char compress[MAX_LEN * 2])
         }
     }
     compress[idx] = '\0';
-    if (strlen(compress) > strlen(str)) {
+    if (strlen(compress) >= strlen(str)) {
         strcpy(compress, str);
     }
 }
