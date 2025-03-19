@@ -14,6 +14,7 @@ int main()
     int arr[n];
     int occ[MAX];
 
+    memset(occ, 0, sizeof(occ));
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
