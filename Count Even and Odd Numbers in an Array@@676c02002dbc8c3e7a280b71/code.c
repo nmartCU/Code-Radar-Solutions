@@ -1,8 +1,6 @@
 // Your code here...
-// Your code here...
 
 #include <stdio.h>
-#define MAX_VAL 200000
 
 int main()
 {
