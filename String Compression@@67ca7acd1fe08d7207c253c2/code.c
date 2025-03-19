@@ -11,7 +11,7 @@ void compressString(char str[MAX_LEN], char compress[MAX_LEN * 2])
         char temp = str[i];
         int count = 0;
         for (int j = i; str[j] != '\0'; j++) {
-            if (temp == str[j] && strrchr(compress, temp) == NULL)
+            if (temp == str[j])
                 ++count;
         }
         if (count > 0) {
