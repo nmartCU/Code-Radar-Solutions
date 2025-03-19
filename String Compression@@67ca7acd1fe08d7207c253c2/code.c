@@ -19,6 +19,13 @@ void convertDigitToChar(int *idx, int count, char compress[MAX_LEN * 2])
     *idx += digits; 
 }
 
+void goEndOccurrence(int *i; int *count, char str[MAX_LEN], char temp)
+{
+    while ((*i) + 1 < strlen(str) && str[(*i) + 1] == temp) {
+        ++(*count);
+        ++(*i);
+    }
+}
 
 void compressString(char str[MAX_LEN], char compress[MAX_LEN * 2])
 {
@@ -27,10 +34,7 @@ void compressString(char str[MAX_LEN], char compress[MAX_LEN * 2])
     for (int i = 0; str[i] != '\0'; i++) {
         char temp = str[i];
         int count = 1;
-        while (i + 1 < strlen(str) && str[i + 1] == temp) {
-            ++count;
-            ++i;
-        }
+        goEndOccurrence(&i, &count, str, temp);
         compress[idx++] = temp;
         if (count > 1) {
             convertDigitToChar(&idx, count, compress);
