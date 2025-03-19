@@ -5,7 +5,18 @@
 
 void convertDigitToChar(int *idx, int count, char compress[MAX_LEN * 2])
 {
-    compress[(*idx)++] = count + '0';
+    int digits = 0;
+    int temp = count;
+    while (temp > 0) {
+        temp /= 10;
+        ++digits;
+    }
+    temp = count;
+    for (int j = digits - 1; j > 0; j--) {
+        compress[((*idx)++) + j] = (temp % 10) + '0';
+        temp /= 10;
+
+    }
 }
 
 
