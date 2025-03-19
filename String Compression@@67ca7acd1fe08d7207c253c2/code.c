@@ -16,8 +16,11 @@ void compressString(char str[MAX_LEN], char compress[MAX_LEN * 2])
         }
         if (count > 0) {
             compress[idx] = temp;
-            compress[idx + 1] = count + '0';
-            idx += 2;
+            if (count != 1) {
+                compress[idx + 1] = count + '0';
+                idx += 2;
+            } else
+                idx += 1;
         }
     }
     compress[idx] = '\0';
