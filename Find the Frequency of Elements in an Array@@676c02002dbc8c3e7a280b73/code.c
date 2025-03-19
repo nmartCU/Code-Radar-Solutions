@@ -41,7 +41,7 @@ int main()
         }
     }
     for (int i = 0; i < index; i++) {
-        printf("%d %d", res[i].elem, res[i].freq);
+        printf("%d %d\n", res[i].elem, res[i].freq);
     }
     return 0;
 }
