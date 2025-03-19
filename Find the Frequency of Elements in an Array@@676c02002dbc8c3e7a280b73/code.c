@@ -8,7 +8,7 @@
 typedef struct frequency_s {
     int freq;
     int elem;
-} frequency_t
+} frequency_t;
 
 int main()
 {
