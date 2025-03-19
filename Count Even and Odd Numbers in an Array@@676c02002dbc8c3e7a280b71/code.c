@@ -13,8 +13,8 @@ int main()
 
     for (int i = 0; i < n; i++) {
         int nb = 0;
-        scanf("%d", n);
-        if (n % 2 == 0) {
+        scanf("%d", &nb);
+        if (nb % 2 == 0) {
             ++even;
         } else
             ++odds;
