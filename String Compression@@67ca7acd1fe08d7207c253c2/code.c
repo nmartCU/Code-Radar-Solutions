@@ -15,7 +15,6 @@ void convertDigitToChar(int *idx, int count, char compress[MAX_LEN * 2])
     for (int j = digits - 1; j >= 0; j--) {
         compress[(*idx) + j] = (temp % 10) + '0';
         temp /= 10;
-        (*idx)++
     }
 }
 
