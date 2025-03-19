@@ -31,6 +31,6 @@ int main()
         --end;
         ++i;
     }
-    printf("%d %d", arr[pos], arr[pos2]);
+    printf("%d %d", arr[pos2], arr[pos]);
     return 0;
 }
