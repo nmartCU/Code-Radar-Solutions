@@ -9,17 +9,14 @@ void compressString(char str[MAX_LEN], char compress[MAX_LEN * 2])
 
     for (int i = 0; str[i] != '\0'; i++) {
         char temp = str[i];
-        int count = 0;
-        for (int j = i; str[j] != '\0' && temp == str[j]; j++) {
+        int count = 1;
+        while (i + 1 > strlen(str) && str[i + 1] == temp) {
             ++count;
+            ++i;
         }
-        if (count > 0 && strrchr(compress, temp) == NULL) {
-            compress[idx] = temp;
-            if (count != 1) {
-                compress[idx + 1] = count + '0';
-                idx += 2;
-            } else
-                idx += 1;
+        compress[idx++] = temp;
+        if (count > 1) {
+            compress[idx++] = count + '0';
         }
     }
     compress[idx] = '\0';
