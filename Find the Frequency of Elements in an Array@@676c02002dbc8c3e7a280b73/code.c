@@ -25,7 +25,7 @@ int main()
 
     for (int i = 0; i < MAX; i++) {
         if (occ[i] >= 1) {
-            printf("%d ", occ[i]);
+            printf("%d %d\n", occ[i], occ[arr[i]]);
         }
     }
     return 0;
