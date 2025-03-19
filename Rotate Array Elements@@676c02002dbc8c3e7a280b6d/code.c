@@ -23,7 +23,7 @@ int main()
     scanf("%d", &k);
     int idx = 0;
     while (idx < k) {
-        for (int i = end; i > 0 i--) {
+        for (int i = end; i >= 0; i--) {
             swap(&arr[i], &arr[i - 1]);
         }
         ++idx;
