@@ -13,16 +13,15 @@ int main()
     int k = 0;
     int j = 0;
 
-    scanf("%d", &n);
+    scanf("%d\n", &n);
     int arr[n];
 
     for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
+        scanf("%d\n", &arr[i]);
     }
-    scanf("%d", &k);
-
+    scanf("%d\n", &k);
     for (int i = k - 1; i > 0; i--) {
-        swap(&arr[i], arr[j]);
+        swap(&arr[i], &arr[j]);
         ++j;
     }
     for (int i = 0; i < n; i++) {
