@@ -17,7 +17,7 @@ int main()
         if (arr[i + 1] >= arr[i]) {
             continue;
         } else {
-            printf("Not sorted\n");
+            printf("Not Sorted\n");
             return 0;
         }
     }
