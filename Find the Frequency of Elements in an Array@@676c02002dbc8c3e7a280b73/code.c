@@ -5,6 +5,11 @@
 
 #define MAX 255
 
+typedef struct frequency_s {
+    int freq;
+    int elem;
+} frequency_t
+
 int main()
 {
     int n = 0;
@@ -12,21 +17,30 @@ int main()
     scanf("%d", &n);
 
     int arr[n];
-    int occ[MAX];
+    frequency_t *res = malloc(sizeof(frequency_t) * n);
+    int index = 0;
 
-    memset(occ, 0, sizeof(occ));
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 
     for (int i = 0; i < n; i++) {
-        ++occ[arr[i]];
-    }
-
-    for (int i = 0; i < MAX; i++) {
-        if (occ[i] >= 1) {
-            printf("%d %d\n", occ[i], occ[arr[i]]);
+        bool state = false;
+        for (int j = 0; j < index; j++) {
+            if (arr[i] == res[j].elem) {
+                ++res[j].freq;
+                state = true;
+                break;
+            }
         }
+        if (!state) {
+            res[index].freq = 1;
+            res[index].elem = arr[i];
+            index++;
+        }
+    }
+    for (int i = 0; i < index; i++) {
+        printf("%d %d", res[i].elem, res[i].freq);
     }
     return 0;
 }
