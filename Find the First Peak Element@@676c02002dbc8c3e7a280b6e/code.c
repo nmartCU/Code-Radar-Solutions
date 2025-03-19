@@ -9,13 +9,19 @@ int main()
 
     int arr[n];
     int first = 0;
+    int max = 0;
 
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 
-    for (int i = 1; i < n - 1; i++) {
-        if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
+    for (int i = 1; i < n; i++) {
+        if (i == n - 1) {
+            if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
+                printf("%d\n", arr[i]);
+                return 0;
+            }
+        } else if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
             printf("%d\n", arr[i]);
             return 0;
         }
