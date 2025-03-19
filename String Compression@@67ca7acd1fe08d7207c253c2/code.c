@@ -10,7 +10,7 @@ void compressString(char str[MAX_LEN], char compress[MAX_LEN * 2])
     for (int i = 0; str[i] != '\0'; i++) {
         char temp = str[i];
         int count = 0;
-        for (int j = 0; str[j] != '\0'; j++) {
+        for (int j = i; str[j] != '\0'; j++) {
             if (temp == str[j] && strrchr(compress, temp) == NULL)
                 ++count;
         }
