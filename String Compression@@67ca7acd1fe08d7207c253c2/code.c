@@ -5,7 +5,7 @@
 
 void convertDigitToChar(int *idx, int count, char compress[MAX_LEN * 2])
 {
-    compress[*idx++] = count + '0';
+    compress[(*idx)++] = count + '0';
 }
 
 
