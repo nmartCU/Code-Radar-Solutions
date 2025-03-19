@@ -12,9 +12,11 @@ int main()
 
     scanf("%d", &n);
 
-    for (int i = 0; i < n; i++) {
+    int arr[n];
+
+    for (int i = 0; i < n; i++)
         scanf("%d", &arr[i]);
-    }
+    
     int end = n - 1;
     int pos = 0, pos2 = 0;
     while (i < n) {
@@ -30,4 +32,5 @@ int main()
         ++i;
     }
     printf("%d %d", arr[pos], arr[pos2]);
+    return 0;
 }
