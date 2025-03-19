@@ -12,15 +12,16 @@ int main()
     scanf("%d", &n);
 
     int arr[n];
-    int occ[MAX] = {0};
+    int occ[MAX];
 
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 
-    for (int i = 0; i < MAX; i++) {
+    for (int i = 0; i < n; i++) {
         ++occ[arr[i]];
     }
+
     for (int i = 0; i < MAX; i++) {
         if (occ[i] >= 1) {
             printf("%d ", occ[i]);
