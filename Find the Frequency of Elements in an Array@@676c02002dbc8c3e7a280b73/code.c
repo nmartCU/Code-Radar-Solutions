@@ -12,13 +12,12 @@ int main()
     scanf("%d", &n);
 
     int arr[n];
-    int occ[MAX];
+    int occ[MAX] = {0};
 
-    memset(occ, 0, sizeof(occ));
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-    
+
     for (int i = 0; i < MAX; i++) {
         ++occ[arr[i]];
     }
