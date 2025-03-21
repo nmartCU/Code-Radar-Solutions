@@ -27,7 +27,7 @@ int main()
 
     for (int i = 0; i < k; i++) {
         int end = n - 1;
-        while (end >= 0) {
+        while (end > 0) {
             swap(&arr[end], &arr[end - 1]);
             --end;
         }
