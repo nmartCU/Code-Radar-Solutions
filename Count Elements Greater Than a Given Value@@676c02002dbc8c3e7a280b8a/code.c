@@ -11,7 +11,6 @@ int main()
     int target = 0;
 
     scanf("%d", &target);
-    printf("%d\n", target);
 
     int arr[n];
     int count = 0;
@@ -19,8 +18,9 @@ int main()
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
+
     for (int i = 0; i < n; i++) {
-        if (arr[i] == target)
+        if (arr[i] > target)
             ++count;
     }
     printf("%d", count);
