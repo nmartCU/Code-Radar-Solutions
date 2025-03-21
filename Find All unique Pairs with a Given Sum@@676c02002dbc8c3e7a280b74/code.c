@@ -33,6 +33,7 @@ int main()
                 pairs[index].a = arr[i];
                 pairs[index].b = arr[j];
                 index++;
+                printf("Inside\n");
             }
         }
     }
