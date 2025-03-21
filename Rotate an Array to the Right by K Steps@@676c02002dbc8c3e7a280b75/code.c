@@ -29,7 +29,7 @@ int main()
 
     for (int i = 0; i < k; i++) {
         temp = arr[end];
-        for (int j = 0; j < n; j++) {
+        while (end > 0) {
             swap(&temp, &arr[end - 1]);
             --end;
         }
