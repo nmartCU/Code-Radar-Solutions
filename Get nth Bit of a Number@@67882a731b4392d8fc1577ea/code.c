@@ -7,7 +7,7 @@
 int main(int argc, char *const av [])
 {
     int number = 0, position = 0;
-    if ((scanf("%d %d", &number, &position)) != 1) {
+    if ((scanf("%d %d", &number, &position)) != 2) {
         printf("Error");
         return ERROR;
     }
