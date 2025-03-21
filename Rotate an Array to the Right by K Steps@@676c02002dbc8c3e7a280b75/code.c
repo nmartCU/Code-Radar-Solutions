@@ -28,11 +28,8 @@ int main()
     scanf("%d", &k);
 
     for (int i = 0; i < k; i++) {
-        temp = arr[end];
-        while (end > 0) {
-            swap(&temp, &arr[end - 1]);
-            --end;
+        for (int i = end; i > 0; i--) {
+            swap(&arr[i], &arr[i - 1]);
         }
-        end = n - 1;
     }
 }
