@@ -1,7 +1,6 @@
 // Your code here...
 
 #include <stdio.h>
-#include <stdlib.h>
 
 int countDigit(int n)
 {
@@ -17,8 +16,6 @@ int countDigit(int n)
 
 int isPalindrome(int n)
 {
-    int orig = n;
-    n = abs(n);
     int digits = countDigit(n);
     int temp = n;
     int i = 0;
@@ -35,9 +32,6 @@ int isPalindrome(int n)
         if (nums[i] != nums[end])
             return 0;
         --end;
-    }
-    if (orig < 0 && digits == countDigit(abs(orig))) {
-        return 1;
     }
     return 1;
 }
