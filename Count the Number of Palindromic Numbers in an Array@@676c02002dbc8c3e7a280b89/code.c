@@ -16,7 +16,7 @@ int countDigit(int n)
 
 int isPalindrome(int n)
 {
-    if (n <= 0)
+    if (n < 0)
         return 0;
     int digits = countDigit(n);
     int temp = n;
