@@ -17,7 +17,7 @@ int main(int argc, char *const av [])
         return ERROR;
     }
     int res = getNthBit(number, position);
-    res = 0 | (1 << number);
+    res = 0 | (1 << position);
     if ((printf("%d\n", (res))) < 0)
         return ERROR;
     return SUCCESS;
