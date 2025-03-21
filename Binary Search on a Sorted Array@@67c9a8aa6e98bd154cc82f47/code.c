@@ -8,8 +8,8 @@ int mySearch(int arr[], int n, int target, int low, int high)
     if (mid == target)
         return mid;
     if (mid > target)
-        return mySearch(arr, n, mid - 1, high)
-    return mySearch(arr, n, mid - 1, high)
+        return mySearch(arr, n, target, mid - 1, high)
+    return mySearch(arr, n, target, mid - 1, high)
 }
 
 int binarySearch(int arr[], int n, int target)
