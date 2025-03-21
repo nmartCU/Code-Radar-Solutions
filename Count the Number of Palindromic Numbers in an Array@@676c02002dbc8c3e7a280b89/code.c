@@ -33,6 +33,7 @@ int isPalindrome(int n)
     for (int i = 0; i < digits; i++) {
         if (nums[i] != nums[end])
             return 0;
+        --end;
     }
     return 1;
 }
