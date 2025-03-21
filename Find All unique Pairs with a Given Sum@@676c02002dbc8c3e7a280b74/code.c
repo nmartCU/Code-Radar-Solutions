@@ -18,7 +18,7 @@ int main()
 
     int arr[n];
 
-    pair_t *pairs = malloc(sizeof(pair_t) * (n + 1));
+    pair_t *pairs = malloc(sizeof(pair_t) * (n));
 
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
