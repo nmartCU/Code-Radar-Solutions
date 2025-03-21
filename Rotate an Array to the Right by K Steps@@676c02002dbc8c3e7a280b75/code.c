@@ -13,10 +13,12 @@ int main()
 {
     int n = 0;
     int k = 0;
+    int temp = 0;
+    int end = 0;
 
 
     scanf("%d", &n);
-
+    end = n - 1;
     int arr[n];
 
     for (int i = 0; i < n; i++) {
@@ -26,9 +28,9 @@ int main()
     scanf("%d", &k);
 
     for (int i = 0; i < k; i++) {
-        int end = n - 1;
+        temp = arr[end];
         while (end > 0) {
-            swap(&arr[end], &arr[end - 1]);
+            swap(&temp, arr[end - 1])
             --end;
         }
     }
