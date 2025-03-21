@@ -34,7 +34,7 @@ int main()
     for (int i = 0; i < n; i++) {
         int next = arr[i] + 1;
         int count = 1;
-        while (findNext(arr, n, next)) {
+        while (findNext(arr, n, next) == true) {
             ++count;
         }
         if (count > max) {
