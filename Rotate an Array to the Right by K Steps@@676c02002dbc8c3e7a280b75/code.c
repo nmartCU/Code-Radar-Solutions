@@ -25,10 +25,9 @@ int main()
 
     scanf("%d", k);
 
-
     for (int i = 0; i < k; i++) {
         int end = n - 1;
-        for (int j = 0; j < n; j++) {
+        while (end >= 0) {
             swap(arr[end], arr[end - 1]);
             --end;
         }
