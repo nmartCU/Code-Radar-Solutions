@@ -40,7 +40,7 @@ int main()
             ++idx;
         }
     }
-    temp[idx] = arr[n - 1];
+    temp[idx + 1] = arr[n - 1];
     for (int i = 0; i < idx; i++) {
         printf("%d ", temp[i]);
     }
