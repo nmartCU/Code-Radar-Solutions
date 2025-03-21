@@ -5,7 +5,7 @@ int main()
 {
     int n = 0;
     int max = -2000;
-    int pos = 0;
+    int pos = -1;
     int prev = 0;
 
     scanf("%d", &n);
@@ -18,5 +18,5 @@ int main()
             max = arr[i];
         } 
     }
-    printf("%d ", arr[pos]);
+    printf("%d ", pos == -1 ? -1 : arr[pos]);
 }
