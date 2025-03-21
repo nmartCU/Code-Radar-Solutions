@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-bool findMax(int *arr, int n, int i, int target)
+bool findLeader(int *arr, int n, int i, int target)
 {
     for (int j = i + 1; j < n; j++) {
         if (target >= arr[j])
@@ -34,7 +34,7 @@ int main()
     }
     
     for (int i = 0; i < n - 1; i++) {
-        bool leader = findLeaders(arr, n, i + 1, target);
+        bool leader = findLeader(arr, n, i + 1, target);
         if (leader) {
             temp[idx] = arr[i];
             ++idx;
