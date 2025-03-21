@@ -25,7 +25,7 @@ void insertionSort(int *arr, int n)
 void selectionSort(int *arr, int n)
 {
     for (int i = 1; i < n - 1; i++) {
-        int idx = i;
+        int idx = i - 1;
         for (int j = i + 1; j < n; j++) {
             if (arr[idx] > arr[j])
                 idx = j;
