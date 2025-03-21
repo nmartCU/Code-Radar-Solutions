@@ -29,11 +29,16 @@ int main()
             int temp = abs(arr[i] - arr[j]);
             if (temp < min) {
                 min = temp;
-                a = arr[i];
-                b = arr[j];
+                if (arr[i] > arr[j]) {
+                    a = arr[j];
+                    b = arr[i];
+                } else {
+                    a = arr[j];
+                    b = arr[i];
+                }
             }
         }
     }
-    printf("%d %d", a > b ? b : a, b > a ? a : b);
+    printf("%d %d", a, b);
     return 0;
 }
