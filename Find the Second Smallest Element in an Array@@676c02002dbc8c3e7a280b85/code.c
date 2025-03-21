@@ -20,7 +20,7 @@ int main()
         if (arr[i] < min) {
             prev = min;
             min = arr[i];
-        } else if (arr[i] > min && (arr[i] > prev || prev == -1))
+        } else if (arr[i] > min && (arr[i] < prev || prev == -1))
             prev = arr[i];
     }
     printf("%d", prev);
