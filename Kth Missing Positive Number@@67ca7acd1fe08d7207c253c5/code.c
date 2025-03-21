@@ -22,7 +22,7 @@ int findKthMissing(int arr[], int n, int k)
         if (index == n || temp < arr[index]) {
             kth++;
             if (kth == k)
-                return kth;
+                return temp;
         } else {
             index++;
         }
