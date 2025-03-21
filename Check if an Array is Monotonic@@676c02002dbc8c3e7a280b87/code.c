@@ -2,6 +2,16 @@
 
 #include <stdio.h>
 
+bool setFlag(int *flag, int val, int comp)
+{
+    if (*flag == 0)
+        *flag = val;
+    else if (*flag == comp) {
+        printf("NO");
+        return false;
+    }
+    return true;
+}
 
 int main()
 {
@@ -14,23 +24,18 @@ int main()
     for (int i = 0; i < n - 1; i++) {
         scanf("%d", &arr[i]);
     }
+    
     int flag = 0;
 
     for (int i = 1; i < n; i++) {
         if (arr[i] > arr[i - 1]) {
-            if (flag == 0)
-                flag = 1;
-            else if (flag == -1) {
-                printf("NO");
-                return 0;
-            }     
+            bool temp = setFlag(&flag, 1, -1);
+            if (!temp)
+                return 0;   
         } else if (arr[i] < arr[i - 1]) {
-            if (flag == 0)
-                flag = -1;
-            else if (flag == 1) {
-                printf("NO");
+            bool temp = setFlag(&flag, -1, 1);
+            if (!temp)
                 return 0;
-            }  
         }
     }
     printf("YES");
