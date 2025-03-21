@@ -22,6 +22,6 @@ int main()
             pos = i;
         }
     }
-    printf("%d", pos == -1 ? "-1" : arr[pos]);
+    printf("%d", pos == -1 ? -1 : arr[pos]);
     return 0;
 }
