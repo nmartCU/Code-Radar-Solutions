@@ -20,8 +20,8 @@ int main()
     }
 
     for (int i = 0; i < n; i++) {
-        if (arr[i] > temp[i]) {
-            temp[i] = arr[i];
+        if (arr[i] > 0 && arr[i] <= n) {
+            temp[arr[i]] = 1;
         }
     }
 
