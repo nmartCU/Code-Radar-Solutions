@@ -56,7 +56,7 @@ int main()
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-    bubbleSort(arr, n);
+    selectionSort(arr, n);
     if (n % 2 == 0) {
         printf("%d", (arr[n / 2 - 1] + arr[n / 2]) / 2);
     } else {
