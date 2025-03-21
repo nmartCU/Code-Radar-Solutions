@@ -21,7 +21,8 @@ int main(int argc, char *const av [])
         printf("Error");
         return ERROR;
     }
-    int res = setBit(number, position);
+    int res = getNtbBit(number, position)
+    res = setBit(number, position);
     if ((printf("%d\n", (res))) < 0)
         return ERROR;
     return SUCCESS;
