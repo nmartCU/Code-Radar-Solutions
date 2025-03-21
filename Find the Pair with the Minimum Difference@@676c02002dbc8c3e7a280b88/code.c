@@ -29,8 +29,8 @@ int main()
             int temp = abs(arr[i] - arr[j]);
             if (temp < min) {
                 min = temp;
-                a = arr[j];
-                b = arr[i];
+                a = arr[i];
+                b = arr[j];
             }
         }
     }
