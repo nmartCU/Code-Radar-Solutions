@@ -11,7 +11,7 @@ int calc(int n)
     if (n < 0) {
         n = n * -1;
     }
-    temp = n
+    temp = n;
     while (temp > 0) {
         sum += temp % 10;
         temp /= 10;
