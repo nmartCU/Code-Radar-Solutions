@@ -34,6 +34,6 @@ int main()
             }
         }
     }
-    printf("%d %d", a > b ? b : a, b < a ? b : a);
+    printf("%d %d", a > b ? b : a, b > a ? a : b);
     return 0;
 }
