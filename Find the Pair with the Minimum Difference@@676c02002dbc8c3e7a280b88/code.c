@@ -29,9 +29,9 @@ int main()
     
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
-            int temp = abs(arr[i] - arr[j]);
-            if (temp < min) {
-                min = temp;
+            int diff = abs(arr[i] - arr[j]);
+            if (diff < min_diff) {
+                min_diff = diff;
                 if (arr[i] < arr[j]) {
                     a = arr[i];
                     b = arr[j];
