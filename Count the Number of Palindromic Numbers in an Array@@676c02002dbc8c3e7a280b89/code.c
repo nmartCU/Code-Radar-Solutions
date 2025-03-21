@@ -28,7 +28,7 @@ int isPalindrome(int n)
     }
 
     int end = digits;
-    printf("%d", digits);
+    printf("\n%d\n", digits);
 
     for (int i = 0; i < digits; i++) {
         if (nums[i] != nums[end])
