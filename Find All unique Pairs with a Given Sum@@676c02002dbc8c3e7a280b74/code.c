@@ -18,7 +18,7 @@ int main()
 
     int arr[n];
 
-    pair_t *pairs = malloc(sizeof(pair_t) * (n + 100));
+    pair_t *pairs = malloc(sizeof(pair_t) * (n + 1));
 
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
@@ -28,7 +28,7 @@ int main()
 
     for (int i = 0; i < n; i++) {
         int temp = arr[i];
-        for (int j = 0; j < n; i++) {
+        for (int j = 0; j < n; j++) {
             if (temp + arr[j] == k && j != i) {
                 pairs[index++].a = temp;
                 pairs[index++].b = arr[j];
