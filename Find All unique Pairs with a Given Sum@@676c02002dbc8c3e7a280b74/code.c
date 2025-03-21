@@ -28,18 +28,16 @@ int main()
 
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
-            printf("%d %d\n", arr[i], arr[j]);
             if (arr[i] + arr[j] == k) {
                 pairs[index].a = arr[i];
                 pairs[index].b = arr[j];
                 index++;
-                printf("Inside\n");
             }
         }
     }
 
     for (int i = 0; i < index; i++) {
-        printf("%d %d\n", pairs[index].a, pairs[index].b);
+        printf("%d %d\n", pairs[i].a, pairs[i].b);
     }
     
     return 0;
