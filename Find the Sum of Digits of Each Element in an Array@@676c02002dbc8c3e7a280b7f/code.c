@@ -6,7 +6,7 @@
 int calc(int n)
 {
     int temp = n;
-    int num = 0;
+    int sum = 0;
 
     while (temp > 0) {
         sum += temp % 10;
