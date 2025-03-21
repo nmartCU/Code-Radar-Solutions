@@ -1,15 +1,17 @@
 // Your code here...
 
 #include <stdio.h>
+#include <stdbool.h>
 
-int findMax(int *arr, int n, int i)
+bool findMax(int *arr, int n, int i, int target)
 {
-    int max = arr[i];
     for (int j = i + 1; j < n; j++) {
-        if (max <= arr[j])
-            max = arr[j];
+        if (target >= arr[j])
+            continue;
+        else
+            return false;
     }
-    return max;
+    return true;
 }
 
 int main()
@@ -32,9 +34,9 @@ int main()
     }
     
     for (int i = 0; i < n - 1; i++) {
-        int max = findMax(arr, n, i + 1);
-        if (max >= arr[i]) {
-            temp[idx] = max;
+        bool leader = findLeaders(arr, n, i + 1, target);
+        if (leader) {
+            temp[idx] = arr[i];
             ++idx;
         }
     }
