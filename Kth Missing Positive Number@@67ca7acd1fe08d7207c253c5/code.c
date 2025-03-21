@@ -39,6 +39,5 @@ int findKthMissing(int arr[], int n, int k)
             break;
         }
     }
-    printf("%d", val);
-    return kth;
+    return val;
 }
