@@ -14,7 +14,5 @@ int mySearch(int arr[], int n, int target, int low, int high)
 
 int binarySearch(int arr[], int n, int target)
 {
-    int low = arr[0];
-    int hight = arr[n - 1];
-    return mySearch(arr, n, target, low, hight);
+    return mySearch(arr, n, target, 0, n - 1);
 }
