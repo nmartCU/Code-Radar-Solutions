@@ -30,14 +30,17 @@ int main()
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
             int diff = abs(arr[i] - arr[j]);
+            int smaller = arr[i] < arr[j] ? arr[i] : arr[j];
+            int bigger = arr[i] < arr[j] ? arr[j] : arr[i];
+
             if (diff < min) {
                 min = diff;
-                if (arr[i] < arr[j]) {
-                    a = arr[i];
-                    b = arr[j];
-                } else {
-                    a = arr[j];
-                    b = arr[i];
+                a = smaller;
+                b = bigger;
+            } else if (diff == min) {
+                if (smaller < a || (smaller == a && bigger < b)) {
+                    a = smaller;
+                    b = bigger;
                 }
             }
         }
