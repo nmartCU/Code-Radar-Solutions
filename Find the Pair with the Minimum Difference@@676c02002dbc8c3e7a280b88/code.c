@@ -20,6 +20,9 @@ int main()
         scanf("%d", &arr[i]);
     }
 
+    if (n == 1)
+        return -1
+
     int min = 2000;
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
