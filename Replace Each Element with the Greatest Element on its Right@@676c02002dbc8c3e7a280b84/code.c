@@ -27,7 +27,7 @@ int main()
         scanf("%d", &arr[i]);
     }
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n - 1; i++) {
         int temp = arr[i];
         max = findMax(arr, n, i + 1);
         // 16. 17 4 3 5
@@ -37,6 +37,8 @@ int main()
             arr[j] = max;
         }
     }
-    printf("%d", val);
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
     return 0;
 }
