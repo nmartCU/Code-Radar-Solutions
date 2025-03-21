@@ -23,7 +23,7 @@ int main()
         scanf("%d", &arr[i]);
     }
 
-    scanf("%d", k);
+    scanf("%d", &k);
 
     for (int i = 0; i < k; i++) {
         int end = n - 1;
