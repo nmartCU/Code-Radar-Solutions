@@ -1,6 +1,21 @@
 // Your code here...
 
 #include <stdio.h>
+#include <stdbool.h>
+
+// 100 4 200 1 3 2
+// loop i to N
+//  -> 100 => findNext(100 + 1)
+            // -> True ++count;
+
+bool findNext(int *arr, int n, int target)
+{
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == target)
+            return true;
+    }
+    return false;
+}
 
 int main()
 {
@@ -15,14 +30,12 @@ int main()
     }
 
     int max = 0;
+
     for (int i = 0; i < n; i++) {
-        int start = arr[i] + 1;
+        int next = arr[i] + 1;
         int count = 1;
-        for (int j = 0; j < n - 1; j++) {
-            if (start == arr[j + 1]) {
-                start = arr[j + 1] + 1;
-                ++count;
-            }
+        while (findNext(arr, n, next)) {
+            ++count;
         }
         if (count > max) {
             max = count;
