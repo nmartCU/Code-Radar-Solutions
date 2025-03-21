@@ -11,7 +11,7 @@ int getNthBit(int x, int n)
 
 int setBit(int x, int n)
 {
-    return x | (1 << n);
+    return x | (1 << n) & 1;
 }
 
 int main(int argc, char *const av [])
