@@ -35,8 +35,10 @@ int findKthMissing(int arr[], int n, int k)
     int val = 0;
 
     for (int i = 0; i < sizeMax; i++) {
+        printf("%d\n", temp[i]);
         if (temp[i] == 0) {
             val = i;
+            printf("val is %d and k is %d\n", val, k);
             k--;
         }
         if (k == 0) {
