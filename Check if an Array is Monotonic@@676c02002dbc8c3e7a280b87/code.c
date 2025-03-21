@@ -14,15 +14,17 @@ int main()
     for (int i = 0; i < n - 1; i++) {
         scanf("%d", &arr[i]);
     }
-    bool order = false;
+    bool inc = false;
+    bool dec = false;
+
     for (int i = 0; i < n - 1; i++) {
-        if (arr[i] >= arr[i + 1] && !order) {
-            continue;
+        if (arr[i] >= arr[i + 1]) {
+            inc = true;
         } else if (arr[i] <= arr[i + 1]) {
-            order = true;
-        } else {
+            dec = true;
+        }
+        if (dec == inc) {
             printf("NO");
-            return 0;
         }
     }
     printf("YES");
