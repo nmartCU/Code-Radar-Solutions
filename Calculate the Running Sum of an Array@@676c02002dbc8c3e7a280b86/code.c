@@ -27,7 +27,8 @@ int main()
     }
 
     for (int i = 0; i < n; i++) {
-        printf("%d", temp[i]);
+        printf("%d ", temp[i]);
     }
+    return 0;
 
 }
