@@ -18,7 +18,7 @@ int findKthMissing(int arr[], int n, int k)
     int kth = 0;
     int index = 0;
 
-    while (kth > k) {
+    while (kth < k) {
         if (temp < arr[index]) {
             kth++;
             if (kth == k)
