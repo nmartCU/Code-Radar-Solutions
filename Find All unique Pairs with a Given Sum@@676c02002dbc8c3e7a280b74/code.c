@@ -10,13 +10,13 @@ typedef struct pair_s {
 } pair_t;
 
 bool isNotPairInside(pair_t *pairs, int n, int a, int b)
-(
+{
     for (int i = 0; i < n; i++) {
         if ((pairs[i].a == a && pairs[i].b == a) || (pairs[i].b == a && pairs[i].a == a))
             return false;
     }
     return true;
-)
+}
 
 int main()
 {
