@@ -16,7 +16,7 @@ int main(int argc, char *const av [])
         printf("Error");
         return ERROR;
     }
-    int res = number | (1 << position);
+    int res = number | (1 << position - 1);
     if ((printf("%d\n", (res))) < 0)
         return ERROR;
     return SUCCESS;
