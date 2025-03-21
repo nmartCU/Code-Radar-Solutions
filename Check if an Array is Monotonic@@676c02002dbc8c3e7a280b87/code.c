@@ -30,11 +30,14 @@ int main()
 
     for (int i = 1; i < n; i++) {
         if (arr[i] > arr[i - 1]) {
+            printf("INside inc\n");
             bool temp = setFlag(&flag, 1, -1);
             if (!temp)
                 return 0;   
         } else if (arr[i] < arr[i - 1]) {
+            printf("INside dec\n");
             bool temp = setFlag(&flag, -1, 1);
+            printf("flag %d\n", flag);
             if (!temp)
                 return 0;
         }
