@@ -5,7 +5,7 @@
 
 bool findLeader(int *arr, int n, int i, int target)
 {
-    for (int j = i + 1; j < n; j++) {
+    for (int j = i; j < n; j++) {
         if (target >= arr[j])
             continue;
         else
