@@ -24,12 +24,12 @@ int main()
     for (int i = 0; i < n; i++) {
         if (arr[i] == 0) {
             for (int j = n - 1; j > 0 && arr[j] != 0; j++) {
-                swap(&arr[j], &arr[j - 1])
+                swap(&arr[j], &arr[j - 1]);
             }
         }
     }
 
     for (int i = 0; i < n ; i++) {
-        printf("%d", arr[i]);
+        printf("%d ", arr[i]);
     }
 }
