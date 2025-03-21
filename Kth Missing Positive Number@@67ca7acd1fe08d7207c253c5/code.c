@@ -19,7 +19,7 @@ int findKthMissing(int arr[], int n, int k)
     int index = 0;
 
     while (kth < k) {
-        if (temp < arr[index]) {
+        if (index == n || temp < arr[index]) {
             kth++;
             if (kth == k)
                 return kth;
@@ -28,5 +28,5 @@ int findKthMissing(int arr[], int n, int k)
         }
         ++temp;
     }
-    return kth;
+    return -1;
 }
