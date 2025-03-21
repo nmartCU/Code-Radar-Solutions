@@ -36,7 +36,7 @@ int isPalindrome(int n)
             return 0;
         --end;
     }
-    if (orig < 0 && orig == countDigit(abs(orig))) {
+    if (orig < 0 && digits == countDigit(abs(orig))) {
         return 1;
     }
     return 1;
