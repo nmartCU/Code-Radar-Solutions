@@ -1,7 +1,7 @@
 // Your code here...
-// Your code here...
 
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct pair_s {
     int a;
@@ -36,7 +36,9 @@ int main()
         }
     }
 
-
+    for (int i = 0; i < index; i++) {
+        printf("%d %d", pairs[index].a, pairs[index].b);
+    }
     
     return 0;
 }
