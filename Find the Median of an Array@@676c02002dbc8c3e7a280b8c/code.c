@@ -57,11 +57,10 @@ int main()
         scanf("%d", &arr[i]);
     }
     insertionSort(arr, n);
-    printf("%d", n / 2);
     if (n % 2 == 0) {
         printf("%d", arr[n / 2 - 1] + arr[n / 2 + 1]);
     } else {
-        printf("%d", arr[n / 2 - 1]);
+        printf("%d", arr[n / 2 + 1]);
     }
     return 0;
 }
