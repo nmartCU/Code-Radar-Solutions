@@ -58,10 +58,9 @@ int main()
     }
     insertionSort(arr, n);
     if (n % 2 == 0) {
-        printf("%d", arr[n / 2 - 1] + arr[n / 2 + 1])
+        printf("%d", arr[n / 2 - 1] + arr[n / 2 + 1]);
     } else {
-        printf("%d", n%2)
+        printf("%d", n%2);
     }
-    printf("%d", count);
     return 0;
 }
