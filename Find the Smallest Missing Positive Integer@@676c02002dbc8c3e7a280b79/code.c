@@ -31,7 +31,7 @@ int main()
             return 0;
         }
     }
-    printf
+    printf("%d", n + 1);
     return 0;
 
 }
