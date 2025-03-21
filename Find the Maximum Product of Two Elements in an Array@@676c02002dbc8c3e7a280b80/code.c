@@ -16,7 +16,7 @@ int main()
     int max = 0;
     for (int i = 0; i < n; i++) {
         int mul = arr[i];
-        for (int j = 0; j < n; j++) {
+        for (int j = 0; j < n - i; j++) {
             int temp = mul * arr[j];
             if (temp > max) {
                 max = temp;
