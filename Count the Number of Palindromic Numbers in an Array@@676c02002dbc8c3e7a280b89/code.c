@@ -38,7 +38,7 @@ int main()
 {
     int n = 0;
 
-    scanf("%d", n);
+    scanf("%d", &n);
 
     int arr[n];
     int count = 0;
