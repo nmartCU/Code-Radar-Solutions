@@ -23,8 +23,9 @@ int main()
         } else if (arr[i] <= arr[i + 1]) {
             dec = true;
         }
-        if (dec == inc) {
+        if (dec && inc) {
             printf("NO");
+            return;
         }
     }
     printf("YES");
