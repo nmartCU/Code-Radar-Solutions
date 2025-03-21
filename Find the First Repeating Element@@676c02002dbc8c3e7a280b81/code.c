@@ -17,10 +17,10 @@ int main()
     for (int i = 0; i < n; i++) {
         int temp = arr[i];
         for (int j = 0; j < n; j++) {
-            if (temp == arr[j] && i != j)
+            if (temp == arr[j] && i != j) {
                 printf("%d", temp);
                 return 0;
-
+            }
         }
     }
     printf("-1");
