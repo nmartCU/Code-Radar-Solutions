@@ -17,7 +17,8 @@ int main()
         if (max < arr[i]) {
             prev = max;
             max = arr[i];
-        }
+        } else if (max > arr[i] && (arr[i] > prev || prev == -1))
+            prev = arr[i];
     }
     printf("%d ", prev);
 }
