@@ -38,6 +38,8 @@ int main()
             ++idx;
         }
     }
-    for  
+    for (int i = 0; i < idx; i++) {
+        printf("%d ", arr[idx]);
+    }
     return 0;
 }
