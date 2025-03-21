@@ -5,8 +5,8 @@
 
 // 100 4 200 1 3 2
 // loop i to N
-//  -> 100 => findNext(100 + 1)
-            // -> True ++count;
+//  -> 100 =>  findNext(100 + 1) // 101 ? oui cont
+                // -> ++count;
 
 bool findNext(int *arr, int n, int target)
 {
@@ -34,8 +34,9 @@ int main()
     for (int i = 0; i < n; i++) {
         int next = arr[i] + 1;
         int count = 1;
-        while (findNext(arr, n, next) == true) {
+        while (findNext(arr, n, next)) {
             ++count;
+            next += 1;
         }
         if (count > max) {
             max = count;
