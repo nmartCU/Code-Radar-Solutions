@@ -23,7 +23,7 @@ int main()
     int min = 2000;
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
-            int temp = arr[j] - arr[i];
+            int temp = abs(arr[i] - arr[j]);
             printf("temp is %d and min is %d\n", temp, min);
             if (temp < min) {
                 min = temp;
