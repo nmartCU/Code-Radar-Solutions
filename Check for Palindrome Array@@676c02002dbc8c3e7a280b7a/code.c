@@ -16,11 +16,9 @@ int main()
 
     int end = n - 1;
     for (int i = 0; i < n; i++) {
-        if (arr[i] == arr[end]) {
-            continue;
-        } else {
+        if (arr[i] != arr[end]) {
             printf("NO");
-            return 0;
+            return 0;;
         }
         --end;
     }
