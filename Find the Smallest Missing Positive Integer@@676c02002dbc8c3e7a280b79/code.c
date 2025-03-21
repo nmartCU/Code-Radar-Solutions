@@ -25,12 +25,13 @@ int main()
         }
     }
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 1; i <= n; i++) {
         if (temp[i] == 0) {
             printf("%d", i);
             return 0;
         }
     }
+    printf
     return 0;
 
 }
