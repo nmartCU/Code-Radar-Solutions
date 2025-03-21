@@ -27,7 +27,7 @@ int isPalindrome(int n)
         temp /= 10;
     }
 
-    int end = digits;
+    int end = digits - 1;
     printf("\n%d\n", digits);
 
     for (int i = 0; i < digits; i++) {
