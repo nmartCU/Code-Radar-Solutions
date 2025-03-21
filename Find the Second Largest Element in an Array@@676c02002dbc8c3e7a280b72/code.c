@@ -5,7 +5,7 @@ int main()
 {
     int n = 0;
     int pos = -1;
-    int prev = 0;
+    int max = 2000;
 
     scanf("%d", &n);
 
@@ -14,7 +14,8 @@ int main()
         scanf("%d", &arr[i]);
     }
     for (int i = 0; i < n  - 1; i++) {
-        if (arr[i] > arr[i + 1]) {
+        int temp = arr[i];
+        if (temp > arr[i + 1]) {
             pos = i == 0 ? 0 : i - 1;
         } 
     }
