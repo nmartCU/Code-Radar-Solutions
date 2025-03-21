@@ -9,6 +9,11 @@ int getNthBit(int x, int n)
     return (x >> n) & 1;
 }
 
+int setBit(int x, int n)
+{
+    return x | (1 << n);
+}
+
 int main(int argc, char *const av [])
 {
     int number = 0, position = 0;
@@ -16,7 +21,7 @@ int main(int argc, char *const av [])
         printf("Error");
         return ERROR;
     }
-    int res = number | (1 << position );
+    int res = setBit(number, position);
     if ((printf("%d\n", (res))) < 0)
         return ERROR;
     return SUCCESS;
