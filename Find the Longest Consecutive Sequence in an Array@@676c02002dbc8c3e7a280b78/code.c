@@ -18,7 +18,7 @@ int main()
     for (int i = 0; i < n; i++) {
         int start = arr[i] + 1;
         int count = 1;
-        for (int j = i; j < n - 1; j++) {
+        for (int j = 0; j < n - 1; j++) {
             if (start == arr[j + 1]) {
                 start = arr[j + 1] + 1;
                 ++count;
