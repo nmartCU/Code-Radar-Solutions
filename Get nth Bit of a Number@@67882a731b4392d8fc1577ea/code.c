@@ -11,8 +11,8 @@ int main(int argc, char *const av [])
         printf("Error");
         return ERROR;
     }
-    mask = (1 << number) - 1;
-    if ((printf("%d\n", (number & mask))) < 0)
+    int res = (number >> n) & 1;
+    if ((printf("%d\n", (res))) < 0)
         return ERROR;
     return SUCCESS;
 }
