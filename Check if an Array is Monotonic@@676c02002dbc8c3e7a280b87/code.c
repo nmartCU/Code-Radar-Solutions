@@ -25,7 +25,7 @@ int main()
         }
         if (dec && inc) {
             printf("NO");
-            return;
+            return 0;
         }
     }
     printf("YES");
