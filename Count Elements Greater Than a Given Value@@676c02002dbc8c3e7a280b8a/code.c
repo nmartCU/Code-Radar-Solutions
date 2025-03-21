@@ -11,6 +11,7 @@ int main()
     int target = 0;
 
     scanf("%d", &target);
+    printf("%d", target);
 
     int arr[n];
     int count = 0;
