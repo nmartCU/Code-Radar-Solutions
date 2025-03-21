@@ -15,7 +15,7 @@ int main()
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-    for (int i = 0; i < n - 1; i++) {
+    for (int i = 0; i < n; i++) {
         if (arr[i] % 2 == 0 && arr[i] > max) {
             max = arr[i];
             pos = i;
