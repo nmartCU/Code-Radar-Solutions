@@ -26,7 +26,7 @@ int main()
             }
         }
         if (count > maj) {
-            printf("%d", count);
+            printf("%d", elem);
             return 0;
         }
     }
