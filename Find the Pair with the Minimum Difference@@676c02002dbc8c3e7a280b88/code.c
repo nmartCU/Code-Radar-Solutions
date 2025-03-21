@@ -21,7 +21,7 @@ int main()
     }
 
     if (n == 1)
-        return -1
+        return -1;
 
     int min = 2000;
     for (int i = 0; i < n; i++) {
