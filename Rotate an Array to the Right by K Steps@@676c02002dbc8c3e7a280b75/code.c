@@ -18,13 +18,13 @@ int main()
 
 
     scanf("%d", &n);
-    end = n - 1;
     int arr[n];
 
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 
+    end = n - 1;
     scanf("%d", &k);
 
     for (int i = 0; i < k; i++) {
