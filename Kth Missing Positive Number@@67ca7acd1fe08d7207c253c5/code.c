@@ -16,7 +16,7 @@ int findKthMissing(int arr[], int n, int k)
     // 1 = 1, 5 = 2, 6 = 3, 8 = 4, 9 = 5 => 5 == 5 => 9
 
     // 2 3 4 7 11
-    // 0 2 3 4 0 0 7 0 0 0 11
+    // 0 1 1 1 0 0 1 0 0 0 1
     // k = 5 donc 
     // loop to temp:
     //      if (tep[i] == 0) val = i k-- ensuite if (k == 0) return val
@@ -34,8 +34,7 @@ int findKthMissing(int arr[], int n, int k)
 
     int val = 0;
 
-    for (int i = 0; i < sizeMax; i++) {
-        printf("%d\n", temp[i]);
+    for (int i = 1; i < sizeMax; i++) {
         if (temp[i] == 0) {
             val = i;
             printf("val is %d and k is %d\n", val, k);
