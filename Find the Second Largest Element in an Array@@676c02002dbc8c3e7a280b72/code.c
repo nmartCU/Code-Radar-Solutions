@@ -4,7 +4,7 @@
 int main()
 {
     int n = 0;
-    int pos = -1;
+    int prev = -1;
 
     scanf("%d", &n);
 
@@ -15,9 +15,9 @@ int main()
     int max = arr[0];
     for (int i = 1; i < n; i++) {
         if (max < arr[i]) {
-            pos = i - 1;
+            prev = max;
             max = arr[i];
         }
     }
-    printf("%d ", pos == -1 ? -1 : arr[pos]);
+    printf("%d ", prev);
 }
