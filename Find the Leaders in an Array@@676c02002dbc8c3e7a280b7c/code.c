@@ -35,8 +35,10 @@ int main()
     
     for (int i = 0; i < n - 1; i++) {
         bool leader = findLeader(arr, n, i + 1, arr[i]);
+        printf("%d add %d\n", leader, arr[i]);
         if (leader) {
             temp[idx] = arr[i];
+            printf("%d\n", temp[idx]);
             ++idx;
         }
     }
