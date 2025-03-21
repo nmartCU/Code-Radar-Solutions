@@ -23,10 +23,12 @@ int isPalindrome(int n)
 
     for (int i = 0; i < digits; i++) {
         nums[i] = temp % 10;
+        printf("%d ", nums[i]);
         temp /= 10;
     }
 
     int end = digits;
+    printf("\n%d\n", digits);
 
     for (int i = 0; i < digits; i++) {
         if (nums[i] != nums[end])
