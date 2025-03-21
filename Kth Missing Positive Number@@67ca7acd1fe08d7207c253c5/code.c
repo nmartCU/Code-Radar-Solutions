@@ -1,5 +1,4 @@
 // Your code here...
-// Your code here...
 
 int maxVal(int arr[], int n)
 {
@@ -26,7 +25,7 @@ int findKthMissing(int arr[], int n, int k)
     int temp[sizeMax];
 
     for (int i = 0; i < sizeMax; i++) {
-        sizeMax[i] = 0;
+        temp[i] = 0;
     }
 
     int val = 0;
