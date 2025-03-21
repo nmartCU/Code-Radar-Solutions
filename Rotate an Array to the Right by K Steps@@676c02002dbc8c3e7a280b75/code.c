@@ -30,7 +30,7 @@ int main()
     for (int i = 0; i < k; i++) {
         temp = arr[end];
         while (end > 0) {
-            swap(&temp, &arr[end - 1])
+            swap(&temp, &arr[end - 1]);
             --end;
         }
         end = n - 1;
