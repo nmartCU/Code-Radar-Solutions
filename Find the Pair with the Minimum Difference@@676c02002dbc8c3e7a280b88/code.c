@@ -38,7 +38,7 @@ int main()
                 a = smaller;
                 b = bigger;
             } else if (diff == min) {
-                if (smaller < a || (smaller == a && bigger < b)) {
+                if (smaller < a || (bigger < b)) {
                     a = smaller;
                     b = bigger;
                 }
