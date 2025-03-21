@@ -11,7 +11,7 @@ int main(int argc, char *const av [])
         printf("Error");
         return ERROR;
     }
-    int res = (number >> n) & 1;
+    int res = (number >> position) & 1;
     if ((printf("%d\n", (res))) < 0)
         return ERROR;
     return SUCCESS;
