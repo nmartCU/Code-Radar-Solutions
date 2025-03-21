@@ -10,9 +10,11 @@ int main()
 
     scanf("%d", &n);
 
+    int arr[n];
     for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
         if (arr[i] > max) {
-            pos = i == 0 ? : i - 1;
+            pos = i == 0 ? 0 : i - 1;
             max = arr[i];
         } 
     }
