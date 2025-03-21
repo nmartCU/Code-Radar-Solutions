@@ -18,7 +18,7 @@ int main()
     for (int i = 0; i < n - 1; i++) {
         if (arr[i] >= arr[i + 1] && !order) {
             continue;
-        } else if (arr[i] <= arr[i + 1] && order) {
+        } else if (arr[i] <= arr[i + 1]) {
             order = true;
         } else {
             printf("NO");
