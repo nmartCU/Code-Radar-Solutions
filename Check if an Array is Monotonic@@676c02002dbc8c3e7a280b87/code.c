@@ -1,7 +1,6 @@
 // Your code here...
 
 #include <stdio.h>
-#include <stdbool.h>
 
 int main()
 {
@@ -14,18 +13,23 @@ int main()
     for (int i = 0; i < n - 1; i++) {
         scanf("%d", &arr[i]);
     }
-    bool inc = false;
-    bool dec = false;
+    int flag = 0;
 
     for (int i = 0; i < n - 1; i++) {
-        if (arr[i] >= arr[i + 1]) {
-            inc = true;
-        } else if (arr[i] <= arr[i + 1]) {
-            dec = true;
-        }
-        if (dec && inc) {
-            printf("NO");
-            return 0;
+        if (arr[i] > arr[i + 1]) {
+            if (flag == 0)
+                flag = 1;
+            else if (flag == -1) {
+                printf("NO");
+                return 0;
+            }     
+        } else if (arr[i] < arr[i + 1]) {
+            if (flag == 0)
+                flag = -1;
+            else if (flag == 1) {
+                printf("NO");
+                return 0;
+            }  
         }
     }
     printf("YES");
