@@ -36,10 +36,8 @@ int main()
         //   16 17 4 3 5 => replace 16 (i) avec 17 (max) => 17 17 4 3 5
         // temp = 17 max = 5
         // loop to replace every element
-        //   17 17 4 3 5 => replace 17 (i) avec 5 (max) => 17 5 5 
-        for (int j = i; j >= i; j--) {
-            arr[j] = max;
-        }
+        //   17 17 4 3 5 => replace 17 (i) avec 5 (max) => 17 5 5
+        arr[i] = max;
     }
     arr[n - 1] = -1;
     for (int i = 0; i < n; i++) {
