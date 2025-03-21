@@ -32,4 +32,7 @@ int main()
             swap(&arr[i], &arr[i - 1]);
         }
     }
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
 }
