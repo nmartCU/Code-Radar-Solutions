@@ -27,7 +27,7 @@ void insertionSort(int ranked[MAX_RANKED], int n)
 void bubbleSort(int ranked[MAX_RANKED], int n)
 {
     for (int i = 0; i < n; i++) {
-        for (int j = 0; i < n - i - 1; j++) {
+        for (int j = 0; j < n - i - 1; j++) {
             if (ranked[j] > ranked[j + 1]) {
                 swap(&ranked[j], &ranked[j + 1]);
             }
