@@ -45,7 +45,7 @@ void selectionSort(int ranked[MAX_RANKED], int n)
             }
         }
         if (idx != i)
-            swap(&ranked[i], &ranked[j]);
+            swap(&ranked[i], &ranked[idx]);
     }
 }
 
