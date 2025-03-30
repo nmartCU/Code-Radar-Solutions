@@ -12,9 +12,23 @@ int countDigits(int n)
     return digits;
 }
 
-int mountainPeak(int n)
+int *createArray(int n)
 {
     int digits = countDigits(n);
+    int temp = n;
+
+    int arr[digits];
+    for (int i = 0; i < digits; i++) {
+        int v = temp % 10;
+        arr[i] = v;
+        temp /= 10;
+    }
+    return arr;
+}
+
+int mountainPeak(int n)
+{
+    int *arr = createArray(n);
     printf("nbr digit = %d\n ", digits);
     return n;
 }
