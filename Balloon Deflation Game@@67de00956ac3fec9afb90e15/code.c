@@ -2,8 +2,8 @@
 
 int findMin(int air[], int n)
 {
-    int min = air[0];
-    for (int i = 1; i < n; i++)
+    int min = 20000;
+    for (int i = 0; i < n; i++)
         if (air[i] < min)
             min = air[i];
     if (min == 0)
