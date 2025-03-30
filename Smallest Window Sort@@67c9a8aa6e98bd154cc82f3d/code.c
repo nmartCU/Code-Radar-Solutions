@@ -11,7 +11,7 @@ int findUnsortedSubarray(int arr[], int n)
     int min = -MAX;
 
     int start = 0;
-    int end = 0;
+    int end = -1;
 
     while (j >= 0) {
         if (arr[i] > min)
@@ -26,5 +26,5 @@ int findUnsortedSubarray(int arr[], int n)
         --j;
         ++i;
     }
-    return end - start;
+    return end - start + 1;
 }
