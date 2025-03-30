@@ -28,13 +28,9 @@ int release(int air[], int n, int min)
 
     for (int i = 0; i < n; i++) {
         if (air[i] != 0) {
+            ++count;
             int temp = air[i] - min;
-            if (temp <= 0)
-                air[i] = 0;
-            else {
-                air[i] = temp;
-                ++count;
-            }
+            air[i] = (temp <= 0) ? 0 : temp;
         }
     }
     return count;
