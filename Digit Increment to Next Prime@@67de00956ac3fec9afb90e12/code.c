@@ -50,7 +50,7 @@ int incrementToPrimeDigits(int n)
 
     printf("\n");
     
-    for (int i = digits - 1; i >= 0; i++) {
+    for (int i = digits - 1; i >= 0; i--) {
         printf("%d ", arr[i]);
     }
 
