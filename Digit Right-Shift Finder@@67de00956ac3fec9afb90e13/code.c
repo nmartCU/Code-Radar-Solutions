@@ -11,9 +11,19 @@ int countDigits(int n)
     return count;
 }
 
+void swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
 int digitRightShift(int n)
 {
     int digits = countDigits(n);
+
+    if (digits == 1)
+        return n;
 
     int arr[digits];
     int temp = n;
@@ -23,7 +33,11 @@ int digitRightShift(int n)
         temp /= 10;
     }
 
+    for (int i = digits - 1; i > 0; i--) {
+        swap(&arr[i], &arr[i - 1]);
+    }
     for (int i = 0; i < digits; i++) {
         printf("i = %d \n", arr[i]);
     }
+
 }
