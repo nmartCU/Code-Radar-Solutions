@@ -1,14 +1,15 @@
 // Your code here...
+#include <limits.h>
 
 int findMin(int air[], int n)
 {
-    int min = 20000;
+    int min = INT_MAX;
+    
     for (int i = 0; i < n; i++)
-        if (air[i] < min)
+        if (air[i] < min && air[i] != 0)
             min = air[i];
-    if (min == 0)
-        return -1;
-    return min;
+
+    return min == INT_MAX ? -1 : min;
 }
 
 void deflateBalloons(int air[], int n)
