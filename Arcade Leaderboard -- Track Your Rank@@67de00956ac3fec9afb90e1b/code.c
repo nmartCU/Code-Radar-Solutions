@@ -81,9 +81,11 @@ void trackPlayerRanks(int ranked[MAX_RANKED], int n, int player[MAX_RANKED], int
     int rank = 1;
     for (int i = 0; i < n - 1; i++) {
         if (ranked[i] != ranked[i + 1]) {
-            rank++;
-        }
             result[i] = rank;
+            rank++;
+        } else {
+            result[i] = rank;
+        }
     }
     printf("\n");
     for (int i = 0; i < n; i++) {
