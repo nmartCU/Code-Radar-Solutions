@@ -56,7 +56,7 @@ void createRank(int ranked[MAX_RANKED], int n, int result[MAX_RANKED])
         if (ranked[i] != ranked[i-1]) {
             rank++;
         }
-        result[ranked[i]] = currentRank;
+        result[ranked[i]] = rank;
     }
 }
 
