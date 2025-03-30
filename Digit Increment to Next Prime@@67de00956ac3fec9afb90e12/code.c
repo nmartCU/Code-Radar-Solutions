@@ -2,8 +2,10 @@
 
 #include <stdbool.h>
 
-int countDigits(int n) {
+int countDigits(int n)
+{
     int digits = 0;
+
     while (n > 0) {
         n /= 10;
         ++digits;
@@ -11,26 +13,31 @@ int countDigits(int n) {
     return digits;
 }
 
-bool isPrime(int n) {
-    if (n <= 1) return false;
-    for (int i = 2; i * i <= n; i++) {
-        if (n % i == 0) return false;
+bool isPrime(int n)
+{
+    if (n <= 1)
+        return false;
+    for (int i = 2; i <= n / 2; i++) {
+        if (n % i == 0)
+            return false;
     }
     return true;
 }
 
-int nextPrimeDigit(int n) {
+int untilPrime(int n)
+{
     if (n <= 7) {
-        while (!isPrime(n)) {
+        while (!isPrime(n))
             ++n;
-        }
         return n;
     }
     return 2;
 }
 
-int incrementToPrimeDigits(int n) {
+int incrementToPrimeDigits(int n)
+{
     int digits = countDigits(n);
+
     int arr[digits];
     int res[digits];
 
@@ -40,15 +47,12 @@ int incrementToPrimeDigits(int n) {
         arr[i] = temp % 10;
         temp /= 10;
     }
-
     for (int i = 0; i < digits; i++) {
-        res[i] = nextPrimeDigit(arr[i]);
+        res[i] = untilPrime(arr[i]);
     }
-
     int result = 0;
     for (int i = digits - 1; i >= 0; i--) {
         result = result * 10 + res[i];
     }
-
     return result;
 }
