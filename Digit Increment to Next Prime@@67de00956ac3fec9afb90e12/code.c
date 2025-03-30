@@ -26,6 +26,7 @@ bool isPrime(int n)
 
 int untilPrime(int n)
 {
+    ++n;
     if (n <= 7) {
         while (!isPrime(n))
             ++n;
