@@ -13,20 +13,6 @@ int countDigits(int n)
     return digits;
 }
 
-int *createArray(int n)
-{
-    int digits = countDigits(n);
-    int temp = n;
-
-    int *arr = malloc(sizeof(int) * (digits));
-    for (int i = 0; i < digits; i++) {
-        int v = temp % 10;
-        arr[i] = v;
-        temp /= 10;
-    }
-    return arr;
-}
-
 int mountainPeak(int n)
 {
     int digits = countDigits(n);
@@ -37,7 +23,7 @@ int mountainPeak(int n)
         arr[i] = temp % 10;
         temp /= 10;
     }
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < digits; i++) {
         printf("%d ", arr[i]);
     }
     return n;
