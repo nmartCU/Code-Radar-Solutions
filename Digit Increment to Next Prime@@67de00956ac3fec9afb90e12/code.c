@@ -48,6 +48,7 @@ int incrementToPrimeDigits(int n)
     int temp = n;
 
     for (int i = 0; i < digits; i++) {
+        printf("Value is %d\n", temp % 10);
         arr[i] = temp % 10;
         temp /= 10;
     }
