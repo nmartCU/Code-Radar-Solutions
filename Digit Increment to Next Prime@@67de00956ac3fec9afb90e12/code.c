@@ -50,7 +50,10 @@ int incrementToPrimeDigits(int n)
     }
 
     for (int i = 0; i < digits; i++) {
-        res[i] = untilPrime(arr[i]);
+        if (arr[i] != 0 || arr[i] != 1)
+            res[i] = untilPrime(arr[i]);
+        else
+            res[i] = 2;
     }
     int result = 0;
     for (int i = digits - 1; i >= 0; i--) {
