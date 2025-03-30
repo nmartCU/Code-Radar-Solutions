@@ -13,7 +13,7 @@ int findMin(int air[], int n)
     return -1;
 }
 
-void deflateBallons(int air[], int n)
+void deflateBalloons(int air[], int n)
 {
     int min = findMin(air, n);
     printf("min = %d\n", min);
