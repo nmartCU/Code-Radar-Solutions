@@ -38,7 +38,7 @@ int mountainPeak(int n)
         bool midDown = (arr[mid] == (arr[i] - idx));
         bool midUp = (arr[mid] == arr[j] + idx);
         printf("IsTrue %d && %d\n", midDown, midUp);
-        if (arr[i] != arr[j] || (midDown && midUp))
+        if (arr[i] != arr[j] && (midDown || midUp))
             return -1;
         i--;
         j++;
