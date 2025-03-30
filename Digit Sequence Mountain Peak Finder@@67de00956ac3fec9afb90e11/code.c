@@ -27,6 +27,14 @@ int mountainPeak(int n)
     if (digits % 2 == 0)
         return -1;
     int mid = digits / 2;
-    printf("mid = %d\n", mid);
-    return n;
+
+    int i = mid - 1, j = mid + 1;
+
+    for (int idx = 0; idx < mid; idx++) {
+        if (arr[i] != arr[j])
+            return -1;
+        i--;
+        j++;
+    }
+    return arr[mid];
 }
