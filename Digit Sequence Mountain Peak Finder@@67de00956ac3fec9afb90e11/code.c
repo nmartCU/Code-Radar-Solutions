@@ -32,9 +32,7 @@ int mountainPeak(int n)
     int i = mid - 1, j = mid + 1;
 
     for (int idx = 0; idx < mid; idx++) {
-        bool desc = arr[mid] == arr[i] - idx - 1;
-        printf("%d\n", desc);
-        if (arr[i] != arr[j] || (arr[mid] == arr[i] - idx - 1 && arr[mid] == arr[j] + idx))
+        if (arr[i] != arr[j] || arr[i] >= arr[i + 1] || arr[j] <= arr[j + 1])
             return -1;
         i--;
         j++;
