@@ -11,7 +11,7 @@ int countDigits(int n)
     return count;
 }
 
-int shiftedNumber(int n)
+int digitRightShifte(int n)
 {
     int digits = countDigits(n);
 
