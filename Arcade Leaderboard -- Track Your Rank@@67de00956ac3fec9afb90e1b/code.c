@@ -60,21 +60,19 @@ void createRank(int ranked[MAX_RANKED], int n, int result[MAX_RANKED])
     }
 }
 
-int trackRank(int ranked[MAX_RANKED], int n, int score)
-{
-    for (int i = 0; i < n; i++) {
-        if (score >= ranked[i])
-            return i;
-    }
-    return n;
-}
-
 void trackPlayerRanks(int ranked[MAX_RANKED], int n, int player[MAX_RANKED], int m, int result[MAX_RANKED])
 {
-    printf("\n");
-    createRank(ranked, n, result);
     for (int i = 0; i < m; i++) {
-        trackRank(ranked, n, player[i]);
+        int score = player[i];
+        int rank = 1;
+        for (int j = 0; j < n; j++) {
+            if (score < ranked[j]) {
+                if (j == 0 || ranked[j] != ranked[j - 1])
+                    ++rank;
+            } else
+                break;
+        }
+        result[i] = rank;
     }
     for (int i = 0; i < n; i++) {
         printf("%d ", result[i]);
