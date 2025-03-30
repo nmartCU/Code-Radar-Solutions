@@ -52,21 +52,30 @@ void selectionSort(int ranked[MAX_RANKED], int n)
 void createRank(int ranked[MAX_RANKED], int n, int result[MAX_RANKED])
 {
     int rank = 1;
-    for (int i = 0; i < n - 1; i++) {
-        if (ranked[i] != ranked[i + 1]) {
-            result[i] = rank;
+    for (int i = 1; i < n; i++) {
+        if (ranked[i] != ranked[i-1]) {
             rank++;
-        } else {
-            result[i] = rank;
         }
+        result[ranked[i]] = currentRank;
     }
-    result[n - 1] = rank;
+}
+
+int trackRank(int ranked[MAX_RANKED], int n, int score)
+{
+    for (int i = 0; i < n; i++) {
+        if (score >= ranked[i])
+            return i;
+    }
+    return n;
 }
 
 void trackPlayerRanks(int ranked[MAX_RANKED], int n, int player[MAX_RANKED], int m, int result[MAX_RANKED])
 {
     printf("\n");
     createRank(ranked, n, result);
+    for (int i = 0; i < m; i++) {
+        trackRank(ranked, n, player[i]);
+    }
     for (int i = 0; i < n; i++) {
         printf("%d ", result[i]);
     }
