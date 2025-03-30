@@ -44,11 +44,12 @@ int incrementToPrimeDigits(int n)
 
     int temp = n;
 
+    if (n == 0)
+        return 2;
     for (int i = 0; i < digits; i++) {
         arr[i] = temp % 10;
         temp /= 10;
     }
-
     for (int i = 0; i < digits; i++) {
         if (arr[i] != 0 || arr[i] != 1)
             res[i] = untilPrime(arr[i]);
