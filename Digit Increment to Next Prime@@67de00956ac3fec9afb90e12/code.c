@@ -15,4 +15,5 @@ int countDigits(int n)
 int incrementToPrimeDigits(int n)
 {
     printf("%d\n", countDigits(n));
+    return n;
 }
