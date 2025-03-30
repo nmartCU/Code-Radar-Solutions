@@ -34,7 +34,7 @@ int mountainPeak(int n)
     for (int idx = 0; idx < mid; idx++) {
         printf("digits %d donc mid = %d\n", digits, mid);
         printf("index = %d arr[mid] = %d arr[i]= %d et arr[j]= %d\n", idx, arr[mid], arr[i], arr[j]);
-        printf("mid %d == %d && mid %d == %d\n", arr[mid], arr[i] - idx + 1, arr[mid], arr[j] + idx);
+        printf("mid %d == %d && mid %d == %d\n", arr[mid], arr[i] - idx, arr[mid], arr[j] + idx);
         bool midDown = (arr[mid] == (arr[i] + idx + 1));
         bool midUp = (arr[mid] == arr[j] - idx);
         printf("IsTrue %d && %d\n", midDown, midUp);
