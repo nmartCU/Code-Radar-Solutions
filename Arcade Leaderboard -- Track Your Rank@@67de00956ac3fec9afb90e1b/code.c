@@ -66,6 +66,7 @@ void createRank(int ranked[MAX_RANKED], int n, int result[MAX_RANKED])
 void trackPlayerRanks(int ranked[MAX_RANKED], int n, int player[MAX_RANKED], int m, int result[MAX_RANKED])
 {
     printf("\n");
+    createRank(ranked, n, result);
     for (int i = 0; i < n; i++) {
         printf("%d ", result[i]);
     }
