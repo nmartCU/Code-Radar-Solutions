@@ -50,8 +50,9 @@ int incrementToPrimeDigits(int n)
     for (int i = 0; i < digits; i++) {
         res[i] = untilPrime(arr[i]);
     }
-    for (int i = 0; i < digits; i++) {
-        printf("%d", res[i]);
+    int result = 0;
+    for (int i = digits - 1; i > 0; i++) {
+        result = result * 10 + res[i];
     }
-    return n;
+    return result;
 }
