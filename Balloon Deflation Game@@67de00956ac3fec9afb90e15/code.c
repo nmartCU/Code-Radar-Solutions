@@ -43,7 +43,7 @@ void deflateBalloons(int air[], int n)
         int min = findMin(air, n);
         int count = release(air, n, min);
         if (isEmpty(air, n) && specialCase)
-            printf("%d", n);
+            printf("%d\n", n);
         else
             printf("%d\n", count);
         specialCase = false;
