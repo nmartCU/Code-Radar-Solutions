@@ -28,14 +28,11 @@ int mountainPeak(int n)
     if (digits % 2 == 0)
         return -1;
     int mid = digits / 2;
-
     int i = mid - 1, j = mid + 1;
 
-    for (int idx = 0; idx < mid; idx++) {
-        if (arr[i] != arr[j] || arr[i] >= arr[i + 1] || arr[j] <= arr[j - 1])
+    for (int idx = 0; idx < mid; idx++, i--, j++) {
+        if (arr[i] != arr[j] || arr[i] >= arr[i + 1] || arr[j] >= arr[j - 1])
             return -1;
-        i--;
-        j++;
     }
     return arr[mid];
 }
