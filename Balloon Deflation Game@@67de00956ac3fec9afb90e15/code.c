@@ -30,7 +30,7 @@ int release(int air[], int n, int min)
         if (air[i] != 0) {
             int temp = air[i] - min;
             if (temp <= 0)
-                air[i] = 0
+                air[i] = 0;
             else {
                 air[i] = temp;
                 ++count;
