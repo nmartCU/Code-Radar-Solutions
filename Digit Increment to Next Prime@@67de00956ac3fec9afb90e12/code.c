@@ -52,7 +52,11 @@ int incrementToPrimeDigits(int n)
         arr[i] = temp % 10;
         temp /= 10;
     }
-    printf("DIGITS %d\n", digits);
+    printf("\n");
+    for (int i = 0; i < digits; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
     for (int i = 0; i < digits; i++) {
         printf("INside %d\n", arr[i]);
         res[i] = untilPrime(arr[i]);
