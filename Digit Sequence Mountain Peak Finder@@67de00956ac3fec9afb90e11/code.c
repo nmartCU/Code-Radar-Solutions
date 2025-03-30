@@ -1,5 +1,6 @@
 // Your code here...
 #include <stdlib.h>
+#include <stdbool.h>
 
 int countDigits(int n)
 {
