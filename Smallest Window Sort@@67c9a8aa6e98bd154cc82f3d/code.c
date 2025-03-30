@@ -26,5 +26,5 @@ int findUnsortedSubarray(int arr[], int n)
         --j;
         ++i;
     }
-    return start - end  - 1;
+    return end - start;
 }
