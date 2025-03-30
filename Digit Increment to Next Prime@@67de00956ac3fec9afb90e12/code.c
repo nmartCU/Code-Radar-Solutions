@@ -30,6 +30,8 @@ int untilPrime(int n)
     int temp = n;
 
     while (isPrime(temp)) {
+        if (temp > 7)
+            return 2;
         temp++;
     }
     return temp;
@@ -52,6 +54,9 @@ int incrementToPrimeDigits(int n)
     for (int i = 0; i < digits; i++) {
         int count = untilPrime(arr[i]);
         res[i] = untilPrime(arr[i]);
+    }
+    for (int i = 0; i < digits; i++) {
+        printf("%d", res[i]);
     }
     return n;
 }
