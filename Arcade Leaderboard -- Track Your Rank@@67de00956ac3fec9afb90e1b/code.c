@@ -49,17 +49,6 @@ void selectionSort(int ranked[MAX_RANKED], int n)
     }
 }
 
-void createRank(int ranked[MAX_RANKED], int n, int result[MAX_RANKED])
-{
-    int rank = 1;
-    for (int i = 1; i < n; i++) {
-        if (ranked[i] != ranked[i-1]) {
-            rank++;
-        }
-        result[ranked[i]] = rank;
-    }
-}
-
 void trackPlayerRanks(int ranked[MAX_RANKED], int n, int player[MAX_RANKED], int m, int result[MAX_RANKED])
 {
     for (int i = 0; i < m; i++) {
