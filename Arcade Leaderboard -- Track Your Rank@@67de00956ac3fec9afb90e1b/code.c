@@ -53,6 +53,7 @@ void trackPlayerRanks(int ranked[MAX_RANKED], int n, int player[MAX_RANKED], int
 {
     selectionSort(ranked, n);
     for (int i = 0; i < n; i++) {
-        printf("%d ", result[i]);
+        printf("%d ", ranked[i]);
     }
+    printf("\n");
 }
