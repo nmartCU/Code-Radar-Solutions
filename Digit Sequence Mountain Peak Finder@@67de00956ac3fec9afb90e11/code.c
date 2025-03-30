@@ -2,7 +2,7 @@
 
 int countDigits(int n)
 {
-    int digits = 1;
+    int digits = 0;
     int temp = n;
 
     while (temp > 0) {
