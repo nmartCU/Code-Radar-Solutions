@@ -16,7 +16,7 @@ int countDigits(int n)
 
 bool isPrime(int n)
 {
-    if (n < 2)
+    if (n <= 1)
         return false;
     for (int i = 2; i <= n / 2; i++) {
         if (n % i == 0)
@@ -28,6 +28,7 @@ bool isPrime(int n)
 int untilPrime(int n)
 {
     int temp = n;
+
     while (isPrime(temp)) {
         temp++;
     }
@@ -39,6 +40,7 @@ int incrementToPrimeDigits(int n)
     int digits = countDigits(n);
 
     int arr[n];
+    int res[n];
 
     int temp = n;
 
@@ -49,6 +51,7 @@ int incrementToPrimeDigits(int n)
 
     for (int i = 0; i < digits; i++) {
         int count = untilPrime(arr[i]);
+        res[i] = untilPrime(arr[i]);
     }
     return n;
 }
