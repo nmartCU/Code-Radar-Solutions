@@ -18,7 +18,7 @@ int *createArray(int n)
     int digits = countDigits(n);
     int temp = n;
 
-    int *arr = malloc(sizeof(int) * (digits + 1));
+    int *arr = malloc(sizeof(int) * (digits));
     for (int i = 0; i < digits; i++) {
         int v = temp % 10;
         arr[i] = v;
