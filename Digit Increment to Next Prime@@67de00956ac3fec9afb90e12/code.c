@@ -4,11 +4,10 @@
 
 int countDigits(int n)
 {
-    int temp = n;
     int digits = 0;
 
-    while (temp > 0) {
-        temp /= 10;
+    while (n > 0) {
+        n /= 10;
         ++digits;
     }
     return digits;
@@ -27,15 +26,12 @@ bool isPrime(int n)
 
 int untilPrime(int n)
 {
-    int temp = n;
-
-    while (isPrime(temp)) {
-        printf("isprime %d\n", temp);
-        if (temp > 7)
-            return 2;
-        temp++;
+    if (n <= 7) {
+        while (!isPrime(n))
+            ++n;
+        return n;
     }
-    return temp;
+    return 2;
 }
 
 int incrementToPrimeDigits(int n)
@@ -48,17 +44,10 @@ int incrementToPrimeDigits(int n)
     int temp = n;
 
     for (int i = 0; i < digits; i++) {
-        printf("Value is %d\n", temp % 10);
         arr[i] = temp % 10;
         temp /= 10;
     }
-    printf("\n");
     for (int i = 0; i < digits; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-    for (int i = 0; i < digits; i++) {
-        printf("INside %d\n", arr[i]);
         res[i] = untilPrime(arr[i]);
     }
     for (int i = 0; i < digits; i++) {
