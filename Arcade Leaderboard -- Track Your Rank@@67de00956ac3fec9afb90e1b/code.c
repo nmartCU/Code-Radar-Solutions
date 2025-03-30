@@ -51,7 +51,7 @@ void selectionSort(int ranked[MAX_RANKED], int n)
 
 void trackPlayerRanks(int ranked[MAX_RANKED], int n, int player[MAX_RANKED], int m, int result[MAX_RANKED])
 {
-    bubbleSort(ranked, n);
+    insertionSort(ranked, n);
     for (int i = 0; i < n; i++) {
         printf("%d ", ranked[i]);
     }
