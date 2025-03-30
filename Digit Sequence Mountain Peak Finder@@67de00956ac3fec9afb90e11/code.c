@@ -23,8 +23,8 @@ int mountainPeak(int n)
         arr[i] = temp % 10;
         temp /= 10;
     }
-    for (int i = 0; i < digits; i++) {
-        printf("%d ", arr[i]);
-    }
+    
+    int mid = digits / 2 + 1;
+    printf("mid = %d\n", mid);
     return n;
 }
