@@ -32,7 +32,7 @@ int mountainPeak(int n)
     int i = mid - 1, j = mid + 1;
 
     for (int idx = 0; idx < mid; idx++) {
-        if (arr[i] != arr[j])
+        if (arr[i] != arr[j] && (mid != arr[i] + idx || mid != arr[j] - idx))
             return -1;
         i--;
         j++;
