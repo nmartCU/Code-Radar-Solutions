@@ -42,7 +42,7 @@ void deflateBalloons(int air[], int n)
     while (!isEmpty(air, n)) {
         int min = findMin(air, n);
         int count = release(air, n, min);
-        if (!isEmpty(air, n) && findMin(air, n) == 0)
+        if (isEmpty(air, n) && findMin(air, n) == 0)
             printf("%d", n);
         else
             printf("%d\n", count);
