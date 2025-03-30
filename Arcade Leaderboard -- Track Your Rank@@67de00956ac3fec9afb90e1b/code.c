@@ -79,7 +79,7 @@ void trackPlayerRanks(int ranked[MAX_RANKED], int n, int player[MAX_RANKED], int
     //     tant que le prochain == current
     //           result[i] = rank
     int rank = 1;
-    for (int i = 0; i < n - 1; i++) {
+    for (int i = 0; i < n; i++) {
         if (ranked[i] != ranked[i + 1]) {
             result[i] = rank;
             rank++;
