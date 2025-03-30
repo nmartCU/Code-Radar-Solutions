@@ -27,7 +27,11 @@ bool isPrime(int n)
 
 int untilPrime(int n)
 {
-
+    int temp = n;
+    while (isPrime(temp)) {
+        temp++;
+    }
+    return temp;
 }
 
 int incrementToPrimeDigits(int n)
