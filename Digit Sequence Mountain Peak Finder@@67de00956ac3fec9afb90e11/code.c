@@ -24,7 +24,6 @@ int *createArray(int n)
         arr[i] = v;
         temp /= 10;
     }
-    arr[digits - 1] = '\0';
     return arr;
 }
 
