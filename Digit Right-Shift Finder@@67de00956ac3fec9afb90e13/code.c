@@ -24,6 +24,6 @@ int digitRightShift(int n)
     }
 
     for (int i = 0; i < digits; i++) {
-        printf("%d ", arr[i]);
+        printf("i = %d \n", arr[i]);
     }
 }
