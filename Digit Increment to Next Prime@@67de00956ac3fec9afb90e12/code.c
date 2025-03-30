@@ -51,9 +51,9 @@ int incrementToPrimeDigits(int n)
         arr[i] = temp % 10;
         temp /= 10;
     }
-
+    printf("DIGITS %d\n", digits);
     for (int i = 0; i < digits; i++) {
-        printf("INside %d", arr[i]);
+        printf("INside %d\n", arr[i]);
         res[i] = untilPrime(arr[i]);
     }
     for (int i = 0; i < digits; i++) {
