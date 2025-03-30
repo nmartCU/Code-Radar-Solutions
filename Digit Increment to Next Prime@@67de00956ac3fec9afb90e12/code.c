@@ -42,8 +42,8 @@ int incrementToPrimeDigits(int n)
 {
     int digits = countDigits(n);
 
-    int arr[n];
-    int res[n];
+    int arr[digits];
+    int res[digits];
 
     int temp = n;
 
