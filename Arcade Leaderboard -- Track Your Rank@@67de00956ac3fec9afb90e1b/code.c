@@ -40,12 +40,12 @@ void selectionSort(int ranked[MAX_RANKED], int n)
     for (int i = 0; i < n - 1; i++) {
         int idx = i;
         for (int j = i + 1; j < n; j++) {
-            if (arr[idx] > arr[j]) {
+            if (ranked[idx] > ranked[j]) {
                 idx = j;
             }
         }
         if (idx != i)
-            swap(&arr[i], &arr[j]);
+            swap(&ranked[i], &ranked[j]);
     }
 }
 
