@@ -36,6 +36,12 @@ int digitRightShift(int n)
     for (int i = digits - 1; i > 0; i--) {
         swap(&arr[i], &arr[i - 1]);
     }
+    int result = 0;
+
+    for (int i = 0; i < digits; i++) {
+        result = result * 10 + arr[i];
+    }
+    printf("res = %d\n", result);
     for (int i = 0; i < digits; i++) {
         printf("i = %d \n", arr[i]);
     }
