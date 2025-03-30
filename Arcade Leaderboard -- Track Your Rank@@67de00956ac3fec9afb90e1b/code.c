@@ -84,9 +84,10 @@ void trackPlayerRanks(int ranked[MAX_RANKED], int n, int player[MAX_RANKED], int
     // 2 < 6 => 50 != 40 yes = 2 rank++
     // 3 < 6 => 40 != 40 no = 3
     // 4 < 6 => 40 != 20 yes = 3 rank++
-    // 5 < 6 
+    // 5 < 6 => 20 != 10 yes = 4 rank++
+    // 6 < 7 => 
     int rank = 1;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n - 1; i++) {
         if (ranked[i] != ranked[i + 1]) {
             result[i] = rank;
             rank++;
