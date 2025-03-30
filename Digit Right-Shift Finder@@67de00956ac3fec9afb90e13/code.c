@@ -41,9 +41,5 @@ int digitRightShift(int n)
     for (int i = 0; i < digits; i++) {
         result = result * 10 + arr[i];
     }
-    printf("res = %d\n", result);
-    for (int i = 0; i < digits; i++) {
-        printf("i = %d \n", arr[i]);
-    }
-
+    return result;
 }
