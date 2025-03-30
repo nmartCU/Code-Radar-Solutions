@@ -24,7 +24,7 @@ int mountainPeak(int n)
         temp /= 10;
     }
     
-    int mid = digits / 2 + 1;
+    int mid = digits / 2;
     printf("mid = %d\n", mid);
     return n;
 }
