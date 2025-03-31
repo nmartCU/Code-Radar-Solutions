@@ -20,7 +20,7 @@ int main(int argc, char *const argv[])
     if ((scanf("%d", &n)) != 1)
         return ERROR;
     student_t students[n];
-    char temp[n][200]
+    char temp[n][200];
 
     for (int i = 0; i < n; i++) {
         scanf("%d %s %f", &students[i].roll, &students[i].name, &students[i].marks);
