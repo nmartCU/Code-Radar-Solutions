@@ -23,7 +23,7 @@ int main(int argc, char *const argv[])
     char temp[n][200];
 
     for (int i = 0; i < n; i++) {
-        scanf("%d %s %f", &students[i].roll, temp[i], &students[i].marks);
+        scanf("%d %s %f", &students[i].roll, &temp[i], &students[i].marks);
         printf("%s\n", temp[i]);
     }
     for (int i = 0; i < n; i++)
