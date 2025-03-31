@@ -36,12 +36,21 @@ int main(int argc, char *const argv[])
     char str[INPUT_LENGTH][MAX_LENGTH];
     char temp[MAX_LENGTH];
     bool rotation = false;
+    int k = 0;
 
     for (int i = 0; i < INPUT_LENGTH; i++) {
         scanf("%s", str[i]);
     }
+    for (int i = 0; str[1]; i++) {
+        if (str[0][0] == str[1][i]) {
+            k = i;
+            break;
+        }
+
+    }
     strcpy(temp, str[0]);
-    rotate(temp, strlen(str[0]));
+    for (int i = 0; i < k; i++)
+        rotate(temp, strlen(str[0]));
     if ((strcmp(str[1], temp)) == 0) {
         rotation = true;
     }
