@@ -3,8 +3,10 @@
 int findPrankReceiver(int nbF, int nbG, int start)
 {
     // 5 2 1 
-    // 5 ami 2 cadeau on commence au 1  => 1 GOOD 2 PRANK
+    // 5 ami 2 cadeau on commence au 1  => 1 ami GOOD 2 eme PRANK
     // 
+    // 5 2 2
+    // 5 ami 2 cadeau on commence au 2 
     // parcours a start jusqu'a nbF
         // 2 - 1 == 0 ? GOOD 2-- 1 
         // 1 - 1 == 0 ? PRANK.   2
@@ -15,11 +17,17 @@ int findPrankReceiver(int nbF, int nbG, int start)
     // 2 - 1 == 0 ? 3 
     // 1 - 1 == 0 ? 4
     //
-    // i = 2 <= 5
+    // count = 1;
+    // commence a start == 1 tant que 1 <= 5
+    //. i = 1   nbG - 1 == 0 ? NON 2 - 1 !== 0 => nbG-- , count++;
+    //  i = 2   nbG - 1 == 0 ? OUI 1 - 1 break return count == 2;
+    // 
+    // commence a start == 2 tant que 2 <= 5
+    //. i = 2   nbG - 1 == 0 ? NON 2 - 1 !== 0 => nbG--, count++;
+    //  i = 3   nbG - 1 == 0 ? OUI 1 - 1 break return count == 2;
+    int i = 0;
 
-    int count = 1;
-
-    for (int i = start; i <= nbF; i++) {
+    for (i = start; i <= nbF; i++) {
         if (nbG - 1 == 0) {
             break;
         }
