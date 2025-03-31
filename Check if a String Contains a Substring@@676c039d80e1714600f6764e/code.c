@@ -34,12 +34,8 @@ int main(int argc, char *const argv[])
     }
 
     for (int i = 0; str[0][i]; i++) {
-        sub = true;
-        for (int j = 0; str[1][j]; j++) {
-            if (str[0][i + j] && str[0][i + j] != str[1][j]) {
-                sub = false;
-                break;
-            }
+        for (int j = 0; str[1][j] && str[0][i + j] && str[0][i + j] == str[1][j]; j++) {
+            sub = true;
         }
         if (sub)
             break;
