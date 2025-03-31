@@ -17,6 +17,20 @@ void my_free(char **str)
     }
 }
 
+void swap(char a, char b)
+{
+    char temp = a;
+    a = b;
+    b = temp;
+}
+
+void rotate(char str[], int n)
+{
+    for (int i = n - 1; i > 0; i++) {
+        swap(str[i], str[i - 1]);
+    }
+}
+
 int main(int argc, char *const argv[])
 {
     char *str[INPUT_LENGTH] = {NULL, NULL};
@@ -54,14 +68,9 @@ int main(int argc, char *const argv[])
         return ERROR;
     }
     temp[read[0]] = '\0';
-    int index = 0;
-    for (int i = start; i < read[0] - 1; i++) {
-        temp[index++] = str[1][i]; 
-    }
-    int res = read[0] - 1 - index;
-    for (int i = 0; i < res; i) {
-        temp[index++] = str[1][i];
-    }
+    strcpy(temp, str[0]);
+    rotate(temp, read[0] - 1);
+    printf("%s", temp);
     if ((strcmp(str[0], temp)) == 0) {
         rotation = true;
     }
