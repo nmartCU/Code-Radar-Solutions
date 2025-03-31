@@ -1,4 +1,5 @@
 // Your code here...
+#include <math.h>
 
 int totalLikes(int n)
 {
