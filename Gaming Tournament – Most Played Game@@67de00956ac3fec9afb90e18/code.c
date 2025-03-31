@@ -12,6 +12,7 @@ int mostPlayedGame(int games[], int n)
                 ++count;
             }
         }
+        printf("COunt is %d and max is %d\n", count, max);
         if (count > max) {
             max = count;
             ids = games[i];
