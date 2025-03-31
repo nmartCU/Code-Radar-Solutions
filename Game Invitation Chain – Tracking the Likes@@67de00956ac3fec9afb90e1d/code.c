@@ -15,8 +15,9 @@ int totalLikes(int n)
     int people = 5;
     int like = 0;
     for (int i = 1; i <= n; i++) {
-        like += people / 2;
-        people = (people / 2 * 3);
+        int temp = people / 2;
+        like += temp;
+        people = (temp * 3);
     }
     return like;
 }
