@@ -16,9 +16,7 @@ typedef struct student_s {
 
 int main(int argc, char *const argv[])
 {
-    int n = 0;
-    student_t *students = NULL;
-        
+    int n = 0;        
     if ((scanf("%d", &n)) != 1)
         return ERROR;
     student_t students[n];
