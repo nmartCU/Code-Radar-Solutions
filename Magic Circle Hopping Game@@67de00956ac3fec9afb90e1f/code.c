@@ -1,4 +1,5 @@
 // Your code here...
+#include <stdbool.h>
 
 int finalEnergy(int cloud[], int n, int k)
 {
