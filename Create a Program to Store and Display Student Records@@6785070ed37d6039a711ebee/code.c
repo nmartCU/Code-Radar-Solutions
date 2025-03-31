@@ -24,7 +24,7 @@ int main(int argc, char *const argv[])
     student_t students[n];
 
     for (int i = 0; i < n; i++)
-        scanf("%d %s %f", &students[i].roll, student[i].name, &students[i].marks);
+        scanf("%d %s %f", &students[i].roll, students[i].name, &students[i].marks);
     for (int i = 0; i < n; i++)
         printf("Roll Number: %d, Name: %s, Marks: %0.2f\n", students[i].roll, students[i].name, students[i].marks)
     return SUCCESS;
