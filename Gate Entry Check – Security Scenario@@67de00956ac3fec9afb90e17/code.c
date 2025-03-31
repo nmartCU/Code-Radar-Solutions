@@ -9,5 +9,5 @@ int gateOpen(int treshold, int entryTimes[], int n)
         if (entryTimes[i] <= 0)
             ++count;
     }
-    return count < treshold ? 1 : 0;
+    return count <= treshold ? 1 : 0;
 }
