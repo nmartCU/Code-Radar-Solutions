@@ -19,10 +19,10 @@ int findPrankReceiver(int nbF, int nbG, int start)
             // 2 ami start = 2 prend 1 cadeau => cadeaux - 1 start ++
             // 1 ami start = 3 prend 1 cadeau => cadeaux - 1 == 0 => sortis de boucle return start = 3
 
-    printf("Test");
     while (nbG >= 0) {
         nbG--;
-        printf("Test");
+        if (nbG == 0)
+            break;
         if (start >= nbF) {
             start = start % nbF;
         } else
