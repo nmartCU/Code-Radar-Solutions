@@ -37,7 +37,7 @@ int main(int argc, char *const argv[])
     scanf("%d", &k);
     student_t *student = find(students, k, n);
     if (student) {
-        printf("Roll Number: %d, Name: %s, Marks: %0.2f\n", students[i]->roll, students[i]->name, students[i]->marks);
+        printf("Roll Number: %d, Name: %s, Marks: %0.2f\n", student->roll, student->name, student->marks);
         free(student);
     } else 
         printf("Student not found");
