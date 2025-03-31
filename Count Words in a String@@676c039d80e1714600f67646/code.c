@@ -26,6 +26,9 @@ int main(int argc, char *const argv[])
         if (str[i] == ' ' || str[i] == '\t') {
             continue;
         }
+        while (str[i] && str[i] != ' ') {
+            i++;
+        }
         wordCount++;
     }
     if (printf("%d\n", wordCount) < 0) {
