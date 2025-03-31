@@ -23,7 +23,9 @@ int main(int argc, char *const argv[])
 
     for (int i = 0; i < n; i++) {
         char temp[100] = {0};
-        scanf("%d %s %f", &students[i].roll, students[i].name, &students[i].marks);
+        scanf("%d %s %f", &students[i].roll, temp, &students[i].marks);
+        printf("temp : %s\n", temp);
+        students[i].name = temp;
     }
     for (int i = 0; i < n; i++)
         printf("Roll Number: %d, Name: %s, Marks: %0.2f\n", students[i].roll, students[i].name, students[i].marks);
