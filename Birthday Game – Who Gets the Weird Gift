@@ -11,13 +11,13 @@ int findPrankReceiver(int nbF, int nbG, int start)
     // 3 7 3
     // 3 ami 7 cadeau on commence au 3 ami =>
         // boucle tant que cadeau > 0
-            // 7 ami start = 3 prend 1 cadeau => cadeau - 1  // ami == 3 == start => start % nbF => 1
-            // 6 ami start = 1 prend 1 cadeau => cadeau - 1 start ++
-            // 5 ami start = 2 prend 1 cadeau => cadeaux - 1 start ++
-            // 4 ami start = 3 prend 1 cadeau => cadeau - 1  // ami == 3 == start => start % nbF => 1
-            // 3 ami start = 1 prend 1 cadeau => cadeau - 1 start ++
-            // 2 ami start = 2 prend 1 cadeau => cadeaux - 1 start ++
-            // 1 ami start = 3 prend 1 cadeau => cadeaux - 1 == 0 => sortis de boucle return start = 3
+            // 7 > 0 ami // start >= ami (3 >= 3) => start % nbF => 1 then kdo--
+            // 6 > 0 cadeau - 1 start ++ 
+            // 5 > 0 cadeaux - 1 start ++
+            // 4 > 0 // start >= ami => start % nbF  + 1 => 1
+            // 3 > 0  cadeau - 1 start ++
+            // 2 > 0  cadeaux - 1 start ++
+            // 1 > 0 ami // start >= ami (3 >= 3) => start % nbF => 1 then kdo-- 
 
     while (nbG > 0) {
         if (start >= nbF) {
