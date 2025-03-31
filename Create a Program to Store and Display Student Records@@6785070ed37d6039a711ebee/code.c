@@ -22,7 +22,7 @@ int main(int argc, char *const argv[])
     student_t students[n];
 
     for (int i = 0; i < n; i++) {
-        char temp[100];
+        char temp[100] = {0};
         scanf("%d %s %f", &students[i].roll, temp, &students[i].marks);
         strcpy(students[i].name, temp);
     }
