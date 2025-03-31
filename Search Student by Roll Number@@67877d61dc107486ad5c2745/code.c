@@ -10,18 +10,9 @@
 
 typedef struct student_s {
     int roll;
-    char *name;
+    char name[200];
     float marks;
 } student_t;
-
-void my_free(student_t *students, int end)
-{
-    if (!students)
-        return;
-    for (int j = 0; j < end; j++)
-        free(students[j].name);
-    free(students);
-}
 
 student_t *find(student_t *students, int roll, int n)
 {
@@ -36,43 +27,21 @@ student_t *find(student_t *students, int roll, int n)
 
 int main(int argc, char *const argv[])
 {
-    int n = 0;
-    student_t *students = NULL;
-        
+    int n = 0, k = 0;        
     if ((scanf("%d", &n)) != 1)
         return ERROR;
-    if ((students = malloc(sizeof(student_t) * (n))) == NULL)
-        return ERROR;
+    student_t students[n];
     for (int i = 0; i < n; i++) {
-        char temp[MAX_LENGTH] = {0};
-        if ((scanf("%d %s %f", &students[i].roll, temp, &students[i].marks)) != 3) {
-            my_free(students, i);
-            return ERROR;
-        }
-        if ((students[i].name = malloc(sizeof(char) * (strlen(temp) + 1))) == NULL) {
-            my_free(students, i);
-            return ERROR;
-        }
-        strcpy(students[i].name, temp);
+        scanf("%d %s %f", &students[i].roll, students[i].name, &students[i].marks);
     }
+    scanf("%d", &k);
 
-    int roll = 0;
-    if ((scanf("%d ", &roll)) != 1) {
-        my_free(students, n);
-        return ERROR;
-    }
-    student_t *student = find(students, roll, n);
-    if (!student) {
-        if ((printf("Student not found\n")) < 0) {
-            my_free(students, n);
-            return ERROR;
+    for (int i = 0; i < n; i++) {
+        if (k == students[i].roll) {
+            printf("Roll Number: %d, Name: %s, Marks: %0.2f\n", students[i].roll, students[i].name, students[i].marks);
+            return SUCCESS;
         }
-        return SUCCESS;
     }
-    if ((printf("Roll Number: %d, Name: %s, Marks: %0.2f\n", student->roll, student->name, student->marks)) < 0) {
-        my_free(students, n);
-        return ERROR;
-    }
-    my_free(students, n);
+    printf("Student not found");
     return SUCCESS;
 }
