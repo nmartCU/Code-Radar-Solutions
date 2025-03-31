@@ -24,7 +24,6 @@ int main(int argc, char *const argv[])
     char *str = NULL;
     size_t len = 0;
     ssize_t read = 0;
-    int size = 0;
     int lenghtWord = 0;
 
     if ((read = getline(&str, &len, stdin)) == -1) {
