@@ -35,6 +35,7 @@ int main(int argc, char *const argv[])
 {
     char str[INPUT_LENGTH][MAX_LENGTH];
     char temp[MAX_LENGTH];
+    bool rotation = false;
 
     for (int i = 0; i < INPUT_LENGTH; i++) {
         scanf("%s", str[i]);
