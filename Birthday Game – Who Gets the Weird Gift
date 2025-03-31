@@ -24,6 +24,7 @@ int findPrankReceiver(int nbF, int nbG, int start)
         if (nbG == 0)
             break;
         if (start >= nbF) {
+            printf("Inside %d\n", start % nbF);
             start = start % nbF;
         } else
             start++;
