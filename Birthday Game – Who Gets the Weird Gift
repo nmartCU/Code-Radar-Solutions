@@ -33,5 +33,5 @@ int findPrankReceiver(int nbF, int nbG, int start)
         }
         nbG--;
     }
-    return count;
+    return i;
 }
