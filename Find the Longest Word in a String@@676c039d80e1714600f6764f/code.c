@@ -33,7 +33,7 @@ int main(int argc, char *const argv[])
         }
         if (sizeWord > max) {
             max = sizeWord;
-            start = i - max;
+            start = i - sizeWord;
         }
         sizeWord = 0;
     }
