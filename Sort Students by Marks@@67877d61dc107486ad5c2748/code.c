@@ -11,18 +11,9 @@
 
 typedef struct student_s {
     int roll;
-    char *name;
+    char name[200];
     float marks;
 } student_t;
-
-void my_free(student_t *students, int end)
-{
-    if (!students)
-        return;
-    for (int j = 0; j < end; j++)
-        free(students[j].name);
-    free(students);
-}
 
 int compare_students(const void *a, const void *b) {
     return ((student_t *)b)->marks - ((student_t *)a)->marks;
@@ -31,23 +22,14 @@ int compare_students(const void *a, const void *b) {
 int main(int argc, char *const argv[])
 {
     int n = 0;
-    student_t *students = NULL;
         
     if ((scanf("%d", &n)) != 1)
         return ERROR;
-    if ((students = malloc(sizeof(student_t) * (n))) == NULL)
-        return ERROR;
+    student_t students[n];
     for (int i = 0; i < n; i++) {
-        char temp[MAX_LENGTH] = {0};
-        if ((scanf("%d %s %f", &students[i].roll, temp, &students[i].marks)) != 3) {
-            my_free(students, i);
+        if ((scanf("%d %s %f", &students[i].roll, students[i].name, &students[i].marks)) != 3) {
             return ERROR;
         }
-        if ((students[i].name = malloc(sizeof(char) * (strlen(temp) + 1))) == NULL) {
-            my_free(students, i);
-            return ERROR;
-        }
-        strcpy(students[i].name, temp);
     }
 
     qsort(students, n, sizeof(student_t), compare_students);
