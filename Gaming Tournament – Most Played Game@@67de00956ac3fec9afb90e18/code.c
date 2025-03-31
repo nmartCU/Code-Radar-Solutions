@@ -7,6 +7,7 @@ int mostPlayedGame(int games[], int n)
     int ids = 0;
 
     for (int i = 0; i < n; i++) {
+        int count = 1;
         for (int j = 0; j < n; j++) {
             if (games[i] == games[j] && i != j) {
                 ++count;
