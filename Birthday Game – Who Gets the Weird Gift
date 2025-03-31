@@ -23,7 +23,7 @@ int findPrankReceiver(int nbF, int nbG, int start)
     while (nbG > 0) {
         nbG--;
         if (start >= nbF) {
-            start = start % nbF;
+            start = start / nbF;
         } else
             start++;
     }
