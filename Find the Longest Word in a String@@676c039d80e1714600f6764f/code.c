@@ -37,7 +37,7 @@ int main(int argc, char *const argv[])
         }
         sizeWord = 0;
     }
-    if ((printf("%.*s\n", max, &str[start])))
+    printf("%.*s\n", max, &str[start]);
     free(str);
     return SUCCESS;
 }
