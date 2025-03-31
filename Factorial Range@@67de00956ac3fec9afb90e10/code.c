@@ -4,7 +4,7 @@ void factorial(int n)
 {
     int result = 1;
     if (n == 0) {
-        printf("1\n");
+        printf("%d\n", result);
         return;
     }
     for (int i = 1; i <= n; i++) {
