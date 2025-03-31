@@ -11,7 +11,8 @@ int totalLikes(int n)
     int people = 5;
     int like = 0;
     for (int i = 2; i <= n; i++) {
-        people = people % 2 == 0 ? people / 2 : people / 2 + 1;
+        printf("%d\n", people / 2);
+        people = people / 2;
         like += people;
         people = people * people + people;
     }
