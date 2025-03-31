@@ -17,17 +17,17 @@ void my_free(char **str)
     }
 }
 
-void swap(char a, char b)
+void swap(char *a, char *b)
 {
-    char temp = a;
-    a = b;
-    b = temp;
+    char temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
 void rotate(char str[], int n)
 {
     for (int i = n - 1; i > 0; i--) {
-        swap(str[i], str[i - 1]);
+        swap(&str[i], &str[i - 1]);
     }
 }
 
