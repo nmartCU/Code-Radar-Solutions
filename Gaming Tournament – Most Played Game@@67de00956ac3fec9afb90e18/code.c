@@ -12,7 +12,7 @@ int mostPlayedGame(int games[], int n)
                 ++count;
             }
         }
-        if (count > max && ids < games[i]) {
+        if (count > max || (count == max && ids > games[i])) {
             max = count;
             ids = games[i];
         }
