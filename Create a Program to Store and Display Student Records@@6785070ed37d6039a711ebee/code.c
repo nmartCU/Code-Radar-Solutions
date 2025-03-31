@@ -27,7 +27,7 @@ int main(int argc, char *const argv[])
         printf("%s\n", temp[i]);
         students[i].name = temp[i];
     }
-    //for (int i = 0; i < n; i++)
-        //printf("Roll Number: %d, Name: %s, Marks: %0.2f\n", students[i].roll, students[i].name, students[i].marks);
+    for (int i = 0; i < n; i++)
+        printf("Roll Number: %d, Name: %s, Marks: %0.2f\n", students[i].roll, students[i].name, students[i].marks);
     return SUCCESS;
 }
