@@ -9,6 +9,7 @@ int finalEnergy(int cloud[], int n, int k)
         int nextCloud = (pos + k) % n;
         int cost = cloud[nextCloud] == 1 ? 3 : 1;
         energy -= cost;
+        pos = nextCloud;
         if (cloud[nextCloud] == cloud[0])
             break;
     }
