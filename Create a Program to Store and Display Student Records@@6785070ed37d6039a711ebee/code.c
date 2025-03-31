@@ -20,10 +20,10 @@ int main(int argc, char *const argv[])
     if ((scanf("%d", &n)) != 1)
         return ERROR;
     student_t students[n];
+    char temp[n][200]
 
     for (int i = 0; i < n; i++) {
         scanf("%d %s %f", &students[i].roll, &students[i].name, &students[i].marks);
-        printf("%p\n", students[i].name);
     }
     for (int i = 0; i < n; i++)
         printf("Roll Number: %d, Name: %s, Marks: %0.2f\n", students[i].roll, students[i].name, students[i].marks);
