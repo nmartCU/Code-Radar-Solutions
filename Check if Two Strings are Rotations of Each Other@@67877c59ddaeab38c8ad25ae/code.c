@@ -41,8 +41,9 @@ int main(int argc, char *const argv[])
         scanf("%s", str[i]);
     }
     strcpy(temp, str[0]);
+    printf("Temp: %s\n", temp)
     rotate(temp, strlen(str[0]));
-    printf("%s", temp);
+    printf("%s\n", temp);
     if ((strcmp(str[0], temp)) == 0) {
         rotation = true;
     }
