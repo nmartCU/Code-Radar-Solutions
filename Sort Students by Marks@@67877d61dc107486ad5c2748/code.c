@@ -35,11 +35,8 @@ int main(int argc, char *const argv[])
     qsort(students, n, sizeof(student_t), compare_students);
     for (int i = 0; i < n; i++) {
         if ((printf("Roll Number: %d, Name: %s, Marks: %0.2f\n", students[i].roll, students[i].name, students[i].marks)) < 0) {
-            my_free(students, n);
             return ERROR;
         }
-        free(students[i].name);
     }
-    free(students);
     return SUCCESS;
 }
