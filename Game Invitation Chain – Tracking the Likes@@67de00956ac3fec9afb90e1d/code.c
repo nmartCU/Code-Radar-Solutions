@@ -13,6 +13,7 @@ int totalLikes(int n)
     int like = 0;
     for (int i = 2; i <= n; i++) {
         people = people / 2;
+        printf("%d\n", people);
         like += people;
         people = (5 * people) + people;
     }
