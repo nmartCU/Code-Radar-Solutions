@@ -22,6 +22,7 @@ int findPrankReceiver(int nbF, int nbG, int start)
 
     while (nbG > 0) {
         nbG--;
+        printf("---NbG : %d start: %d nbF: %d---", nbG, start, nbF);
         if (start >= nbF) {
             start = start % nbF;
         } else
