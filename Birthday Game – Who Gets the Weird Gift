@@ -20,14 +20,12 @@ int findPrankReceiver(int nbF, int nbG, int start)
             // 1 ami start = 3 prend 1 cadeau => cadeaux - 1 == 0 => sortis de boucle return start = 3
 
     while (nbG > 0) {
-        nbG--;
-        if (nbG == 0)
-            break;
         if (start >= nbF) {
             printf("Inside %d nbG is %d\n", start % nbF + 1, nbG);
             start = start % nbF + 1;
         } else
             start++;
+        nbG--;
     }
     return start;
 }
