@@ -10,7 +10,7 @@
 
 typedef struct student_s {
     int roll;
-    char *name;
+    char name[200];
     float marks;
 } student_t;
 
@@ -20,12 +20,9 @@ int main(int argc, char *const argv[])
     if ((scanf("%d", &n)) != 1)
         return ERROR;
     student_t students[n];
-    char temp[n][100];
 
     for (int i = 0; i < n; i++) {
-        scanf("%d %s %f", &students[i].roll, temp[i], &students[i].marks);
-        printf("adress: %p\n", temp[i]);
-        // students[i].name = &temp[i];
+        scanf("%d %s %f", &students[i].roll, &students[i].name, &students[i].marks);
     }
     for (int i = 0; i < n; i++)
         printf("Roll Number: %d, Name: %s, Marks: %0.2f\n", students[i].roll, students[i].name, students[i].marks);
