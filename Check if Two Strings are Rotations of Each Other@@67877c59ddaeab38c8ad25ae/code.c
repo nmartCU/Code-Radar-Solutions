@@ -26,7 +26,7 @@ void swap(char a, char b)
 
 void rotate(char str[], int n)
 {
-    for (int i = n - 1; i > 0; i++) {
+    for (int i = n - 1; i > 0; i--) {
         swap(str[i], str[i - 1]);
     }
 }
