@@ -24,7 +24,7 @@ int main(int argc, char *const argv[])
 
     for (int i = 0; i < n; i++) {
         scanf("%d %s %f", &students[i].roll, temp[i], &students[i].marks);
-        printf("adress: %p\n",&temp[i]);
+        printf("adress: %p\n", temp[i]);
         // students[i].name = &temp[i];
     }
     for (int i = 0; i < n; i++)
