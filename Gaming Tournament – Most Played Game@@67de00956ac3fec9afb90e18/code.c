@@ -3,7 +3,6 @@
 int mostPlayedGame(int games[], int n)
 {
     int max = 0;
-    int count = 1;
     int ids = 0;
 
     for (int i = 0; i < n; i++) {
