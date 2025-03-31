@@ -12,10 +12,11 @@ int totalLikes(int n)
     int people = 5;
     int like = 0;
     for (int i = 2; i <= n; i++) {
+        int before = people;
         people /= 2;
         printf("people is: %d\n", people);
         like += people;
-        people = (5 * people) + people;
+        people = (before * people) + before;
     }
     return like;
 }
