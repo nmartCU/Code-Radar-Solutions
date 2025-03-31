@@ -54,15 +54,13 @@ int main(int argc, char *const argv[])
         return ERROR;
     }
     temp[read[0]] = '\0';
-    if ((strcpy(temp, &str[1][start])) == NULL) {
-        my_free(str);
-        free(temp);
-        return ERROR;
+    int index = 0;
+    for (int i = start; i < read[0] - 1; i++) {
+        temp[index++] = str[1][i]; 
     }
-    if ((strncat(temp, str[1], start)) == NULL) {
-        my_free(str);
-        free(temp);
-        return ERROR;
+    int res = read[0] - 1 - index;
+    for (int i = 0; i < res; i) {
+        temp[index++] = str[1][i];
     }
     if ((strcmp(str[0], temp)) == 0) {
         rotation = true;
