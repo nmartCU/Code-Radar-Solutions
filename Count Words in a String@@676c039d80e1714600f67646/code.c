@@ -24,13 +24,9 @@ int main(int argc, char *const argv[])
     
     for (int i = 0; str[i] != '\0'; i++) {
         if (str[i] == ' ' || str[i] == '\t') {
-            inWord = false;
             continue;
         }
-        if (!inWord) {
-            inWord = true;
-            wordCount++;
-        }
+        wordCount++;
     }
     if (printf("%d\n", wordCount) < 0) {
         free(str);
