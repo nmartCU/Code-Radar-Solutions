@@ -35,13 +35,11 @@ int main(int argc, char *const argv[])
         scanf("%d %s %f", &students[i].roll, students[i].name, &students[i].marks);
     }
     scanf("%d", &k);
-
-    for (int i = 0; i < n; i++) {
-        if (k == students[i].roll) {
-            printf("Roll Number: %d, Name: %s, Marks: %0.2f\n", students[i].roll, students[i].name, students[i].marks);
-            return SUCCESS;
-        }
-    }
-    printf("Student not found");
+    student *student = find(students, k, n);
+    if (student) {
+        printf("Roll Number: %d, Name: %s, Marks: %0.2f\n", students[i]->roll, students[i]->name, students[i]->marks);
+        free(student);
+    } else 
+        printf("Student not found");
     return SUCCESS;
 }
