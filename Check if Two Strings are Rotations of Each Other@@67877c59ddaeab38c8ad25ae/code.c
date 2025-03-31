@@ -42,7 +42,7 @@ int main(int argc, char *const argv[])
     }
     strcpy(temp, str[0]);
     rotate(temp, strlen(str[0]));
-    if ((strcmp(str[0], temp)) == 0) {
+    if ((strcmp(str[1], temp)) == 0) {
         rotation = true;
     }
     if (printf("%s\n", rotation ? "Yes" : "No") < 0)
