@@ -18,7 +18,7 @@ int kangaroo(int x1, int v1, int x2, int v2)
     // 0 = 3 => -1
     // 0 3 4 2
     
-    int n = 1;
+    int n = 0;
     int exp = v1 * n + x1;
     int exp2 = x2 + v2 * n;
     for (int i = 0; i < v1; i++) {
