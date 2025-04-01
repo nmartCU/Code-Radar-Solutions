@@ -10,7 +10,7 @@ int kangaroo(int x1, int v1, int x2, int v2)
 
     if (v1 == v2 && x1 < x2)
         return -1;
-    if (x2 - x1 % v1 - v2 == 0) {
+    if ((x2 - x1) % (v1 - v2) == 0) {
         int exp = (x2 - x1) / (v1 - v2);
         return exp;
     } 
