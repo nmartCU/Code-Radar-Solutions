@@ -2,7 +2,7 @@
 
 int calculatePenalty(int subD, int subM ,int subY, int dueD, int dueM ,int dueY)
 {
-    int penalt = 0;
+    int penalty = 0;
 
     if (subD <= dueD && subM <= dueM && subY <= dueY)
         return penalty;
