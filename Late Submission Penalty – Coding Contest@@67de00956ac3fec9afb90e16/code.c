@@ -4,8 +4,6 @@ int calculatePenalty(int subD, int subM ,int subY, int dueD, int dueM ,int dueY)
 {
     int penalty = 0;
 
-    if (subD <= dueD && subM <= dueM && subY <= dueY)
-        return penalty;
     if (subY > dueY) {
         penalty += 5000;
         return penalty;
